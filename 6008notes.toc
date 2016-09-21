@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {1}Probability and Inference}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Introduction to Probability}{2}{subsection.1.1}
+\contentsline {paragraph}{Introduction}{2}{section*.2}
+\contentsline {paragraph}{A First Look at Probability}{2}{section*.3}
+\contentsline {paragraph}{Simulating Coin Flips}{2}{section*.4}
+\contentsline {paragraph}{Computer note:}{4}{section*.5}
+\contentsline {paragraph}{Probability and the Art of Modeling Uncertainty}{4}{section*.6}
+\contentsline {subsection}{\numberline {1.2}Probability Spaces and Events}{4}{subsection.1.2}
+\contentsline {paragraph}{Two Ingredients to Modeling Uncertainty}{4}{section*.7}
+\contentsline {paragraph}{Probability Spaces}{5}{section*.8}
+\contentsline {paragraph}{Notation:}{5}{section*.9}
+\contentsline {paragraph}{Why finite?}{6}{section*.10}
+\contentsline {paragraph}{Table Representation}{6}{section*.11}
+\contentsline {paragraph}{More on Sample Spaces}{6}{section*.12}
+\contentsline {paragraph}{Probabilities with Events}{7}{section*.13}
+\contentsline {paragraph}{Events as Sets}{7}{section*.14}
+\contentsline {paragraph}{Code for Dealing with Sets in Python}{7}{section*.15}
+\contentsline {paragraph}{Probabilities with Events and Code}{7}{section*.16}
+\contentsline {subsection}{\numberline {1.3}Random Variables}{7}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Jointly Distributed Random Variables}{7}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Conditioning on Events}{7}{subsection.1.5}

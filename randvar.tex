@@ -1,0 +1,91 @@
+\documentclass[6008notes.tex]{subfiles}
+\begin{document}
+\graphicspath{ {images/randvar/} }
+
+\subsection{Random Variables}
+
+\paragraph{A First Look at Random Variables}
+Follow along in an IPython prompt.
+
+We continue with our weather example.
+
+\begin{lstlisting}
+> prob_space = {'sunny': 1/2, 'rainy': 1/6, 'snowy': 1/3}
+\end{lstlisting}
+
+We can simulate tomorrow's weather using the above model of the world. Let's simulate two different values, one (which we'll call W for "weather") for whether tomorrow will be sunny, rainy, or snowy, and another (which we'll call I for “indicator") that is 1 if it is sunny and 0 otherwise:
+
+\begin{lstlisting}
+> random_outcome = comp_prob_inference.sample_from_finite_probability_space(prob_space)
+> W = random_outcome
+> if random_outcome == 'sunny':
+>     I = 1
+> else:
+>     I = 0
+\end{lstlisting}
+
+Print out the variables $W$ or $I$ to see that they take on specific values. Then re-run the above block of code a few times.
+
+You should see that $W$ and $I$ change and are random (following the probabilities given by the probability space).
+
+This code shows something that's of key importance that we'll see throughout the course. Variables $W$ and $I$ store the values of what are called random variables.
+
+\paragraph{Random Variables}
+
+To mathematically reason about a random variable, we need to somehow keep track of the full range of possibilities for what the random variable's value could be, and how probable different instantiations of the random variable are. The resulting formalism may at first seem a bit odd but as we progress through the course, it will become more apparent how this formalism helps us study real-world problems and address these problems with powerful solutions.
+
+To build up to the formalism, first note, computationally, what happened in the code in the previous part.
+
+First, there is an underlying probability space $(\Omega , \mathbb {P})$, where $\Omega = \{ \text {sunny}, \text {rainy}, \text {snowy}\}$, and
+
+P(sunny)=1/2,\\
+P(rainy)=1/6,\\
+P(snowy)=1/3.
+
+A random outcome $\omega \in \Omega$ is sampled using the probabilities given by the probability space $(\Omega , \mathbb {P})$. This step corresponds to an underlying experiment happening.
+
+Two random variables are generated:
+
+$W$ is set to be equal to $\omega$. As an equation:
+
+\begin{eqnarray}
+W(\omega) &=&\omega\quad\text{for }\omega\in\{\text{sunny},\text{rainy},\text{snowy}\}.
+\end{eqnarray}
+
+This step perhaps seems entirely unnecessary, as you might wonder ``Why not just call the random outcome $W$ instead of $\omega$?'' Indeed, this step isn't actually necessary for this particular example, but the formalism for random variables has this step to deal with what happens when we encounter a random variable like $I$.
+
+$I$ is set to 1 if $\omega =\text {sunny}$, and 0 otherwise. As an equation:
+
+\begin{eqnarray}
+I(\omega)
+&=&
+\begin{cases}
+  1 & \text{if }\omega=\text{sunny}, \\
+  0 & \text{if }\omega\in\{\text{rainy},\text{snowy}\}.
+\end{cases}
+\end{eqnarray}
+
+Importantly, multiple possible outcomes (rainy or snowy) get mapped to the same value 0 that $I$ can take on.
+
+We see that random variable $W$ maps the sample space $\Omega =\{ \text {sunny},\text {rainy},\text {snowy}\}$ to the same set $\{ \text {sunny},\text {rainy},\text {snowy}\}$. Meanwhile, random variable $I$ maps the sample space $\Omega =\{ \text {sunny},\text {rainy},\text {snowy}\}$ to the set $\{ 0,1\}$.
+
+In general:
+
+Definition of a “finite random variable" (in this course, we will just call this a ``random variable''): Given a finite probability space (?,P), a finite random variable $X$ is a mapping from the sample space ? to a set of values $X$ that random variable $X$ can take on. (We will often call $X$ the ``alphabet'' of random variable $X$.)
+
+For example, random variable $W$ takes on values in the alphabet {sunny,rainy,snowy}, and random variable $I$ takes on values in the alphabet $\{ 0,1\}$.
+
+Quick summary: There's an underlying experiment corresponding to probability space (?,P). Once the experiment is run, let ??? denote the outcome of the experiment. Then the random variable takes on the specific value of X(?)?X.
+
+Explanation using a picture: Continuing with the weather example, we can pictorially see what's going on by looking at the probability tables for: the original probability space, the random variable W, and the random variable I:
+
+
+These tables make it clear that a “random variable" really is just reassigning/relabeling what the values are for the possible outcomes in the underlying probability space (given by the top left table):
+
+In the top right table, random variable W does not do any sort of relabeling so its probability table looks the same as that of the underlying probability space.
+
+In the bottom left table, the random variable I relabels/reassigns “sunny" to 1, and both “rainy" and “snowy" to 0. Intuitively, since two of the rows now have the same label 0, it makes sense to just combine these two rows, adding their probabilities (16+13=12). This results in the bottom right table.
+
+Technical note: Even though the formal definition of a finite random variable doesn't actually make use of the probability assignment P, the probability assignment will become essential as soon as we talk about how probability works with random variables.
+
+\end{document}

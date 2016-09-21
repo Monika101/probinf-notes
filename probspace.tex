@@ -1,0 +1,155 @@
+\documentclass[6008notes.tex]{subfiles}
+\begin{document}
+\graphicspath{ {images/probspace/} }
+
+\subsection{Probability Spaces and Events}
+
+\paragraph{Two Ingredients to Modeling Uncertainty}
+
+When we think of an uncertain world, we will always think of there being some underlying experiment of interest. To model this uncertain world, it suffices to keep track of two things:
+
+The set of all possible outcomes for the experiment: this set is called the sample space and is usually denoted by the Greek letter Omega $\Omega$.
+(For the fair coin flip, there are exactly two possible outcomes: heads, tails. Thus, $\Omega =\{ \text {heads},\text {tails}\}$.)
+
+The probability of each outcome: for each possible outcome, assign a probability that is at least 0 and at most 1.
+(For the fair coin flip, $\mathbb {P}(\text {heads})=\frac{1}{2}$ and $\mathbb {P}(\text {tails})=\frac{1}{2}$.)
+
+Notation: Throughout this course, for any statement $\mathcal{S}$, ``$\mathbb {P}(\mathcal{S})$'' denotes the probability of $\mathcal{S}$ happening.
+
+In Python:
+
+\begin{lstlisting}
+> model = {'heads': 1/2, 'tails': 1/2}
+\end{lstlisting}
+In particular, we see that we can model uncertainty in code using a Python dictionary. The sample space is precisely the keys in the dictionary:
+
+\begin{lstlisting}
+> sample_space = set(model.keys())
+{'tails', 'heads'}
+\end{lstlisting}
+Of course, the dictionary gives us the assignment of probabilities, meaning that for each outcome in the sample space (i.e., for each key in the dictionary), we have an assigned probability:
+
+\begin{lstlisting}
+> model['heads']
+0.5
+> model['tails']
+0.5
+\end{lstlisting}
+
+A few important remarks:
+\begin{itemize}
+\item The sample space is always specified to be \textit{collectively exhaustive}, meaning that every possible outcome is in it, and \textit{mutually exclusive}, meaning that once the experiment is run (e.g., flipping the fair coin), exactly one possible outcome in the sample space happens. It's impossible for multiple outcomes in the sample space to simultaneously happen! It's also impossible for none of the outcomes to happen!
+
+\item Probabilities can be thought of as fractions of times outcomes occur; thus, probabilities are nonnegative and at least 0 and at most 1.
+
+\item If we add up the probabilities of all the possible outcomes in the sample space, we get 1.
+(For the fair coin flip, $\mathbb {P}(\text {heads})+\mathbb {P}(\text {tails})=\frac{1}{2}+\frac{1}{2}=1$.)
+\end{itemize}
+
+Some intuition for this: Consider the coin flipping experiment. What does the fraction of times heads occur and the fraction of times tails occur add up to? Since these are the only two possible outcomes (and again, recall that these outcomes are exclusive in that they can't simultaneously occur, and exhaustive since they are the only possible outcomes), these two fractions will always sum to 1. For a massive number of repeats of the experiment, these two fractions correspond to $\mathbb {P}(\text {heads})$ and $\mathbb {P}(\text {tails})$; the fractions sum to 1 and so these probabilities also sum to 1.
+
+\paragraph{Probability Spaces}
+
+At this point, we've actually already seen the most basic data structure used throughout this course for modeling uncertainty, called a \textit{finite probability space} (in this course, we'll often also just call this either a \textit{probability space} or a \textit{probability model}):
+
+A \textit{finite probability space} consists of two ingredients:
+\begin{itemize}
+ \item a sample space $\Omega$ consisting of a \textit{finite} (i.e., not infinite) number of collectively exhaustive and mutually exclusive possible outcomes
+
+\item an assignment of probabilities: for each possible outcome $\omega \in \Omega$, we assign a probability $\mathbb {P}(\text {outcome }\omega )$ at least 0 and at most 1, where we require that the probabilities across all the possible outcomes in the sample space add up to 1:\\
+$\sum _{\omega \in \Omega }\mathbb {P}(\text {outcome }\omega )=1$
+\end{itemize}
+
+ 
+\paragraph{Notation:} As shorthand we occasionally use the tuple ``$(\Omega ,\mathbb {P})$'' to refer to a finite probability space to remind ourselves of the two ingredients needed, sample space $\Omega$ and an assignment of probabilities $\mathbb {P}$. As we already saw, in code these two pieces can be represented together in a single Python dictionary. However, when we want to reason about probability spaces in terms of the mathematics, it's helpful to have names for the two pieces.
+
+\paragraph{Why finite?} Of the two pieces making up a finite probability space $(\Omega ,\mathbb {P})$, the sample space $\Omega$ being finite is a fairly natural constraint, corresponding to how we typically work with Python dictionaries where there is only a finite number of keys. As we'll see, finite probability spaces are already extremely useful in practice. Pedagogically, finite probability spaces also provide a great intro to probability theory as they already carry a wealth of intuition, much of which carries over to a more complete story of general probability spaces!
+
+\paragraph{Table Representation}
+
+A probability space is a data structure in that we can always visualize as a table of nonnegative entries that sum to 1. Let's see a concrete example of this, first writing the table out on paper and then coding it up.
+
+Example: Suppose we have a model of tomorrow's weather given as follows: sunny with probability 1/2, rainy with probability 1/6, and snowy with probability 1/3. Here's the probability space, shown as a table:
+
+\begin{center}
+\begin{tabular}{c c c}
+ & & \textbf{Probability} \\
+ &	sunny	& 1/2 \\
+\textbf{Outcome} &	rainy &	1/6 \\
+ &	snowy	& 1/3
+\end{tabular}
+\end{center}
+
+Note: This a table of 3 nonnegative entries that sum to 1. The rows correspond to the sample space\\
+ $\Omega =\{ \text {sunny},\text {rainy},\text {snowy}\}$.
+
+We will often use this table representation of a probability space to tell you how we're modeling uncertainty for a particular problem. It provides the simplest of visualizations of a probability space.
+
+Of course, in Python code, the above probability space is given by:
+
+\begin{lstlisting}
+prob_space = {'sunny': 1/2, 'rainy': 1/6, 'snowy': 1/3}
+\end{lstlisting}
+A different way to code up the same probability space is to separately specify the outcomes (i.e., the sample space) and the probabilities:
+
+\begin{lstlisting}
+outcomes = ['sunny', 'rainy', 'snowy']
+probabilities = np.array([1/2, 1/6, 1/3])
+\end{lstlisting}
+The i-th entry of \texttt{outcomes} has probability given by the i-th entry of \texttt{probabilities}. Note that \texttt{probabilities} is a vector of numbers that we represent as a Numpy array. Numpy has various built-in methods that enable us to easily work with vectors (and more generally arrays) of numbers.
+
+\paragraph{More on Sample Spaces}
+
+In the video, we saw that a sample space encoding the outcomes of 2 coin flips encodes all the information for 1 coin flip as well. Thus, we could use the same sample space to model a single coin flip. However, if we really only cared about a single coin flip, then a sample space encoding 2 coin flips is richer than we actually need it to be!
+
+When we model some uncertain situation, how we specify a sample space is not unique. We saw an example of this already in an earlier exercise where for rolling a single six-sided die, we can choose to name the outcomes differently, saying for instance "roll 1" instead of "1". We could even add a bunch of extraneous outcomes that all have probability 0. We could add extraneous information that doesn't matter such as "Alice rolls 1", "Bob rolls 1", etc where we enumerate out all the people who could roll the die in which the outcome is a 1. Sure, depending on the problem we are trying to solve, maybe knowing who rolled the die is important, but if we don't care about who rolled the die, then the information isn't helpful but it's still possible to include this information in the sample space.
+
+Generally speaking it's best to choose a sample space that is as simple as possible for modeling what we care about solving. For example, if we were rolling a six-sided die, and we actually only care about whether the face shows up at least 4 or not, then it's sufficient to just keep track of two outcomes, "at least 4" and "less than 4".
+
+\paragraph{Probabilities with Events}
+
+\paragraph{Events as Sets}
+
+\paragraph{Code for Dealing with Sets in Python}
+
+In the video, the set operations can actually be implemented in Python as follows:
+
+\begin{lstlisting}
+sample_space = {'HH', 'HT', 'TH', 'TT'}
+A = {'HT', 'TT'}
+B = {'HH', 'HT', 'TH'}
+C = {'HH'}
+A_intersect_B = A.intersection(B)  # equivalent to "B.intersection(A)" or "A & B"
+A_union_C = A.union(C)  # equivalent to "C.union(A)" and also "A | C"
+B_complement = sample_space.difference(B)  # equivalent also to "sample_space - B"
+\end{lstlisting}
+
+\paragraph{Probabilities with Events and Code}
+
+From the videos, we see that an event is a subset of the sample space $\Omega$. If you remember our table representation for a probability space, then an event could be thought of as a subset of the rows, and the probability of the event is just the sum of the probability values in those rows!
+
+The probability of an event $\mathcal{A}\subseteq \Omega$ is the sum of the probabilities of the possible outcomes in $\mathcal{A}$:
+
+$\mathbb {P}(\mathcal{A})\triangleq \sum _{\omega \in \mathcal{A}}\mathbb {P}(\text {outcome }\omega )$,
+ 
+where ``$\triangleq$'' means ``defined as''.
+
+We can translate the above equation into Python code. In particular, we can compute the probability of an event encoded as a Python set $\texttt{event}$, where the probability space is encoded as a Python dictionary $\texttt{prob\_space}$:
+
+\begin{lstlisting}
+def prob_of_event(event, prob_space):
+    total = 0
+    for outcome in event:
+        total += prob_space[outcome]
+    return total
+\end{lstlisting}
+
+Here's an example of how to use the above function:
+
+\begin{lstlisting}
+prob_space = {'sunny': 1/2, 'rainy': 1/6, 'snowy': 1/3}
+rainy_or_snowy_event = {'rainy', 'snowy'}
+print(prob_of_event(rainy_or_snowy_event, prob_space))
+\end{lstlisting}
+
+\end{document}
