@@ -6,6 +6,90 @@
 
 \paragraph{Conditioning on Events Intro}
 
+TODO -- add notes from video
+
+\paragraph{The Product Rule for Events}
+
+TODO -- add notes from video
+
+\paragraph{Bayes' Theorem for Events}
+
+\paragraph{Important note about dividing by probabilities:} We will often divide by probabilities. In videos, we might not always say this, but this is required: we cannot divide by 0. To ensure this, we will not condition on events that have probability 0.
+
+Given two events $\mathcal{A}$ and $\mathcal{B}$ (both of which have positive probability), Bayes' theorem, also called Bayes' rule or Bayes' law, gives a way to compute $\mathbb {P}(\mathcal{A} | \mathcal{B})$ in terms of $\mathbb {P}(\mathcal{B} | \mathcal{A})$. This result turns out to be extremely useful for inference because often times we want to compute one of these, and the other is known or otherwise straightforward to compute.
+
+Bayes' theorem is given by
+
+$\mathbb {P}(\mathcal{A} | \mathcal{B}) = \frac{\mathbb {P}(\mathcal{B} | \mathcal{A}) \mathbb {P}(\mathcal{A})}{\mathbb {P}(\mathcal{B})}.$
+ 
+The proof of why this is the case is a one liner:
+
+$\mathbb {P}(\mathcal{A} | \mathcal{B}) \overset {(a)}{=} \frac{\mathbb {P}(\mathcal{A} \cap \mathcal{B})}{\mathbb {P}(\mathcal{B})} \overset {(b)}{=} \frac{\mathbb {P}(\mathcal{B} | \mathcal{A}) \mathbb {P}(\mathcal{A})}{\mathbb {P}(\mathcal{B})},$
+ 
+where step $(a)$ is by the definition of conditional probability for events, and step $(b)$ is due to the product rule for events (which follows from rearranging the definition of conditional probability for $\mathbb {P}(\mathcal{B} | \mathcal{A})$).
+
+\paragraph{Practice Problem: Bayes' Theorem and Total Probability}
+
+Your problem set is due in 15 minutes! It's in one of your drawers, but they are messy, and you're not sure which one it's in.
+
+The probability that the problem set is in drawer $k$ is $d_k$. If drawer $k$ has the problem set and you search there, you have probability $p_k$ of finding it. There are a total of $m$ drawers.
+
+Suppose you search drawer $i$ and do not find the problem set.
+
+\begin{itemize}
+\item (a) Find the probability that the paper is in drawer $j$, where $j \neq i$.
+
+\item (b) Find the probability that the paper is in drawer $i$.
+\end{itemize}
+
+\paragraph{Solution:} Let $A_k$ be the event that the problem set is in drawer $k$, and $B_k$ be the event that you find the problem set in drawer $k$.
+
+(a) We'll express the desired probability as $\mathbb {P}(A_ j|B_ i^ c)$. Since this quantity is difficult to reason about directly, we'll use Bayes' rule:
+
+$\mathbb {P}(A_ j|B_ i^ c) = \frac{\mathbb {P}(B_ i^ c | A_ j) \mathbb {P}(A_ j)}{\mathbb {P}(B_ i^ c)}$
+ 
+The first probability, $\mathbb {P}(B_ i^ c | A_ j)$, expresses the probability of not finding the problem set in drawer $i$ given that it's in a different drawer $j$. Since it's impossible to find the paper in a drawer it isn't in, this is just 1.
+
+The second quantity, $\mathbb {P}(A_ j)$, is given to us in the problem statement as $d_j$.
+
+The third probability, $\mathbb {P}(B_ i^ c) = 1-\mathbb {P}(B_ i)$, is difficult to reason about directly. But, if we knew whether or not the paper was in the drawer, it would become easier. So, we'll use total probability:
+
+\begin{eqnarray}
+            \mathbb{P}(B_i) &=& \mathbb{P}(B_i|A_i)\mathbb{P}(A_i) + \mathbb{P}(B_i|A_i^c)\mathbb{P}(A_i^c) \\
+            &=& p_i d_i + 0 (1-d_i)
+\end{eqnarray}
+
+Putting these terms together, we find that
+
+$\mathbb {P}(A_ j|B_ i^ c) = \frac{d_ j}{1-p_ i d_ i}$
+ 
+\paragraph{Alternate method to compute the denominator $\mathbb {P}(B_ i^ c)$:} We could use the law of total probability to decompose $\mathbb {P}(B_ i^ c)$ depending on which drawer the homework is actually in. We have
+
+\begin{eqnarray}
+        \mathbb{P}(B_i^c) &=& \sum_{k=1}^m
+                       \underbrace{\mathbb{P}(A_k)}_{d_k}
+                       \underbrace{\mathbb{P}(B_i^c|A_k)}_{\substack{1\text{ if }k\ne i,\\
+                                                             (1-p_i)\text{ if }k=i}} \\
+                  &=& \sum_{\substack{k=1,\\
+                                     k\ne i}}^m d_k
+                     + (1-p_i)d_i \\
+                  &=& \sum_{k=1}^m d_k - p_i d_i \\
+                  &=& 1 - p_i d_i.
+\end{eqnarray}
+
+(b) Similarly, we'll use Bayes' rule:
+
+$\mathbb {P}(A_ i | B_ i^ c) = \frac{\mathbb {P}(B_ i^ c | A_ i) \mathbb {P}(A_ i)}{\mathbb {P}(B_ i^ c)} = \frac{(1-p_ i) d_ i}{1 - p_ i d_ i}$
+ 
+\paragraph{Take-Away Lessons:}
+
+\begin{itemize}
+\item Defining the sample-space is not always going to help solve the problem. (It's difficult to precisely define the sample space for this particular problem)
+
+\item When in doubt of being able to precisely define the sample space, try to define events intelligently, i.e., in a way that you use what you're given in the problem.
+
+\item The probability law of a probability model is a function on events, or subsets of the sample space, i.e., one can work with the probability law without knowing precisely what the sample-space (as a set) is.
+\end{itemize}
 
 
 \end{document}

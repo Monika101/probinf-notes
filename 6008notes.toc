@@ -17,5 +17,35 @@
 \contentsline {paragraph}{Code for Dealing with Sets in Python}{7}{section*.15}
 \contentsline {paragraph}{Probabilities with Events and Code}{7}{section*.16}
 \contentsline {subsection}{\numberline {1.3}Random Variables}{7}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Jointly Distributed Random Variables}{7}{subsection.1.4}
-\contentsline {subsection}{\numberline {1.5}Conditioning on Events}{7}{subsection.1.5}
+\contentsline {paragraph}{A First Look at Random Variables}{7}{section*.17}
+\contentsline {paragraph}{Random Variables}{8}{section*.18}
+\contentsline {paragraph}{Definition of a ``finite random variable'' (in this course, we will just call this a ``random variable''):}{9}{section*.19}
+\contentsline {paragraph}{Quick summary:}{9}{section*.20}
+\contentsline {paragraph}{Explanation using a picture:}{9}{section*.21}
+\contentsline {paragraph}{Technical note:}{9}{section*.22}
+\contentsline {paragraph}{Random Variables Notation and Terminology}{9}{section*.23}
+\contentsline {subsection}{\numberline {1.4}Jointly Distributed Random Variables}{10}{subsection.1.4}
+\contentsline {paragraph}{Relating Two Random Variables}{10}{section*.24}
+\contentsline {paragraph}{Conceptual note:}{11}{section*.25}
+\contentsline {paragraph}{Preview of inference:}{11}{section*.26}
+\contentsline {paragraph}{Representing a Joint Probability Table in Code}{12}{section*.27}
+\contentsline {paragraph}{Approach 0:}{12}{section*.28}
+\contentsline {paragraph}{Approach 1:}{12}{section*.29}
+\contentsline {paragraph}{Approach 2:}{13}{section*.30}
+\contentsline {paragraph}{Some remarks:}{14}{section*.31}
+\contentsline {paragraph}{Marginalization}{14}{section*.32}
+\contentsline {paragraph}{Marginalization:}{15}{section*.33}
+\contentsline {paragraph}{Marginalization for Many Random Variables}{15}{section*.34}
+\contentsline {paragraph}{Conditioning for Random Variables}{17}{section*.35}
+\contentsline {paragraph}{Conditioning:}{17}{section*.36}
+\contentsline {paragraph}{Computational interpretation:}{17}{section*.37}
+\contentsline {paragraph}{Moving Toward a More General Story for Conditioning}{17}{section*.38}
+\contentsline {subsection}{\numberline {1.5}Conditioning on Events}{18}{subsection.1.5}
+\contentsline {paragraph}{Conditioning on Events Intro}{18}{section*.39}
+\contentsline {paragraph}{The Product Rule for Events}{18}{section*.40}
+\contentsline {paragraph}{Bayes' Theorem for Events}{18}{section*.41}
+\contentsline {paragraph}{Important note about dividing by probabilities:}{18}{section*.42}
+\contentsline {paragraph}{Practice Problem: Bayes' Theorem and Total Probability}{18}{section*.43}
+\contentsline {paragraph}{Solution:}{18}{section*.44}
+\contentsline {paragraph}{Alternate method to compute the denominator $\mathbb {P}(B_ i^ c)$:}{19}{section*.45}
+\contentsline {paragraph}{Take-Away Lessons:}{19}{section*.46}
