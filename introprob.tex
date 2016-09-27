@@ -2,9 +2,9 @@
 \begin{document}
 \graphicspath{ {images/introprob/} }
 
-\subsection{Introduction to Probability}
+\section{Introduction to Probability}
 
-\paragraph{Introduction}
+\subsection{Introduction}
 Probabilities appear in everyday life and feed into how we make decisions. For example:
 
 The weather forecast might say that ``tomorrow there is a 70\% chance of rain''. This 70\% chance of rain is a probability, and if it is sufficiently high, then we may want to bring an umbrella when we go outdoors.
@@ -13,7 +13,7 @@ We could predict that the probability of car traffic is higher during rush hour 
 
 We aim to build computer programs that can reason with probabilities.
 
-\paragraph{A First Look at Probability}
+\subsection{A First Look at Probability}
 Perhaps the simplest example of probability is flipping a fair coin for which we say that the probability of heads is 1/2 and, similarly, the probability of tails is also 1/2. (Don't worry, we'll see much more exciting problems soon!) What do we mean when we say that the probability of heads is 1/2?
 
 The basic idea is that if we repeat this experiment of flipping a coin a huge number of times, say $n$, then the number of heads we should see should be close to $n/2$ as we increase $n$. While you could certainly try this out in real life by flipping a coin, say, 100,000 times, doing this would be disastrously tedious. Let's simulate these flips in Python instead.
@@ -24,7 +24,7 @@ Follow along in an IPython prompt within Spyder.
 
 We have provided a package \href{https://d37djvu3ytnwxt.cloudfront.net/assets/courseware/v1/710ba23b569da54c14fc614315ced6a1/asset-v1:MITx+6.008.1x+3T2016+type@asset+block/comp_prob_inference.py}{\texttt{comp\_prob\_inference.py}}, which you should save to your computer. Within Spyder, do the following:
 
-{\centering\includegraphics[scale=0.3]{images_first-look-at-prob-spyder-setup}}
+{\centering\includegraphics[scale=0.3]{images_first-look-at-prob-spyder-setup} \par}
 
 Let's start by importing the package comp\_prob\_inference:
 
@@ -94,7 +94,7 @@ The fraction of heads initially can be far from 1/2 but as the number of flips i
 
 \paragraph{Computer note:} Many times in this course, it will be helpful to run simulations to test code and plot histograms for different outcomes to get a sense of how likely the outcomes are. Simulations and visualizations can be powerful not only in making sure your code is working correctly but also to present results to people!
 
-\paragraph{Probability and the Art of Modeling Uncertainty}
+\subsection{Probability and the Art of Modeling Uncertainty}
 Since probability effectively corresponds to a fraction, it is a value between 0 and 1. Of course, we can have impossible events that have probability 0, or events that deterministically happen and thus have probability 1. Each time we model uncertainty in the world, there will be some underlying experiment (such as flipping a coin in our running example). An event happens with probability $q \in [0,1]$ if in a massive number of repeats of the experiment, the event happens roughly a fraction $q$ of the time; more repeats of the experiment make it so that the fraction gets closer to $q$.
 
 Some times, an underlying experiment cannot possibly be repeated. Take for instance weather forecasting. Whereas we could actually physically flip a coin many times to repeat the same experiment, we cannot physically repeat a real-life experiment for what different realizations of tomorrow's weather will be. We could wait until tomorrow to see the weather, but then we would need a time machine to go back in time by one day to repeat and see what the weather is like tomorrow (and this assumes that there's some inherent randomness in tomorrow's weather)! In such a case, our only hope is to somehow model or simulate tomorrow's weather given measurements up to present time.

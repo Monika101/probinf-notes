@@ -1,51 +1,67 @@
-\contentsline {section}{\numberline {1}Probability and Inference}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}Introduction to Probability}{2}{subsection.1.1}
-\contentsline {paragraph}{Introduction}{2}{section*.2}
-\contentsline {paragraph}{A First Look at Probability}{2}{section*.3}
-\contentsline {paragraph}{Simulating Coin Flips}{2}{section*.4}
-\contentsline {paragraph}{Computer note:}{4}{section*.5}
-\contentsline {paragraph}{Probability and the Art of Modeling Uncertainty}{4}{section*.6}
-\contentsline {subsection}{\numberline {1.2}Probability Spaces and Events}{4}{subsection.1.2}
-\contentsline {paragraph}{Two Ingredients to Modeling Uncertainty}{4}{section*.7}
-\contentsline {paragraph}{Probability Spaces}{5}{section*.8}
-\contentsline {paragraph}{Notation:}{5}{section*.9}
-\contentsline {paragraph}{Why finite?}{6}{section*.10}
-\contentsline {paragraph}{Table Representation}{6}{section*.11}
-\contentsline {paragraph}{More on Sample Spaces}{6}{section*.12}
-\contentsline {paragraph}{Probabilities with Events}{7}{section*.13}
-\contentsline {paragraph}{Events as Sets}{7}{section*.14}
-\contentsline {paragraph}{Code for Dealing with Sets in Python}{7}{section*.15}
-\contentsline {paragraph}{Probabilities with Events and Code}{7}{section*.16}
-\contentsline {subsection}{\numberline {1.3}Random Variables}{7}{subsection.1.3}
-\contentsline {paragraph}{A First Look at Random Variables}{7}{section*.17}
-\contentsline {paragraph}{Random Variables}{8}{section*.18}
-\contentsline {paragraph}{Definition of a ``finite random variable'' (in this course, we will just call this a ``random variable''):}{9}{section*.19}
-\contentsline {paragraph}{Quick summary:}{9}{section*.20}
-\contentsline {paragraph}{Explanation using a picture:}{9}{section*.21}
-\contentsline {paragraph}{Technical note:}{9}{section*.22}
-\contentsline {paragraph}{Random Variables Notation and Terminology}{9}{section*.23}
-\contentsline {subsection}{\numberline {1.4}Jointly Distributed Random Variables}{10}{subsection.1.4}
-\contentsline {paragraph}{Relating Two Random Variables}{10}{section*.24}
-\contentsline {paragraph}{Conceptual note:}{11}{section*.25}
-\contentsline {paragraph}{Preview of inference:}{11}{section*.26}
-\contentsline {paragraph}{Representing a Joint Probability Table in Code}{12}{section*.27}
-\contentsline {paragraph}{Approach 0:}{12}{section*.28}
-\contentsline {paragraph}{Approach 1:}{12}{section*.29}
-\contentsline {paragraph}{Approach 2:}{13}{section*.30}
-\contentsline {paragraph}{Some remarks:}{14}{section*.31}
-\contentsline {paragraph}{Marginalization}{14}{section*.32}
-\contentsline {paragraph}{Marginalization:}{15}{section*.33}
-\contentsline {paragraph}{Marginalization for Many Random Variables}{15}{section*.34}
-\contentsline {paragraph}{Conditioning for Random Variables}{17}{section*.35}
-\contentsline {paragraph}{Conditioning:}{17}{section*.36}
-\contentsline {paragraph}{Computational interpretation:}{17}{section*.37}
-\contentsline {paragraph}{Moving Toward a More General Story for Conditioning}{17}{section*.38}
-\contentsline {subsection}{\numberline {1.5}Conditioning on Events}{18}{subsection.1.5}
-\contentsline {paragraph}{Conditioning on Events Intro}{18}{section*.39}
-\contentsline {paragraph}{The Product Rule for Events}{18}{section*.40}
-\contentsline {paragraph}{Bayes' Theorem for Events}{18}{section*.41}
-\contentsline {paragraph}{Important note about dividing by probabilities:}{18}{section*.42}
-\contentsline {paragraph}{Practice Problem: Bayes' Theorem and Total Probability}{18}{section*.43}
-\contentsline {paragraph}{Solution:}{18}{section*.44}
-\contentsline {paragraph}{Alternate method to compute the denominator $\mathbb {P}(B_ i^ c)$:}{19}{section*.45}
-\contentsline {paragraph}{Take-Away Lessons:}{19}{section*.46}
+\contentsline {section}{\numberline {1}Introduction to Probability}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Introduction}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}A First Look at Probability}{3}{subsection.1.2}
+\contentsline {paragraph}{Simulating Coin Flips}{3}{section*.2}
+\contentsline {paragraph}{Computer note:}{5}{section*.3}
+\contentsline {subsection}{\numberline {1.3}Probability and the Art of Modeling Uncertainty}{5}{subsection.1.3}
+\contentsline {section}{\numberline {2}Probability Spaces and Events}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Two Ingredients to Modeling Uncertainty}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Probability Spaces}{6}{subsection.2.2}
+\contentsline {paragraph}{Notation:}{7}{section*.4}
+\contentsline {paragraph}{Why finite?}{7}{section*.5}
+\contentsline {subsection}{\numberline {2.3}Table Representation}{7}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}More on Sample Spaces}{7}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Probabilities with Events}{8}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Events as Sets}{8}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Code for Dealing with Sets in Python}{8}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}Probabilities with Events and Code}{8}{subsection.2.8}
+\contentsline {section}{\numberline {3}Random Variables}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}A First Look at Random Variables}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Random Variables}{9}{subsection.3.2}
+\contentsline {paragraph}{Definition of a ``finite random variable'' (in this course, we will just call this a ``random variable''):}{10}{section*.6}
+\contentsline {paragraph}{Quick summary:}{10}{section*.7}
+\contentsline {paragraph}{Explanation using a picture:}{10}{section*.8}
+\contentsline {paragraph}{Technical note:}{11}{section*.9}
+\contentsline {subsection}{\numberline {3.3}Random Variables Notation and Terminology}{11}{subsection.3.3}
+\contentsline {section}{\numberline {4}Jointly Distributed Random Variables}{11}{section.4}
+\contentsline {subsection}{\numberline {4.1}Relating Two Random Variables}{11}{subsection.4.1}
+\contentsline {paragraph}{Conceptual note:}{12}{section*.10}
+\contentsline {paragraph}{Preview of inference:}{12}{section*.11}
+\contentsline {subsection}{\numberline {4.2}Representing a Joint Probability Table in Code}{13}{subsection.4.2}
+\contentsline {paragraph}{Approach 0:}{13}{section*.12}
+\contentsline {paragraph}{Approach 1:}{13}{section*.13}
+\contentsline {paragraph}{Approach 2:}{14}{section*.14}
+\contentsline {paragraph}{Some remarks:}{15}{section*.15}
+\contentsline {subsection}{\numberline {4.3}Marginalization}{15}{subsection.4.3}
+\contentsline {paragraph}{Marginalization:}{16}{section*.16}
+\contentsline {subsection}{\numberline {4.4}Marginalization for Many Random Variables}{17}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Conditioning for Random Variables}{18}{subsection.4.5}
+\contentsline {paragraph}{Conditioning:}{18}{section*.17}
+\contentsline {paragraph}{Computational interpretation:}{19}{section*.18}
+\contentsline {subsection}{\numberline {4.6}Moving Toward a More General Story for Conditioning}{19}{subsection.4.6}
+\contentsline {section}{\numberline {5}Conditioning on Events}{19}{section.5}
+\contentsline {subsection}{\numberline {5.1}Conditioning on Events Intro}{19}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}The Product Rule for Events}{19}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Bayes' Theorem for Events}{19}{subsection.5.3}
+\contentsline {paragraph}{Important note about dividing by probabilities:}{19}{section*.19}
+\contentsline {subsection}{\numberline {5.4}Practice Problem: Bayes' Theorem and Total Probability}{19}{subsection.5.4}
+\contentsline {paragraph}{Solution:}{20}{section*.20}
+\contentsline {paragraph}{Alternate method to compute the denominator $\mathbb {P}(B_ i^ c)$:}{20}{section*.21}
+\contentsline {subsection}{\numberline {5.5}Take-Away Lessons:}{21}{subsection.5.5}
+\contentsline {section}{\numberline {6}Inference with Bayes' Theorem for Random Variables}{21}{section.6}
+\contentsline {subsection}{\numberline {6.1}The Product Rule for Random Variables (Also Called the Chain Rule)}{21}{subsection.6.1}
+\contentsline {paragraph}{Interpretation:}{21}{section*.22}
+\contentsline {paragraph}{Claim:}{21}{section*.23}
+\contentsline {paragraph}{Proof:}{21}{section*.24}
+\contentsline {paragraph}{Important convention for this course:}{22}{section*.25}
+\contentsline {paragraph}{The product rule is symmetric:}{22}{section*.26}
+\contentsline {paragraph}{Interpretation:}{22}{section*.27}
+\contentsline {paragraph}{Many random variables:}{22}{section*.28}
+\contentsline {subsection}{\numberline {6.2}Bayes' Rule for Random Variables (Also Called Bayes' Theorem for Random Variables}{23}{subsection.6.2}
+\contentsline {paragraph}{Bayes' theorem:}{23}{section*.29}
+\contentsline {paragraph}{Important:}{23}{section*.30}
+\contentsline {paragraph}{Proof:}{23}{section*.31}
+\contentsline {subsection}{\numberline {6.3}Bayes' Theorem for Random Variables: A Computational View}{23}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Maximum A Posteriori (MAP) Estimation}{24}{subsection.6.4}
+\contentsline {section}{\numberline {7}Independence Structure}{25}{section.7}
+\contentsline {subsection}{\numberline {7.1}Independent Events}{25}{subsection.7.1}

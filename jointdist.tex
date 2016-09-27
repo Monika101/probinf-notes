@@ -2,9 +2,9 @@
 \begin{document}
 \graphicspath{ {images/jointdist/} }
 
-\subsection{Jointly Distributed Random Variables}
+\section{Jointly Distributed Random Variables}
 
-\paragraph{Relating Two Random Variables}
+\subsection{Relating Two Random Variables}
 
 At the most basic level, inference refers to using an observation to reason about some unknown quantity. In this course, the observation and the unknown quantity are represented by random variables. The main modeling question is: How do these random variables relate?
 
@@ -39,7 +39,7 @@ $\text {hot:}\quad \frac{\frac{1}{30}}{\frac{1}{30}+\frac{2}{15}}=\frac{1}{5},\q
  
 Now they sum to 1. It turns out that, given that we've observed the weather to be rainy, these are the correct probabilities for the two options ``hot'' and ``cold''. Let's formalize the steps. We work backwards, first explaining what the the denominator ``$\frac{1}{30}+\frac{2}{15}=\frac{1}{6}$'' above comes from.
 
-\paragraph{Representing a Joint Probability Table in Code}
+\subsection{Representing a Joint Probability Table in Code}
 
 There are various ways to represent a joint probability table in code. Here are a few.
 
@@ -173,7 +173,7 @@ Now the probability for $W =$ \texttt{w} and $T =$ \texttt{t} is given by:
 
 The dictionaries within a dictionary representation allows for easily retrieving rows but not columns (try it: write a Python function that picks out a specific row and another function that picks out a specific column; you should see that retrieving a row is easier because it corresponds to looking at the value stored for a single key of the outer dictionary). This also means that summing a column's probabilities is more cumbersome than summing a row's probabilities. However, a huge advantage of this way of representing a joint probability table is that in many problems, we have a massive joint probability table that is mostly filled with 0's. Thus, the 2D array representation would require storing a very, very large table with many 0's, whereas the dictionaries within a dictionary representation is able to only store the nonzero table entries. We'll see more about this issue when we look at robot localization in the second section of the course on inference in graphical models.
 
-\paragraph{Marginalization}
+\subsection{Marginalization}
 
 Given a joint probability table, often we'll want to know what the probability table is for just one of the random variables. We can do this by just summing or ``marginalizing'' out the other random variables. For example, to get the probability table for random variable $W$, we do the following:
 
@@ -217,7 +217,7 @@ In general:
 
 $p_{X}(x)=\sum _{y}p_{X,Y}(x,y).$
  
-\paragraph{Marginalization for Many Random Variables}
+\subsection{Marginalization for Many Random Variables}
 
 What happens when we have more than two random variables? Let's build on our earlier example and suppose that in addition to weather $W$ and temperature $T$, we also had a random variable $H$ for humidity that takes on values in the alphabet {dry, humid}. Then having a third random variable, we can draw out a 3D joint probability table for random variables $W$, $T$, and $H$. As an example, we could have the following:
 
@@ -257,7 +257,7 @@ Even with more than three random variables, the idea is the same. For example, w
 
 $p_{X,Y}(x, y) = \sum _ w \Big( \sum _ z p_{W,X,Y,Z}(w,x,y,z) \Big).$
  
-\paragraph{Conditioning for Random Variables}
+\subsection{Conditioning for Random Variables}
 
 When we observe that a random variable takes on a specific value (such as $W=\text {rainy}$ from earlier for which we say that we condition on random variable $W$ taking on the value ``rainy''), this observation can affect what we think are likely or unlikely values for another random variable.
 
@@ -285,7 +285,7 @@ $p_{T\mid W}(\text {cold}\mid \text {rainy})=\frac{p_{W,T}(\text {rainy},\text {
  
 \paragraph{Computational interpretation:} To compute $p_{X\mid Y}(x\mid y)$, take the entry $p_{X,Y}(x,y)$ in the joint probability table corresponding to $X=x$ and $Y=y$, and then divide the entry by $p_Y(y)$, which is an entry in the marginal probability table $p_Y$ for random variable $Y$.
 
-\paragraph{Moving Toward a More General Story for Conditioning}
+\subsection{Moving Toward a More General Story for Conditioning}
 
 Jointly distributed random variables play a central role in this course. Remember that we will model observations as random variables and the quantities we want to infer also as random variables. When these random variables are jointly distributed so that we have a probabilistic way to describe how they relate (through their joint probability table), then we can systematically and quantitatively produce inferences.
 

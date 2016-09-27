@@ -2,9 +2,9 @@
 \begin{document}
 \graphicspath{ {images/probspace/} }
 
-\subsection{Probability Spaces and Events}
+\section{Probability Spaces and Events}
 
-\paragraph{Two Ingredients to Modeling Uncertainty}
+\subsection{Two Ingredients to Modeling Uncertainty}
 
 When we think of an uncertain world, we will always think of there being some underlying experiment of interest. To model this uncertain world, it suffices to keep track of two things:
 
@@ -48,7 +48,7 @@ A few important remarks:
 
 Some intuition for this: Consider the coin flipping experiment. What does the fraction of times heads occur and the fraction of times tails occur add up to? Since these are the only two possible outcomes (and again, recall that these outcomes are exclusive in that they can't simultaneously occur, and exhaustive since they are the only possible outcomes), these two fractions will always sum to 1. For a massive number of repeats of the experiment, these two fractions correspond to $\mathbb {P}(\text {heads})$ and $\mathbb {P}(\text {tails})$; the fractions sum to 1 and so these probabilities also sum to 1.
 
-\paragraph{Probability Spaces}
+\subsection{Probability Spaces}
 
 At this point, we've actually already seen the most basic data structure used throughout this course for modeling uncertainty, called a \textit{finite probability space} (in this course, we'll often also just call this either a \textit{probability space} or a \textit{probability model}):
 
@@ -65,7 +65,7 @@ $\sum _{\omega \in \Omega }\mathbb {P}(\text {outcome }\omega )=1$
 
 \paragraph{Why finite?} Of the two pieces making up a finite probability space $(\Omega ,\mathbb {P})$, the sample space $\Omega$ being finite is a fairly natural constraint, corresponding to how we typically work with Python dictionaries where there is only a finite number of keys. As we'll see, finite probability spaces are already extremely useful in practice. Pedagogically, finite probability spaces also provide a great intro to probability theory as they already carry a wealth of intuition, much of which carries over to a more complete story of general probability spaces!
 
-\paragraph{Table Representation}
+\subsection{Table Representation}
 
 A probability space is a data structure in that we can always visualize as a table of nonnegative entries that sum to 1. Let's see a concrete example of this, first writing the table out on paper and then coding it up.
 
@@ -98,7 +98,7 @@ probabilities = np.array([1/2, 1/6, 1/3])
 \end{lstlisting}
 The i-th entry of \texttt{outcomes} has probability given by the i-th entry of \texttt{probabilities}. Note that \texttt{probabilities} is a vector of numbers that we represent as a Numpy array. Numpy has various built-in methods that enable us to easily work with vectors (and more generally arrays) of numbers.
 
-\paragraph{More on Sample Spaces}
+\subsection{More on Sample Spaces}
 
 In the video, we saw that a sample space encoding the outcomes of 2 coin flips encodes all the information for 1 coin flip as well. Thus, we could use the same sample space to model a single coin flip. However, if we really only cared about a single coin flip, then a sample space encoding 2 coin flips is richer than we actually need it to be!
 
@@ -106,15 +106,15 @@ When we model some uncertain situation, how we specify a sample space is not uni
 
 Generally speaking it's best to choose a sample space that is as simple as possible for modeling what we care about solving. For example, if we were rolling a six-sided die, and we actually only care about whether the face shows up at least 4 or not, then it's sufficient to just keep track of two outcomes, "at least 4" and "less than 4".
 
-\paragraph{Probabilities with Events}
+\subsection{Probabilities with Events}
 
 TODO -- add notes from video
 
-\paragraph{Events as Sets}
+\subsection{Events as Sets}
 
 TODO -- add notes from video
 
-\paragraph{Code for Dealing with Sets in Python}
+\subsection{Code for Dealing with Sets in Python}
 
 In the video, the set operations can actually be implemented in Python as follows:
 
@@ -128,7 +128,7 @@ A_union_C = A.union(C)  # equivalent to "C.union(A)" and also "A | C"
 B_complement = sample_space.difference(B)  # equivalent also to "sample_space - B"
 \end{lstlisting}
 
-\paragraph{Probabilities with Events and Code}
+\subsection{Probabilities with Events and Code}
 
 From the videos, we see that an event is a subset of the sample space $\Omega$. If you remember our table representation for a probability space, then an event could be thought of as a subset of the rows, and the probability of the event is just the sum of the probability values in those rows!
 
