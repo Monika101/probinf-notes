@@ -20,11 +20,11 @@ Given two events $\mathcal{A}$ and $\mathcal{B}$ (both of which have positive pr
 
 Bayes' theorem is given by
 
-$\mathbb {P}(\mathcal{A} | \mathcal{B}) = \frac{\mathbb {P}(\mathcal{B} | \mathcal{A}) \mathbb {P}(\mathcal{A})}{\mathbb {P}(\mathcal{B})}.$
+{\centering$\mathbb {P}(\mathcal{A} | \mathcal{B}) = \frac{\mathbb {P}(\mathcal{B} | \mathcal{A}) \mathbb {P}(\mathcal{A})}{\mathbb {P}(\mathcal{B})}.$ \par}
  
 The proof of why this is the case is a one liner:
 
-$\mathbb {P}(\mathcal{A} | \mathcal{B}) \overset {(a)}{=} \frac{\mathbb {P}(\mathcal{A} \cap \mathcal{B})}{\mathbb {P}(\mathcal{B})} \overset {(b)}{=} \frac{\mathbb {P}(\mathcal{B} | \mathcal{A}) \mathbb {P}(\mathcal{A})}{\mathbb {P}(\mathcal{B})},$
+{\centering$\mathbb {P}(\mathcal{A} | \mathcal{B}) \overset {(a)}{=} \frac{\mathbb {P}(\mathcal{A} \cap \mathcal{B})}{\mathbb {P}(\mathcal{B})} \overset {(b)}{=} \frac{\mathbb {P}(\mathcal{B} | \mathcal{A}) \mathbb {P}(\mathcal{A})}{\mathbb {P}(\mathcal{B})},$ \par}
  
 where step $(a)$ is by the definition of conditional probability for events, and step $(b)$ is due to the product rule for events (which follows from rearranging the definition of conditional probability for $\mathbb {P}(\mathcal{B} | \mathcal{A})$).
 
@@ -46,7 +46,7 @@ Suppose you search drawer $i$ and do not find the problem set.
 
 (a) We'll express the desired probability as $\mathbb {P}(A_ j|B_ i^ c)$. Since this quantity is difficult to reason about directly, we'll use Bayes' rule:
 
-$\mathbb {P}(A_ j|B_ i^ c) = \frac{\mathbb {P}(B_ i^ c | A_ j) \mathbb {P}(A_ j)}{\mathbb {P}(B_ i^ c)}$
+{\centering$\mathbb {P}(A_ j|B_ i^ c) = \frac{\mathbb {P}(B_ i^ c | A_ j) \mathbb {P}(A_ j)}{\mathbb {P}(B_ i^ c)}$ \par}
  
 The first probability, $\mathbb {P}(B_ i^ c | A_ j)$, expresses the probability of not finding the problem set in drawer $i$ given that it's in a different drawer $j$. Since it's impossible to find the paper in a drawer it isn't in, this is just 1.
 
@@ -54,18 +54,18 @@ The second quantity, $\mathbb {P}(A_ j)$, is given to us in the problem statemen
 
 The third probability, $\mathbb {P}(B_ i^ c) = 1-\mathbb {P}(B_ i)$, is difficult to reason about directly. But, if we knew whether or not the paper was in the drawer, it would become easier. So, we'll use total probability:
 
-\begin{eqnarray}
+\begin{eqnarray*}
             \mathbb{P}(B_i) &=& \mathbb{P}(B_i|A_i)\mathbb{P}(A_i) + \mathbb{P}(B_i|A_i^c)\mathbb{P}(A_i^c) \\
             &=& p_i d_i + 0 (1-d_i)
-\end{eqnarray}
+\end{eqnarray*}
 
 Putting these terms together, we find that
 
-$\mathbb {P}(A_ j|B_ i^ c) = \frac{d_ j}{1-p_ i d_ i}$
+{\centering$\mathbb {P}(A_ j|B_ i^ c) = \frac{d_ j}{1-p_ i d_ i}$ \par}
  
 \paragraph{Alternate method to compute the denominator $\mathbb {P}(B_ i^ c)$:} We could use the law of total probability to decompose $\mathbb {P}(B_ i^ c)$ depending on which drawer the homework is actually in. We have
 
-\begin{eqnarray}
+\begin{eqnarray*}
         \mathbb{P}(B_i^c) &=& \sum_{k=1}^m
                        \underbrace{\mathbb{P}(A_k)}_{d_k}
                        \underbrace{\mathbb{P}(B_i^c|A_k)}_{\substack{1\text{ if }k\ne i,\\
@@ -75,11 +75,11 @@ $\mathbb {P}(A_ j|B_ i^ c) = \frac{d_ j}{1-p_ i d_ i}$
                      + (1-p_i)d_i \\
                   &=& \sum_{k=1}^m d_k - p_i d_i \\
                   &=& 1 - p_i d_i.
-\end{eqnarray}
+\end{eqnarray*}
 
 (b) Similarly, we'll use Bayes' rule:
 
-$\mathbb {P}(A_ i | B_ i^ c) = \frac{\mathbb {P}(B_ i^ c | A_ i) \mathbb {P}(A_ i)}{\mathbb {P}(B_ i^ c)} = \frac{(1-p_ i) d_ i}{1 - p_ i d_ i}$
+{\centering$\mathbb {P}(A_ i | B_ i^ c) = \frac{\mathbb {P}(B_ i^ c | A_ i) \mathbb {P}(A_ i)}{\mathbb {P}(B_ i^ c)} = \frac{(1-p_ i) d_ i}{1 - p_ i d_ i}$ \par}
  
 \subsection{Take-Away Lessons:}
 

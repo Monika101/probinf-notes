@@ -10,7 +10,7 @@ In many real world problems, we aren't given what the joint distribution of two 
 
 As we saw from before, we were able to derive Bayes' theorem for events using the product rule for events: $\mathbb {P}(\mathcal{A} \cap \mathcal{B}) = \mathbb {P}(\mathcal{A}) \mathbb {P}(\mathcal{B} \mid \mathcal{A})$. The random variable version of the product rule is derived just like the event version of the product rule, by rearranging the equation for the definition of conditional probability. For two random variables $X$ and $Y$ (that take on values in sets $\mathcal{X}$ and $\mathcal{Y}$ respectively), the product rule for random variables says that
 
-$p_{X,Y}(x,y)=p_{Y}(y)p_{X\mid Y}(x\mid y)\qquad \text {for all }x\in \mathcal{X},y\in \mathcal{Y}\text { such that }p_{Y}(y)>0.$
+{\centering$p_{X,Y}(x,y)=p_{Y}(y)p_{X\mid Y}(x\mid y)\qquad \text {for all }x\in \mathcal{X},y\in \mathcal{Y}\text { such that }p_{Y}(y)>0.$ \par}
  
 \paragraph{Interpretation:} If we have the probability table for $Y$, and separately the probability table for $X$ conditioned on $Y$, then we can come up with the joint probability table (i.e., the joint distribution) of $X$ and $Y$.
 
@@ -22,15 +22,15 @@ We can formalize this intuition with a proof:
 
 \paragraph{Claim:} Suppose that random variables $X$ and $Y$ have joint probability table $p_{X,Y}$ and take on values in sets $\mathcal{X}$ and $\mathcal{Y}$ respectively. Suppose that for a specific choice of $y\in \mathcal{Y}$, we have $p_{Y}(y)=0$. Then
 
-$p_{X,Y}(x,y)=0\qquad \text {for all }x\in \mathcal{X}.$
+{\centering$p_{X,Y}(x,y)=0\qquad \text {for all }x\in \mathcal{X}.$ \par}
  
 \paragraph{Proof:} Let $y\in \mathcal{Y}$ satisfy $p_{Y}(y)=0$. Recall that we relate marginal distribution $p_Y$ to joint distribution $p_{X,Y}$ via marginalization:
 
-$0=p_{Y}(y)=\sum _{x\in \mathcal{X}}p_{X,Y}(x,y).$
+{\centering$0=p_{Y}(y)=\sum _{x\in \mathcal{X}}p_{X,Y}(x,y).$ \par}
  
 Next, we use a crucial mathematical observation: If a sum of nonnegative numbers (such as probabilities) equals 0, then each of the numbers being summed up must also be 0 (otherwise, the sum would be positive!). Hence, it must be that each number being added up in the right-hand side sum is 0, i.e.,
 
-$p_{X,Y}(x,y)=0\qquad \text {for all }x\in \mathcal{X}.$
+{\centering$p_{X,Y}(x,y)=0\qquad \text {for all }x\in \mathcal{X}.$ \par}
  
 This completes the proof. $\square$
 
@@ -49,7 +49,7 @@ p_{Y}(y)p_{X\mid Y}(x\mid y) & \text{if }p_{Y}(y)>0,\\
 
 \paragraph{The product rule is symmetric:} We can use the definition of conditional probability with $X$ and $Y$ swapped, and rearranging factors, we get:
 
-$p_{X,Y}(x,y)=p_{X}(x)p_{Y\mid X}(y\mid x)\qquad \text {for all }x\in \mathcal{X},y\in \mathcal{Y}\text { such that }p_{X}(x)>0,$
+{\centering$p_{X,Y}(x,y)=p_{X}(x)p_{Y\mid X}(y\mid x)\qquad \text {for all }x\in \mathcal{X},y\in \mathcal{Y}\text { such that }p_{X}(x)>0,$ \par}
  
 and so similarly we could show that
 
@@ -112,7 +112,7 @@ Bayes' theorem (also called Bayes' rule or Bayes' law) for random variables expl
 
 \paragraph{Bayes' theorem:} Suppose that $y$ is a value that random variable $Y$ can take on, and $p_{Y}(y)>0$. Then
 
-$p_{X\mid Y}(x\mid y)=\frac{p_{X}(x)p_{Y\mid X}(y\mid x)}{\sum _{ x'}p_{X}( x')p_{Y\mid X}(y\mid x')}$
+{\centering$p_{X\mid Y}(x\mid y)=\frac{p_{X}(x)p_{Y\mid X}(y\mid x)}{\sum _{ x'}p_{X}( x')p_{Y\mid X}(y\mid x')}$ \par}
  
 for all values $x$ that random variable $X$ can take on.
 
@@ -130,7 +130,7 @@ Computationally, Bayes' theorem can be thought of as a two-step procedure. Once 
 
 For each value $x$ that random variable $X$ can take on, initially we believed that $X=x$ with a score of $p_X(x)$, which could be thought of as how plausible we thought ahead of time that $X=x$. However now that we have observed $Y=y$, we weight the score $p_X(x)$ by a factor $p_{Y\mid X}(y\mid x)$, so
 
-$\text {new belief for how plausible }X=x\text { is:}\quad \alpha (x\mid y)\triangleq p_{X}(x)p_{Y\mid X}(y\mid x),$
+{\centering$\text {new belief for how plausible }X=x\text { is:}\quad \alpha (x\mid y)\triangleq p_{X}(x)p_{Y\mid X}(y\mid x),$ \par}
 
 where we have defined a new table $\alpha (\cdot \mid y)$ which is not a probability table, since when we put in the weights, the new beliefs are no longer guaranteed to sum to 1 (i.e., $\sum _{x}\alpha (x\mid y)$ might not equal 1)! $\alpha (\cdot \mid y)$ is an unnormalized posterior distribution!
 

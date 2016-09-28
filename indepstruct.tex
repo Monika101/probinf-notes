@@ -6,7 +6,52 @@
 
 \subsection{Independent Events}
 
+TODO - add notes from video
 
+\subsection{Independent Random Variables}
 
+TODO - add notes from video
+
+\subsection{Mutual vs Pairwise Independence}
+
+TODO - add notes from video
+
+\subsection{Conditional Independence}
+
+TODO - add notes from video
+
+\subsection{Practice Problem: Conditional Independence}
+
+Suppose $X_0, \dots , X_{100}$ are random variables whose joint distribution has the following factorization:
+
+{\centering$p_{X_0, \dots , X_{100}}(x_0, \dots , x_{100}) = p_{X_0}(x_0) \cdot \prod _{i=1}^{100} p_{X_ i | X_{i-1}}(x_ i | x_{i-1})$ \par}
+ 
+This factorization is what's called a Markov chain. We'll be seeing Markov chains a lot more later on in the course.
+
+Show that $X_{50} \perp X_{52} | X_{51}$.
+
+Solution: Notice that we can marginalize out $x_{100}$ as such:
+
+{\centering$p_{X_0, \dots , X_{99}}(x_0, \dots , x_{99}) = p_{X_0}(x_0) \cdot \prod _{i=1}^{99} p_{X_ i | X_{i-1}}(x_ i | x_{i-1}) \cdot \underbrace{\sum _{x_{100}} p_{X_{100}|X_{99}}(x_{100}|x_{99})}_{= 1} \qquad\qquad$ (2.5) \par}
+ 
+Now we can repeat the same marginalization procedure to get:
+
+{\centering$p_{X_0, \dots , X_{50}}(x_0, \dots , x_{50}) = p_{X_0}(x_0) \cdot \prod _{i=1}^{50} p_{X_ i | X_{i-1}}(x_ i | x_{i-1})$ \par}
+
+In essence, we have shown that the given joint distribution factorization applies not just to the last random variable ($X_{100}$), but also up to any point in the chain.
+
+For brevity, we will now use $p(x_{i}^{j})$ as a shorthand for $p_{X_ i, \dots , X_{j}}(x_ i, \dots , x_{j})$. We want to exploit what we have shown to rewrite $p(x_{50}^{52})$
+
+\begin{eqnarray*}
+		p(x_{50}^{52})
+        &=& \sum_{x_{0} \dots x_{49}} \sum_{x_{53} \dots x_{100}} p(x_{0}^{100}) \\
+		&=& \sum_{x_{0} \dots x_{49}} \sum_{x_{53} \dots x_{100}} \left[p(x_{0}) \prod_{i=0}^{50} p(x_{i}|x_{i-1})\right] \cdot p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51}) \cdot \prod_{i=53}^{100} p(x_{i}|x_{i-1}) \\
+		&=& \sum_{x_{0} \dots x_{49}} \sum_{x_{53} \dots x_{100}} p(x_{0}^{50}) \cdot p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51}) \cdot \prod_{i=53}^{100} p(x_{i}|x_{i-1}) \\
+		&=& p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51}) \cdot \sum_{x_{0} \dots x_{49}} p(x_{0}^{50}) \underbrace{\sum_{x_{53} \dots x_{100}} \prod_{i=53}^{100} p(x_{i}|x_{i-1})}_{=1} \\
+		&=& p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51}) \cdot \sum_{x_{0} \dots x_{49}} p(x_{0}^{50}) \\
+		&=& p(x_{50}) \cdot p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51})
+    \end{eqnarray*}
+		
+where we used (2.5) for the 3rd equality and the same marginalization trick for the 5th equality. We have just shown the Markov chain property, so the conditional independence property must be satisfied.
 
 \end{document}

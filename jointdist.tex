@@ -10,11 +10,11 @@ At the most basic level, inference refers to using an observation to reason abou
 
 Let's build on our earlier weather example, where now another outcome of interest appears, the temperature, which we quantize into to possible values ``hot'' and ``cold''. Let's suppose that we have the following probability space:
 
-{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-prob-space}}
+{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-prob-space} \par}
 
 You can check that the nonnegative entries do add to 1. If we let random variable $W$ be the weather (sunny, rainy, snowy) and random variable $T$ be the temperature (hot, cold), then notice that we could rearrange the table in the following fashion:
 
-{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-rearrange-table}}
+{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-rearrange-table} \par}
 
 When we talk about two separate random variables, we could view them either as a single ``super'' random variable that happens to consist of a pair of values (the first table; notice the label for each outcome corresponds to a pair of values), or we can view the two separate variables along their own different axes (the second table).
 
@@ -24,7 +24,7 @@ The second table is called a joint probability table $p_{W,T}$ for random variab
 
 The joint probability table gives probabilities in which $W$ and $T$ co-occur with specific values. For example, in the above, the event that ``$W=\text {sunny}$'' and the event that ``$T=\text {hot}$'' co-occur with probability 3/10. Notationally, we write
 
-$p_{W,T}(\text {sunny},\text {hot})=\mathbb {P}(W=\text {sunny},T=\text {hot})=\frac{3}{10}.$
+{\centering$p_{W,T}(\text {sunny},\text {hot})=\mathbb {P}(W=\text {sunny},T=\text {hot})=\frac{3}{10}.$ \par}
  
 \paragraph{Conceptual note:} Given the joint probability table, we can easily go backwards and write out the first table above, which is the underlying probability space.
 
@@ -34,8 +34,8 @@ First, if we observe that it is rainy, then we know that ``sunny'' and ``snowy''
 
 Why not just scale both 1/30 and 2/15 by the same constant so that they sum to 1? This can be done by dividing 1/30 and 2/15 by their sum:
 
-$\text {hot:}\quad \frac{\frac{1}{30}}{\frac{1}{30}+\frac{2}{15}}=\frac{1}{5},\qquad 
- \text {cold}:\quad \frac{\frac{2}{15}}{\frac{1}{30}+\frac{2}{15}}=\frac{4}{5}.$
+{\centering$\text {hot:}\quad \frac{\frac{1}{30}}{\frac{1}{30}+\frac{2}{15}}=\frac{1}{5},\qquad 
+ \text {cold}:\quad \frac{\frac{2}{15}}{\frac{1}{30}+\frac{2}{15}}=\frac{4}{5}.$ \par}
  
 Now they sum to 1. It turns out that, given that we've observed the weather to be rainy, these are the correct probabilities for the two options ``hot'' and ``cold''. Let's formalize the steps. We work backwards, first explaining what the the denominator ``$\frac{1}{30}+\frac{2}{15}=\frac{1}{6}$'' above comes from.
 
@@ -177,7 +177,7 @@ The dictionaries within a dictionary representation allows for easily retrieving
 
 Given a joint probability table, often we'll want to know what the probability table is for just one of the random variables. We can do this by just summing or ``marginalizing'' out the other random variables. For example, to get the probability table for random variable $W$, we do the following:
 
-{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-marg-rows}}
+{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-marg-rows} \par}
 
 We take the joint probability table (left-hand side) and compute out the row sums (which we've written in the margin).
 
@@ -185,59 +185,59 @@ The right-hand side table is the probability table $p_W$ for random variable $W$
 
 In terms of notation, the above marginalization procedure whereby we used the joint distribution of $W$ and $T$ to produce the marginal distribution of $W$ is written:
 
-$p_{W}(w)=\sum _{t\in \mathcal{T}}p_{W,T}(w,t),$
+{\centering$p_{W}(w)=\sum _{t\in \mathcal{T}}p_{W,T}(w,t),$ \par}
  
 where $\mathcal{T}$ is the set of values that random variable $T$ can take on. In fact, throughout this course, we will often omit explicitly writing out the alphabet of values that a random variable takes on, e.g., writing instead
 
-$p_{W}(w)=\sum _{t}p_{W,T}(w,t).$
+{\centering$p_{W}(w)=\sum _{t}p_{W,T}(w,t).$ \par}
  
 It's clear from context that we're summing over all possible values for $t$, which is going to be the values that random variable $T$ can possibly take on.
 
 As a specific example,
 
-$p_{W}(\text {rainy})=\sum _{t}p_{W,T}(\text {rainy},t)=\underbrace{p_{W,T}(\text {rainy},\text {hot})}_{1/30}+\underbrace{p_{W,T}(\text {rainy},\text {cold})}_{2/15}=\frac{1}{6}.$
+{\centering$p_{W}(\text {rainy})=\sum _{t}p_{W,T}(\text {rainy},t)=\underbrace{p_{W,T}(\text {rainy},\text {hot})}_{1/30}+\underbrace{p_{W,T}(\text {rainy},\text {cold})}_{2/15}=\frac{1}{6}.$ \par}
  
 We could similarly marginalize out random variable $W$ to get the marginal distribution $p_T$ for random variable $T$:
 
-{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-marg-cols}}
+{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-marg-cols} \par}
 
 (Note that whether we write a probability table for a single variable horizontally or vertically doesn't actually matter.)
 
 As a formula, we would write:
 
-$p_{T}(t)=\sum _{w}p_{W,T}(w,t).$
+{\centering$p_{T}(t)=\sum _{w}p_{W,T}(w,t).$ \par}
  
 For example,
 
-$p_{T}(\text {hot})=\sum _{w}p_{W,T}(w,\text {hot})=\underbrace{p_{W,T}(\text {sunny},\text {hot})}_{3/10}+\underbrace{p_{W,T}(\text {rainy},\text {hot})}_{1/30}+\underbrace{p_{W,T}(\text {snowy},\text {hot})}_{0}=\frac{1}{3}.$
+{\centering$p_{T}(\text {hot})=\sum _{w}p_{W,T}(w,\text {hot})=\underbrace{p_{W,T}(\text {sunny},\text {hot})}_{3/10}+\underbrace{p_{W,T}(\text {rainy},\text {hot})}_{1/30}+\underbrace{p_{W,T}(\text {snowy},\text {hot})}_{0}=\frac{1}{3}.$ \par}
  
 In general:
 
 \paragraph{Marginalization:} Consider two random variables $X$ and $Y$ (that take on values in the sets $\mathcal{X}$ and $\mathcal{Y}$ respectively) with joint probability table $p_{X,Y}$. For any $x\in \mathcal{X}$, the marginal probability that $X=x$ is given by
 
-$p_{X}(x)=\sum _{y}p_{X,Y}(x,y).$
+{\centering$p_{X}(x)=\sum _{y}p_{X,Y}(x,y).$ \par}
  
 \subsection{Marginalization for Many Random Variables}
 
 What happens when we have more than two random variables? Let's build on our earlier example and suppose that in addition to weather $W$ and temperature $T$, we also had a random variable $H$ for humidity that takes on values in the alphabet {dry, humid}. Then having a third random variable, we can draw out a 3D joint probability table for random variables $W$, $T$, and $H$. As an example, we could have the following:
 
-{\includegraphics[scale=0.4]{images_sec-joint-rv-marg-many-rv-joint-table}}
+{\includegraphics[scale=0.4]{images_sec-joint-rv-marg-many-rv-joint-table} \par}
 
 Here, each of the cubes/boxes stores a probability. Not visible are two of the cubes in the back left column, which for this particular example both have probability values of 0.
 
 Then to marginalize out the humidity $H$, we would add values as follows:
 
-{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-marg-many-rv-marg}}
+{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-marg-many-rv-marg} \par}
 
 The result is the joint probability table for weather $W$ and temperature $T$, shown still in 3D cubes with each cube storing a single probability.
 
 As an equation:
 
-$p_{W,T}(w,t) = \sum _ h p_{W,T,H}(w, t, h).$
+{\centering$p_{W,T}(w,t) = \sum _ h p_{W,T,H}(w, t, h).$ \par}
  
 In general, for three random variables X, Y, and Z with joint probability table pX,Y,Z, we have
 
-\begin{eqnarray}
+\begin{eqnarray*}
 p_{X,Y}(x,y)
 &=&
 \sum_{z} p_{X,Y,Z}(x,y,z), \\
@@ -247,15 +247,15 @@ p_{X,Z}(x,z)
 p_{Y,Z}(y,z)
 &=&
 \sum_{x} p_{X,Y,Z}(x,y,z).
-\end{eqnarray}
+\end{eqnarray*}
 
 Note that we can marginalize out different random variables in succession. For example, given joint probability table $p_{X,Y,Z}$, if we wanted the probability table $p_X$, we can get it by marginalizing out the two random variables $Y$ and $Z$:
 
-$p_ X(x) = \sum _{y} p_{X,Y}(x,y) = \sum _{y} \Big( \sum _{z} p_{X,Y,Z}(x,y,z) \Big).$
+{\centering$p_ X(x) = \sum _{y} p_{X,Y}(x,y) = \sum _{y} \Big( \sum _{z} p_{X,Y,Z}(x,y,z) \Big).$ \par}
  
 Even with more than three random variables, the idea is the same. For example, with four random variables $W$, $X$, $Y$, and $Z$ with joint probability table $p_{W,X,Y,Z}$, if we want the joint probability table for $X$ and $Y$, we would do the following:
 
-$p_{X,Y}(x, y) = \sum _ w \Big( \sum _ z p_{W,X,Y,Z}(w,x,y,z) \Big).$
+{\centering$p_{X,Y}(x, y) = \sum _ w \Big( \sum _ z p_{W,X,Y,Z}(w,x,y,z) \Big).$ \par}
  
 \subsection{Conditioning for Random Variables}
 
@@ -263,25 +263,25 @@ When we observe that a random variable takes on a specific value (such as $W=\te
 
 When we condition on $W=\text {rainy}$, we do a two-step procedure; first, we only keep the row for $W$ corresponding to the observed value:
 
-{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-cond-restrict}}
+{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-cond-restrict} \par}
 
 Second, we ``normalize'' the table so that its entries add up to 1, which corresponds to dividing it by the sum of the entries, which is equal to $p_{W}(\text {rainy})$ in this case:
 
-{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-cond-renormalize}}
+{\centering\includegraphics[scale=0.4]{images_sec-joint-rv-cond-renormalize} \par}
 
 Notation: The resulting probability table $p_{T\mid W}(\cdot \mid \text {rainy})$ is associated with the random variable denoted $(T\mid W=\text {rainy})$; we use ``|'' to denote that we're conditioning on things to the right of ``|'' happening (these are things that we have observed or that we are given as having happened). We read ``$T\mid W=\text {rainy}$'' as either ``$T$ given $W$ is rainy'' or ``$T$ conditioned on $W$ being rainy''. To refer to specific entries of the table, we write, for instance,
 
-$p_{T\mid W}(\text {cold}\mid \text {rainy})=\mathbb {P}(T=\text {cold}\mid W=\text {rainy})=\frac{4}{5}.$
+{\centering$p_{T\mid W}(\text {cold}\mid \text {rainy})=\mathbb {P}(T=\text {cold}\mid W=\text {rainy})=\frac{4}{5}.$ \par}
  
 In general:
 
 \paragraph{Conditioning:} Consider two random variables $X$ and $Y$ (that take on values in the sets $\mathcal{X}$ and $\mathcal{Y}$ respectively) with joint probability table $p_{X,Y}$ (from which by marginalization we can readily compute the marginal probability table $p_Y$). For any $x\in \mathcal{X}$ and $y\in \mathcal{Y}$ such that $p_{Y}(y)>0$, the conditional probability of event $X=x$ given event $Y=y$ has happened is
 
-$p_{X\mid Y}(x\mid y)\triangleq \frac{p_{X,Y}(x,y)}{p_{Y}(y)}.$
+{\centering$p_{X\mid Y}(x\mid y)\triangleq \frac{p_{X,Y}(x,y)}{p_{Y}(y)}.$ \par}
  
 For example,
 
-$p_{T\mid W}(\text {cold}\mid \text {rainy})=\frac{p_{W,T}(\text {rainy},\text {cold})}{p_{W}(\text {rainy})}=\frac{\frac{2}{15}}{\frac{1}{6}}=\frac{4}{5}.$
+{\centering$p_{T\mid W}(\text {cold}\mid \text {rainy})=\frac{p_{W,T}(\text {rainy},\text {cold})}{p_{W}(\text {rainy})}=\frac{\frac{2}{15}}{\frac{1}{6}}=\frac{4}{5}.$ \par}
  
 \paragraph{Computational interpretation:} To compute $p_{X\mid Y}(x\mid y)$, take the entry $p_{X,Y}(x,y)$ in the joint probability table corresponding to $X=x$ and $Y=y$, and then divide the entry by $p_Y(y)$, which is an entry in the marginal probability table $p_Y$ for random variable $Y$.
 
