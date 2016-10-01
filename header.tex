@@ -1,4 +1,5 @@
-\documentclass[11pt]{article}%
+\documentclass[11pt]{report}%
+%\documentclass[11pt]{article}%
 %Options -- Point size:  10pt (default), 11pt, 12pt
 %        -- Paper size:  letterpaper (default), a4paper, a5paper, b5paper
 %                        legalpaper, executivepaper
@@ -23,7 +24,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{mathabx}
-%\usepackage[retainorgcmds]{IEEEtran} %problems installing with MikTeX
+%\usepackage[retainorgcmds]{IEEEtran} % problems installing with MikTeX
 
 \usepackage{graphicx}
 \graphicspath{ {images/} }
@@ -37,10 +38,14 @@
 %\usepackage{newtxtext,newtxmath}
 \usepackage{mathptmx}
 
+% define symbol for condtional independence
+\newcommand{\bigCI}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
+
 \usepackage{subfiles}
 \usepackage[dvips,letterpaper,margin=0.75in,bottom=0.5in]{geometry}
 \usepackage{hyperref}
 
+% for source code
 \usepackage{listings}
 \usepackage{color}
 \lstset{
@@ -63,10 +68,10 @@
 %\pagestyle{empty} % Removes page numbers
 \pagestyle{headings} 
 
-\makeatletter % Need for anything that contains an @ command 
-
-\renewcommand{\maketitle} % Redefine maketitle to conserve space
-{ \begingroup \vskip 10pt \begin{center} \large {\bf \@title}
-	\vskip 10pt \large \@author \hskip 20pt \@date \end{center}
-  \vskip 10pt \endgroup \setcounter{footnote}{0} }
-\makeatother % End of region containing @ commands
+%\makeatletter % Need for anything that contains an @ command 
+%
+%\renewcommand{\maketitle} % Redefine maketitle to conserve space
+%{ \begingroup \vskip 10pt \begin{center} \large {\bf \@title}
+	%\vskip 10pt \large \@author \hskip 20pt \@date \end{center}
+  %\vskip 10pt \endgroup \setcounter{footnote}{0} }
+%\makeatother % End of region containing @ commands
