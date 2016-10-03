@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.20)  2 OCT 2016 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.20)  3 OCT 2016 15:45
 entering extended mode
 **./6008notes.tex
 (6008notes.tex
@@ -1149,23 +1149,22 @@ Non-PDF special ignored!
 {C:/Users/colin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 10.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.12 \end{abstract}
+l.14 \end{abstract}
                     [1]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 14.
- (6008notes.toc
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 16.
+ (6008notes.tocpdfTeX warning (ext4): destination with the same identifier (nam
+e{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.76 ...tional Independence}{31}{subsection.1.7.6}
@@ -1178,7 +1177,7 @@ l.76 ...tional Independence}{31}{subsection.1.7.6}
  [2]
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 21.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 22.
 (introprob.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 5.
@@ -1189,7 +1188,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 25.
 ("C:\Users\colin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<images/introprob/images_first-look-at-prob-spyder-setup.png, id=253, 773.89125
+<images/introprob/images_first-look-at-prob-spyder-setup.png, id=298, 773.89125
 pt x 558.085pt>
 File: images/introprob/images_first-look-at-prob-spyder-setup.png Graphic file 
 (type png)
@@ -1204,7 +1203,7 @@ p.png used on input line 27.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 32.
 
-<images/introprob/images_sec-intro-histogram-counts.jpg, id=263, 361.35pt x 289
+<images/introprob/images_sec-intro-histogram-counts.jpg, id=308, 361.35pt x 289
 .08pt>
 File: images/introprob/images_sec-intro-histogram-counts.jpg Graphic file (type
  jpg)
@@ -1214,7 +1213,7 @@ Package pdftex.def Info: images/introprob/images_sec-intro-histogram-counts.jpg
 (pdftex.def)             Requested size: 180.67456pt x 144.53964pt.
  [4 <./images/introprob/images_first-look-at-prob-spyder-setup.png> <./images/i
 ntroprob/images_sec-intro-histogram-counts.jpg>]
-<images/introprob/images_sec-intro-histogram-frequencies.jpg, id=280, 361.35pt 
+<images/introprob/images_sec-intro-histogram-frequencies.jpg, id=325, 361.35pt 
 x 289.08pt>
 File: images/introprob/images_sec-intro-histogram-frequencies.jpg Graphic file 
 (type jpg)
@@ -1224,7 +1223,7 @@ s.jpg used on input line 65.
 (pdftex.def)             Requested size: 180.67456pt x 144.53964pt.
 
 <images/introprob/images_sec-intro-frequency-of-heads-vs-number-of-flips.jpg, i
-d=281, 578.16pt x 289.08pt>
+d=326, 578.16pt x 289.08pt>
 File: images/introprob/images_sec-intro-frequency-of-heads-vs-number-of-flips.j
 pg Graphic file (type jpg)
 
@@ -1253,7 +1252,7 @@ Overfull \hbox (9.89017pt too wide) in paragraph at lines 74--75
  []
 
 [10]
-<images/randvar/images_sec-random-variables-main.png, id=379, 827.09pt x 604.25
+<images/randvar/images_sec-random-variables-main.png, id=424, 827.09pt x 604.25
 75pt>
 File: images/randvar/images_sec-random-variables-main.png Graphic file (type pn
 g)
@@ -1262,7 +1261,7 @@ Package pdftex.def Info: images/randvar/images_sec-random-variables-main.png us
 ed on input line 86.
 (pdftex.def)             Requested size: 330.83012pt x 241.69872pt.
  [11 <./images/randvar/images_sec-random-variables-main.png>]) (jointdist.tex
-<images/jointdist/images_sec-joint-rv-prob-space.png, id=390, 395.4775pt x 285.
+<images/jointdist/images_sec-joint-rv-prob-space.png, id=435, 395.4775pt x 285.
 065pt>
 File: images/jointdist/images_sec-joint-rv-prob-space.png Graphic file (type pn
 g)
@@ -1271,7 +1270,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-prob-space.png us
 ed on input line 13.
 (pdftex.def)             Requested size: 158.18819pt x 114.02397pt.
 
-<images/jointdist/images_sec-joint-rv-rearrange-table.png, id=391, 582.175pt x 
+<images/jointdist/images_sec-joint-rv-rearrange-table.png, id=436, 582.175pt x 
 574.145pt>
 File: images/jointdist/images_sec-joint-rv-rearrange-table.png Graphic file (ty
 pe png)
@@ -1282,7 +1281,7 @@ ng used on input line 17.
 
 [12 <./images/jointdist/images_sec-joint-rv-prob-space.png>] [13 <./images/join
 tdist/images_sec-joint-rv-rearrange-table.png>] [14] [15]
-<images/jointdist/images_sec-joint-rv-marg-rows.png, id=472, 717.68124pt x 290.
+<images/jointdist/images_sec-joint-rv-marg-rows.png, id=517, 717.68124pt x 290.
 08376pt>
 File: images/jointdist/images_sec-joint-rv-marg-rows.png Graphic file (type png
 )
@@ -1291,7 +1290,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-marg-rows.png use
 d on input line 180.
 (pdftex.def)             Requested size: 287.06741pt x 116.03143pt.
  [16 <./images/jointdist/images_sec-joint-rv-marg-rows.png>]
-<images/jointdist/images_sec-joint-rv-marg-cols.png, id=485, 424.58624pt x 496.
+<images/jointdist/images_sec-joint-rv-marg-cols.png, id=530, 424.58624pt x 496.
 85625pt>
 File: images/jointdist/images_sec-joint-rv-marg-cols.png Graphic file (type png
 )
@@ -1300,7 +1299,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-marg-cols.png use
 d on input line 202.
 (pdftex.def)             Requested size: 169.83148pt x 198.73897pt.
 
-<images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png, id=486, 430
+<images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png, id=531, 430
 .60875pt x 355.3275pt>
 File: images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png Graphic
  file (type png)
@@ -1311,7 +1310,7 @@ t-table.png used on input line 224.
 (pdftex.def)             Requested size: 172.24043pt x 142.12846pt.
 
 [17 <./images/jointdist/images_sec-joint-rv-marg-cols.png>]
-<images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png, id=494, 695.59875p
+<images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png, id=539, 695.59875p
 t x 492.84125pt>
 File: images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png Graphic file (
 type png)
@@ -1322,7 +1321,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-marg-many-rv-marg
 (pdftex.def)             Requested size: 313.01654pt x 221.7765pt.
  [18 <./images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png> <./i
 mages/jointdist/images_sec-joint-rv-marg-many-rv-marg.png>]
-<images/jointdist/images_sec-joint-rv-cond-restrict.png, id=501, 717.68124pt x 
+<images/jointdist/images_sec-joint-rv-cond-restrict.png, id=546, 717.68124pt x 
 235.88126pt>
 File: images/jointdist/images_sec-joint-rv-cond-restrict.png Graphic file (type
  png)
@@ -1331,7 +1330,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-cond-restrict.png
  used on input line 266.
 (pdftex.def)             Requested size: 287.06741pt x 94.35083pt.
 
-<images/jointdist/images_sec-joint-rv-cond-renormalize.png, id=502, 686.565pt x
+<images/jointdist/images_sec-joint-rv-cond-renormalize.png, id=547, 686.565pt x
  132.495pt>
 File: images/jointdist/images_sec-joint-rv-cond-renormalize.png Graphic file (t
 ype png)
@@ -1343,7 +1342,7 @@ png used on input line 270.
 [19 <./images/jointdist/images_sec-joint-rv-cond-restrict.png> <./images/jointd
 ist/images_sec-joint-rv-cond-renormalize.png>]) (conditioning.tex [20])
 (infbayes.tex [21] [22] [23]
-<images/infbayes/images_sec-bayes-computational-view.png, id=539, 583.17876pt x
+<images/infbayes/images_sec-bayes-computational-view.png, id=584, 583.17876pt x
  423.5825pt>
 File: images/infbayes/images_sec-bayes-computational-view.png Graphic file (typ
 e png)
@@ -1354,7 +1353,7 @@ g used on input line 141.
 
 [24]) (indepstruct.tex [25 <./images/infbayes/images_sec-bayes-computational-vi
 ew.png>]
-<images/indepstruct/images_sec-joint-rv-ex-marg.png, id=553, 570.13pt x 216.81p
+<images/indepstruct/images_sec-joint-rv-ex-marg.png, id=598, 570.13pt x 216.81p
 t>
 File: images/indepstruct/images_sec-joint-rv-ex-marg.png Graphic file (type png
 )
@@ -1363,37 +1362,58 @@ Package pdftex.def Info: images/indepstruct/images_sec-joint-rv-ex-marg.png use
 d on input line 39.
 (pdftex.def)             Requested size: 228.04796pt x 86.72246pt.
  [26 <./images/indepstruct/images_sec-joint-rv-ex-marg.png>] [27] [28] [29] [30
-] [31]) [32]
+] [31])
+(decisions.tex [32]
+<images/decisions/images_sec-expectation-example1.png, id=640, 280.04625pt x 21
+0.7875pt>
+File: images/decisions/images_sec-expectation-example1.png Graphic file (type p
+ng)
+ <use images/decisions/images_sec-expectation-example1.png>
+Package pdftex.def Info: images/decisions/images_sec-expectation-example1.png u
+sed on input line 59.
+(pdftex.def)             Requested size: 84.01451pt x 63.23672pt.
+
+<images/decisions/images_sec-expectation-example2.png, id=641, 283.0575pt x 212
+.795pt>
+File: images/decisions/images_sec-expectation-example2.png Graphic file (type p
+ng)
+ <use images/decisions/images_sec-expectation-example2.png>
+Package pdftex.def Info: images/decisions/images_sec-expectation-example2.png u
+sed on input line 67.
+(pdftex.def)             Requested size: 84.9179pt x 63.83897pt.
+ [33 <./images/decisions/images_sec-expectation-example1.png> <./images/decisio
+ns/images_sec-expectation-example2.png>] [34] [35]) (measrand.tex) (toinf.tex) 
+[36]
 Chapter 2.
-[33
+[37
 
 ]
 Chapter 3.
-[34
+[38
 
 ]
 Appendix A.
-(notation.tex [35
+(notation.tex [39
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
- [36]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
+ [40]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
  (6008notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
 Package rerunfilecheck Info: File `6008notes.out' has not changed.
-(rerunfilecheck)             Checksum: E04E285CA09803618D7DC6792F3DE9EF;3853.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
+(rerunfilecheck)             Checksum: B31B9DF6BC8D3A095668DA3E8E15FCDA;4657.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 11316 strings out of 493634
- 166293 string characters out of 3135239
+ 11362 strings out of 493634
+ 167266 string characters out of 3135239
  297167 words of memory out of 3000000
- 14196 multiletter control sequences out of 15000+200000
- 85984 words of font info for 146 fonts, out of 3000000 for 9000
+ 14213 multiletter control sequences out of 15000+200000
+ 86406 words of font info for 148 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 39i,14n,40p,1037b,1931s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,14n,40p,3317b,1931s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi4
 80\mathx10.pk> <C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\
 mathabx\dpi600\matha6.pk> <C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
@@ -1418,9 +1438,9 @@ ype1/urw/times/utmb8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/urw/times/utmr8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 6008notes.pdf (38 pages, 1343700 bytes).
+Output written on 6008notes.pdf (42 pages, 1400518 bytes).
 PDF statistics:
- 907 PDF objects out of 1000 (max. 8388607)
- 255 named destinations out of 1000 (max. 500000)
- 444 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 986 PDF objects out of 1000 (max. 8388607)
+ 270 named destinations out of 1000 (max. 500000)
+ 526 words of extra memory for PDF output out of 10000 (max. 10000000)
 

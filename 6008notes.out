@@ -41,6 +41,15 @@
 \BOOKMARK [2][-]{subsection.1.7.4}{Conditional Independence}{section.1.7}% 41
 \BOOKMARK [2][-]{subsection.1.7.5}{Explaining Away}{section.1.7}% 42
 \BOOKMARK [2][-]{subsection.1.7.6}{Practice Problem: Conditional Independence}{section.1.7}% 43
-\BOOKMARK [0][-]{chapter.2}{Graphical Models}{}% 44
-\BOOKMARK [0][-]{chapter.3}{Learning a Probabilistic Model from Data}{}% 45
-\BOOKMARK [0][-]{appendix.A}{Notation Summary}{}% 46
+\BOOKMARK [1][-]{section.1.8}{Decisions and Expectations}{chapter.1}% 44
+\BOOKMARK [2][-]{subsection.1.8.1}{Introduction to Decision Making and Expectations}{section.1.8}% 45
+\BOOKMARK [2][-]{subsection.1.8.2}{The Expected Value of a Random Variable}{section.1.8}% 46
+\BOOKMARK [2][-]{subsection.1.8.3}{Variance and Standard Deviation}{section.1.8}% 47
+\BOOKMARK [2][-]{subsection.1.8.4}{Practice Problem: The Law of Total Expectation}{section.1.8}% 48
+\BOOKMARK [1][-]{section.1.9}{Measuring Randomness}{chapter.1}% 49
+\BOOKMARK [2][-]{subsection.1.9.1}{Introduction to Information-Theoretic Measures of Randomness}{section.1.9}% 50
+\BOOKMARK [1][-]{section.1.10}{Towards Infinity in Modeling Uncertainty}{chapter.1}% 51
+\BOOKMARK [2][-]{subsection.1.10.1}{Infinite Outcomes}{section.1.10}% 52
+\BOOKMARK [0][-]{chapter.2}{Graphical Models}{}% 53
+\BOOKMARK [0][-]{chapter.3}{Learning a Probabilistic Model from Data}{}% 54
+\BOOKMARK [0][-]{appendix.A}{Notation Summary}{}% 55
