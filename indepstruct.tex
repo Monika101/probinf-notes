@@ -86,41 +86,6 @@ To compute and print the right-hand side, we do:
 print(np.outer(prob_W, prob_I))
 \end{lstlisting}
 
-TODO - add notes from video
-
-\subsection{Practice Problem: Conditional Independence}
-
-Suppose $X_0, \dots , X_{100}$ are random variables whose joint distribution has the following factorization:
-
-{\centering$p_{X_0, \dots , X_{100}}(x_0, \dots , x_{100}) = p_{X_0}(x_0) \cdot \prod _{i=1}^{100} p_{X_ i | X_{i-1}}(x_ i | x_{i-1})$ \par}
- 
-This factorization is what's called a Markov chain. We'll be seeing Markov chains a lot more later on in the course.
-
-Show that $X_{50} \perp X_{52} | X_{51}$.
-
-Solution: Notice that we can marginalize out $x_{100}$ as such:
-
-{\centering$p_{X_0, \dots , X_{99}}(x_0, \dots , x_{99}) = p_{X_0}(x_0) \cdot \prod _{i=1}^{99} p_{X_ i | X_{i-1}}(x_ i | x_{i-1}) \cdot \underbrace{\sum _{x_{100}} p_{X_{100}|X_{99}}(x_{100}|x_{99})}_{= 1} \qquad\qquad$ (2.5) \par}
- 
-Now we can repeat the same marginalization procedure to get:
-
-{\centering$p_{X_0, \dots , X_{50}}(x_0, \dots , x_{50}) = p_{X_0}(x_0) \cdot \prod _{i=1}^{50} p_{X_ i | X_{i-1}}(x_ i | x_{i-1})$ \par}
-
-In essence, we have shown that the given joint distribution factorization applies not just to the last random variable ($X_{100}$), but also up to any point in the chain.
-
-For brevity, we will now use $p(x_{i}^{j})$ as a shorthand for $p_{X_ i, \dots , X_{j}}(x_ i, \dots , x_{j})$. We want to exploit what we have shown to rewrite $p(x_{50}^{52})$
-
-\begin{eqnarray*}
-		p(x_{50}^{52})
-        &=& \sum_{x_{0} \dots x_{49}} \sum_{x_{53} \dots x_{100}} p(x_{0}^{100}) \\
-		&=& \sum_{x_{0} \dots x_{49}} \sum_{x_{53} \dots x_{100}} \left[p(x_{0}) \prod_{i=0}^{50} p(x_{i}|x_{i-1})\right] \cdot p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51}) \cdot \prod_{i=53}^{100} p(x_{i}|x_{i-1}) \\
-		&=& \sum_{x_{0} \dots x_{49}} \sum_{x_{53} \dots x_{100}} p(x_{0}^{50}) \cdot p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51}) \cdot \prod_{i=53}^{100} p(x_{i}|x_{i-1}) \\
-		&=& p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51}) \cdot \sum_{x_{0} \dots x_{49}} p(x_{0}^{50}) \underbrace{\sum_{x_{53} \dots x_{100}} \prod_{i=53}^{100} p(x_{i}|x_{i-1})}_{=1} \\
-		&=& p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51}) \cdot \sum_{x_{0} \dots x_{49}} p(x_{0}^{50}) \\
-		&=& p(x_{50}) \cdot p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51})
-    \end{eqnarray*}
-		
-where we used (2.5) for the 3rd equality and the same marginalization trick for the 5th equality. We have just shown the Markov chain property, so the conditional independence property must be satisfied.
 
 \subsection{Mutual vs Pairwise Independence}
 
@@ -194,7 +159,191 @@ But if we look all together, they're not mutually independent. For example, if I
 
 \subsection{Conditional Independence}
 
-TODO - add notes from video
+We say that two random variables $X$ and $Y$ are conditionally independent given the third random variable $Z$ if we can write the conditional distribution for both of them as the product of the individual conditionals:
 
+{\centering$p_{X,Y \mid Z} (x,y \mid z) = p_{X \mid Z} (x \mid z) p_{Y \mid Z} (y \mid z) $ \par}
+
+Intuitively, this means that once we know $Z$, then knowing something about $Y$ doesn't tell you anything about $X$, and \textit{vice versa}. 
+
+Notice that marginal independence and conditional independence are not the same thing. So if you have marginal independence, then that does not necessarily imply conditional independence. And the reverse is also not true. So two random variables $X$ and $Y$ could be independent but not conditionally independent given something else. Or two random variables could be conditionally independent but not marginally independent given something else. 
+
+As an example that illustrates this, suppose we have three random variables $R$, $S$, and $T$. We'll ask two questions: $(a)$ is $S \bigCI T$? $(b)$ is $S \bigCI T \mid R$? There are two different ways of writing the joint distribution:
+
+\begin{eqnarray*}
+(a) p_{R,S,T}(r,s,t) &=& p_R(r) p_{S \mid R}(s \mid r)  p_{T \mid R}(t \mid r) \\
+(b) p_{R,S,T}(r,s,t) &=& p_S(s) p_T(t) p_{R \mid S,T}(r \mid s,t) 
+\end{eqnarray*}
+
+%If we were to draw a little diagram for R, S, and T, then we would say first is R. Then from R, there's S. So R kind of tells you how to get S. And then from R, there's T. So once we have this, now we can answer our questions we posed before. Is S independent of T, and is S independent of T given R? So we'll 
+
+\paragraph{Part $(a)$:} To determine whether two things are independent we just write out the distribution and see if it factors --- that is, see if we can write it as something that only depends on $S$ times something that only depends on $T$. If we can, then the former is $p_S(s)$, the latter is $p_T(t)$. 
+
+To compute the distribution of $p_{S,T}(s,t)$ from $p_{R,S,T}(r,s,t)$, we just have to sum over every possible value of $r$:
+
+\begin{eqnarray*}
+p_{S,T}(s,t) &=& \sum_r p_{R,S,T}(r,s,t) \\
+             &=& \sum_r p_R(r) p_{S \mid R}(s \mid r)  p_{T \mid R}(t \mid r) \\
+						 &\neq& p_S(s) p_T(t)
+\end{eqnarray*}
+
+In general, we will not be able to factor the result because it will be a sum of different things that depend on $S$ and $T$ in different ways. So therefore, $S$ and $T$ are not independent. 
+
+Are they conditionally independent given $R$? To compute that, we have to see whether $p_{S,T}(s,t) \mid R = p_{S \mid R}(s \mid r)  p_{T \mid R}(t \mid r)$. To compute a conditional distribution, remember that we just have to divide by the distribution of whatever we're conditioning on:
+
+\begin{eqnarray*}
+p_{S,T \mid R}(s,t \mid r) &=& \frac{p_{R,S,T}(r,s,t)}{p_R(r)} \\
+             &=& \frac{p_R(r) p_{S \mid R}(s \mid r)  p_{T \mid R}(t \mid r)}{p_R(r)} \\
+						 &=& p_{S \mid R}(s \mid r)  p_{T \mid R}(t \mid r)
+\end{eqnarray*}
+
+Canceling $p_R(r)$ leaves us with exactly the two terms we want. So the joint conditional distribution  becomes the product of the two individual conditionals. So $S$ and $T$ are, in fact, conditionally independent given $R$.
+
+\paragraph{Part $(b)$:}  We have that 
+
+{\centering$p_{R,S,T}(r,s,t) = p_S(s) p_T(t) p_{R \mid S,T}(r \mid s,t)$ \par}
+
+%p R S T is p S times p T times p R given S T. So if we were to draw our little diagram for this one, it would be-- well, we start with S. Then we start with T. So we start with S and T. And from there, we get R given both of them. So given both of them, we have R. And we're interested in the two questions, is S independent of T and is S independent of T given R? So let's look at the first question. 
+
+As in part $(a)$, if we want to compute whether $S$ and $T$ are independent, we have to look at the joint distribution and see whether we can write it as a product of the two individual distributions. 
+
+Again, to compute the joint distribution we have sum over every possible $r$:
+
+\begin{eqnarray*}
+p_{S,T}(s,t) &=& \sum_r p_S(s) p_T(t) p_{R \mid S,T}(r \mid s,t) \\
+             &=& p_S(s) p_T(t) \sum_r p_{R \mid S,T}(r \mid s,t) \\
+						 &=& p_S(s) p_T(t)
+\end{eqnarray*}
+
+As $p_S(s)$ and $p_T(t)$ don't depend on $r$ they can be factored outside the summation. But no matter what $S$ and $T$ are, if we sum over every possible value of $r$, then $\sum_r p_{R \mid S,T}(r \mid s,t)$ is just going to give us 1 because it is just a probability distribution over R, and all probability distributions have to sum to 1. Hence $p_{S,T}(s,t) = p_S(s) p_T(t)$, and that's exactly the condition for independence. So in this case, $S \bigCI T$. 
+
+What about conditional independence? As in part $(a)$, we have to look at the conditional distribution $p_{S,T \mid R}(s,t \mid r)$ and see whether it factors.
+
+{\centering$p_{S,T \mid R}(s,t \mid r) = \frac{p_S(s) p_T(t) p_{R \mid S,T}(r \mid s,t)}{p_R(r)}$ \par}
+
+If we try to factor this, we'll see that we run into trouble when we get to the term $p_{R \mid S,T}(r \mid s,t){p_R(r)}$ because in general, this is not going to factor. We don't know how S and T interact here, and there are no simplifications we can do to make this term go away. So here, $S \nbigCI T \mid R$. 
+
+We've seen from the last two examples that sometimes we can have marginal independence without conditional independence, and that sometimes we can have conditional independence without marginal independence. So it's important to keep in mind that these two are not always the same thing, and knowing one doesn't necessarily tell you the other.
+
+\subsection{Explaining Away}
+
+Let's look at an example with conditional probability. Suppose we have three events, $R$, $A$, and $T$, where
+\begin{itemize}
+\item $R$ is the event that a Red Sox game 
+\item $A$ is the event there's an accident downtown
+\item $T$ is the event there is unusually bad traffic
+\end{itemize}
+
+The chance of having a game and the chance of having an accident are each independently 50:50 : 
+
+\begin{eqnarray*}
+p_R(r)
+&=&
+\begin{cases}
+0.5 & r=1\\
+0.5 & r=0.
+\end{cases} \\
+p_A(a)
+&=&
+\begin{cases}
+0.5 & a=1\\
+0.5 & a=0.
+\end{cases}
+\end{eqnarray*}
+
+Whether or not there is traffic depends on whether there's a game and whether there's an accident. This table shows the probability that $T$ is 1 for each configuration of $r$ and $a$:
+
+\begin{center}
+\begin{tabular}{ c  c | c }
+\textbf{r} & \textbf{a} & $p_{T \mid R,A} (1 \mid r,a)$ \\
+\hline
+0 &	0 &	0.3 \\
+0 &	1 &	0.9 \\
+1 &	0 &	0.9 \\
+1 &	1 &	0.3 \\
+\end{tabular}
+\end{center}
+
+So with no game and no accident, the probability of having bad traffic is 0.3. With either or both, then the probability goes up to 0.9. The table shows us the distribution for $T = 1$. The distribution for $T = 0$ would just have 1 minus this in every entry. 
+
+We want to calculate three probabilities:\\
+(a) $\mathbb{P}(R = 1)$ \\
+(b) $\mathbb{P}(R = 1 \mid T = 1)$ \\
+(b) $\mathbb{P}(R = 1 \mid T = 1, A = 1)$ 
+
+Part (a) is easy, as $\mathbb{P}(R = 1)$ is given to us as 0.5. But in (b) and (c), we're asked to find information about $R$ given $T$, whereas the problem setup gives us information about $T$ in terms of $R$. So we'll use Bayes' rule to turn the conditioning around. In both cases, we're only interested in the case where $T = 1$, so we'll not worry about the full distribution for now.
+
+Bayes' rule tells us that 
+
+{\centering$p_{R,A \mid T}(r,a \mid 1) = \frac{p_{T \mid R,A}(1 \mid r,a) p_R(r) p_A(a)}{p_T(1)}$ \par}
+
+%this is the probability of p T given R A times p of R and A, which is since they're independent just a product of the two, and divided by p T. Sorry, this should be a 1. Because we're only interest in the case where T is 1.   So we're interested in this thing for different values of R and A. And since this is going to be a distribution over R and A, anything that we get is going to have to sum up to 1 for every possible value, that is the four different possibilities for R and A should all sum up, the probabilities should all sum up to 1. And 
+
+If we look carefully, we'll see that, in this case, because $R$ and $A$ are independent 50-50, $p_R(r)$ and $p_A(a)$ are going to be the same for every combination of $r$ and $a$. Similarly, the denominator is also going to be the same for every $r$ and $a$. So we can take a shortcut and say that these terms together are equal to some constant $C$:
+
+{\centering$p_{R,A \mid T}(r,a \mid 1) = C \cdot p_{T \mid R,A}(1 \mid r,a)$ \par}
+
+The table for $p_{T \mid R,A}(1 \mid r,a)$ is shown above, and we know that $p_{R,A \mid T}(r,a \mid 1)$ is some constant times this table. The probabilities are 0.3, 0.9, 0.9, 0.9. Except we know that they have to sum to 1. So if we take everything and divide by their sum, we get the normalized distribution of $r$ and $a$ given $t=1$. 
+
+\begin{center}
+\begin{tabular}{c c | c  c}
+ & & \textbf{a} & \\
+ & & 0 & 1 \\
+\hline
+\textbf{r} & 0 &	0.1 &	0.3 \\
+ & 1 &	0.3 &	0.3 \\
+\end{tabular}
+\end{center}
+
+In part (b), we're asking for $\mathbb{P}(R = 1 \mid T = 1)$. So in this case, we don't care about $a$, we only care about $r$ being 1 and we're marginalizing over A. So from the bottom row of the normalized distribution,  $\mathbb{P}(R = 1 \mid T = 1) = 0.3 + 0.3 = 0.6$.
+
+In part (b), we're asking for $\mathbb{P}(R = 1 \mid T = 1, A = 1)$. If we condition on $a=1$, then we're restricting ourselves to the right column:
+
+\begin{center}
+\begin{tabular}{c c | c}
+ & & \textbf{a} \\
+ & & 1 \\
+\hline
+\textbf{r} & 0 &	0.3 \\
+           & 1 &	0.3 \\
+\end{tabular}
+\end{center}
+
+The probability that $r = 1$ is 0.3 divided by the marginal probability of the column, that is 0.3 divided by 0.6. It occurs half the time because it's equally likely to be 0 or 1. So here our probability goes back down to 0.5. Intuitively, why is this? Why does our probability change? When we had more information the first time, in (b), $T = 1$, our probability went up from 0.5 to 0.6. But when we added even more information, then it went back down. 
+
+If we go back and look at the scenario, what this is asking is only given that there is traffic, what's the probability that there was a game? Well, it's a little higher in (b) because we know games cause traffic. So if there was traffic, then it's reasonable to assume that there was a game. So the probability goes up. But we know that both games and accidents cause traffic. So if we know that there was traffic and we know there was an accident, in (c), then it's more likely that the traffic was caused by the accident. So this is called explaining away, where once we observe one explanation, that is the accident, our belief in a different explanation, the Red Sox game, goes back down.  
+
+\subsection{Practice Problem: Conditional Independence}
+
+Suppose $X_0, \dots , X_{100}$ are random variables whose joint distribution has the following factorization:
+
+{\centering$p_{X_0, \dots , X_{100}}(x_0, \dots , x_{100}) = p_{X_0}(x_0) \cdot \prod _{i=1}^{100} p_{X_ i | X_{i-1}}(x_ i | x_{i-1})$ \par}
+ 
+This factorization is what's called a Markov chain. We'll be seeing Markov chains a lot more later on in the course.
+
+Show that $X_{50} \perp X_{52} | X_{51}$.
+
+Solution: Notice that we can marginalize out $x_{100}$ as such:
+
+{\centering$p_{X_0, \dots , X_{99}}(x_0, \dots , x_{99}) = p_{X_0}(x_0) \cdot \prod _{i=1}^{99} p_{X_ i | X_{i-1}}(x_ i | x_{i-1}) \cdot \underbrace{\sum _{x_{100}} p_{X_{100}|X_{99}}(x_{100}|x_{99})}_{= 1} \qquad\qquad$ (2.5) \par}
+ 
+Now we can repeat the same marginalization procedure to get:
+
+{\centering$p_{X_0, \dots , X_{50}}(x_0, \dots , x_{50}) = p_{X_0}(x_0) \cdot \prod _{i=1}^{50} p_{X_ i | X_{i-1}}(x_ i | x_{i-1})$ \par}
+
+In essence, we have shown that the given joint distribution factorization applies not just to the last random variable ($X_{100}$), but also up to any point in the chain.
+
+For brevity, we will now use $p(x_{i}^{j})$ as a shorthand for $p_{X_ i, \dots , X_{j}}(x_ i, \dots , x_{j})$. We want to exploit what we have shown to rewrite $p(x_{50}^{52})$
+
+\begin{eqnarray*}
+		p(x_{50}^{52})
+        &=& \sum_{x_{0} \dots x_{49}} \sum_{x_{53} \dots x_{100}} p(x_{0}^{100}) \\
+		&=& \sum_{x_{0} \dots x_{49}} \sum_{x_{53} \dots x_{100}} \left[p(x_{0}) \prod_{i=0}^{50} p(x_{i}|x_{i-1})\right] \cdot p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51}) \cdot \prod_{i=53}^{100} p(x_{i}|x_{i-1}) \\
+		&=& \sum_{x_{0} \dots x_{49}} \sum_{x_{53} \dots x_{100}} p(x_{0}^{50}) \cdot p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51}) \cdot \prod_{i=53}^{100} p(x_{i}|x_{i-1}) \\
+		&=& p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51}) \cdot \sum_{x_{0} \dots x_{49}} p(x_{0}^{50}) \underbrace{\sum_{x_{53} \dots x_{100}} \prod_{i=53}^{100} p(x_{i}|x_{i-1})}_{=1} \\
+		&=& p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51}) \cdot \sum_{x_{0} \dots x_{49}} p(x_{0}^{50}) \\
+		&=& p(x_{50}) \cdot p(x_{51}|x_{50}) \cdot p(x_{52}|x_{51})
+    \end{eqnarray*}
+		
+where we used (2.5) for the 3rd equality and the same marginalization trick for the 5th equality. We have just shown the Markov chain property, so the conditional independence property must be satisfied.
 
 \end{document}

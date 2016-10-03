@@ -37,8 +37,10 @@
 \BOOKMARK [1][-]{section.1.7}{Independence Structure}{chapter.1}% 37
 \BOOKMARK [2][-]{subsection.1.7.1}{Independent Events}{section.1.7}% 38
 \BOOKMARK [2][-]{subsection.1.7.2}{Independent Random Variables}{section.1.7}% 39
-\BOOKMARK [2][-]{subsection.1.7.3}{Practice Problem: Conditional Independence}{section.1.7}% 40
-\BOOKMARK [2][-]{subsection.1.7.4}{Mutual vs Pairwise Independence}{section.1.7}% 41
-\BOOKMARK [2][-]{subsection.1.7.5}{Conditional Independence}{section.1.7}% 42
-\BOOKMARK [0][-]{chapter.2}{Graphical Models}{}% 43
-\BOOKMARK [0][-]{chapter.3}{Learning a Probabilistic Model from Data}{}% 44
+\BOOKMARK [2][-]{subsection.1.7.3}{Mutual vs Pairwise Independence}{section.1.7}% 40
+\BOOKMARK [2][-]{subsection.1.7.4}{Conditional Independence}{section.1.7}% 41
+\BOOKMARK [2][-]{subsection.1.7.5}{Explaining Away}{section.1.7}% 42
+\BOOKMARK [2][-]{subsection.1.7.6}{Practice Problem: Conditional Independence}{section.1.7}% 43
+\BOOKMARK [0][-]{chapter.2}{Graphical Models}{}% 44
+\BOOKMARK [0][-]{chapter.3}{Learning a Probabilistic Model from Data}{}% 45
+\BOOKMARK [0][-]{appendix.A}{Notation Summary}{}% 46

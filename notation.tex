@@ -1,0 +1,34 @@
+\documentclass[6008notes.tex]{subfiles}
+\begin{document}
+
+Typically we use a capital letter like $X$ to denote a random variable, a script (or calligraphic) letter $\mathcal{X}$ to denote a set (or an event), and a lowercase letter like $x$ to refer to a nonrandom variable. Occasionally we will also use capital letters to refer to a constant that is not varying throughout the problem (in contrast to using a lowercase letter like $x$ that can be a ``dummy'' variable such as in a summation $\sum _{x}p_{X}(x)$, for which lowercase $x$ refers to a specific constant value but we are varying what $x$ is and it is effectively a temporary variable that we do not need after computing the summation).
+
+{\renewcommand{\arraystretch}{2}
+\begin{tabular}{c L}
+$p_X$ or $p_{X}(\cdot )$	& probability table/probability mass function (PMF)/probability distribution/marginal distribution of random variable $X$ \\
+
+$p_X(x)$ or $\mathbb {P}(X=x)$	& probability that random variable $X$ takes on value $x$ \\
+
+$p_{X,Y}$ or $p_{X,Y}(\cdot ,\cdot )$	& joint probability table/joint PMF/joint probability distribution of random variables $X$ and $Y$ \\
+
+$p_{X,Y}(x,y)$ or $\mathbb {P}(X=x,Y=y)$	& probability that $X$ takes on value $x$ and $Y$ takes on value $y$ \\
+$p_{X\mid Y}(\cdot \mid y)$	& conditional probability table/conditional PMF/conditional probability distribution of $X$ given $Y$ takes on value $y$ \\
+$p_{X\mid Y}(x\mid y)$ or $\mathbb {P}(X=x\mid Y=y)$	& probability that $X$ takes on value $x$ given that $Y$ takes on value $y$ \\
+$X\sim p$ or $X\sim p(\cdot )$ &	$X$ is distributed according to distribution $p$ \\
+$X\perp Y$	& $X$ and $Y$ are independent \\
+$X\perp Y\mid Z$	& $X$ and $Y$ are independent given $Z$
+\end{tabular}}
+
+We will also of course be dealing with many events or many random variables. For example, $\mathbb {P}(\mathcal{A},\mathcal{B},\mathcal{C}\mid \mathcal{D},\mathcal{E})$ would be the probability that events $\mathcal{A}$, $\mathcal{B}$, and $\mathcal{C}$ all occur, given that both events $\mathcal{D}$ and $\mathcal{E}$ occur, which by the definition of conditional probability would be
+
+{\centering$\mathbb {P}(\mathcal{A},\mathcal{B},\mathcal{C}\mid \mathcal{D},\mathcal{E})=\frac{\mathbb {P}(\mathcal{A},\mathcal{B},\mathcal{C},\mathcal{D},\mathcal{E})}{\mathbb {P}(\mathcal{D},\mathcal{E})}.$ \par}
+ 
+Similarly, $p_{X,Y,Z\mid V,W}$ would refer to a joint conditional distribution of random variables $X$, $Y$, and $Z$ given both $V$ and $W$ taking on specific values together:
+
+{\centering$p_{X,Y,Z\mid V,W}(x,y,z\mid v,w)=\frac{p_{X,Y,Z,V,W}(x,y,z,v,w)}{p_{V,W}(v,w)}.$ \par}
+ 
+When we have a collection of random variables, e.g., $W$,$X$,$Y$,$Z$, if we say that they are independent (without specifying what type of independence), then what we mean is mutual independence, which means that the joint distribution factorizes into the marginal distributions:
+
+{\centering$p_{W,X,Y,Z}(w,x,y,z)=p_{W}(w)p_{X}(x)p_{Y}(y)p_{Z}(z)\qquad \text {for all }w,x,y,z.$ \par}
+
+\end{document}

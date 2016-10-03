@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.20)  30 SEP 2016 18:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.20)  2 OCT 2016 17:51
 entering extended mode
 **./6008notes.tex
 (6008notes.tex
@@ -791,6 +791,16 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
+) ("C:\Users\colin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen128
+\extrarowheight=\dimen129
+\NC@list=\toks26
+\extratabsurround=\skip60
+\backup@length=\skip61
+)
+("C:\Users\colin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\cancel\cancel.sty"
+Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
 ("C:\Users\colin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfiles\subfiles.
 sty"
@@ -799,8 +809,8 @@ Package: subfiles 2012/05/23 Federico Garcia
 ("C:\Users\colin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbatim.sty
 "
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks26
-\verbatim@line=\toks27
+\every@verbatim=\toks27
+\verbatim@line=\toks28
 \verbatim@in@stream=\read1
 ))
 ("C:\Users\colin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
@@ -824,15 +834,15 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count114
 \Gm@cntv=\count115
 \c@Gm@tempcnt=\count116
-\Gm@bindingoffset=\dimen128
-\Gm@wd@mp=\dimen129
-\Gm@odd@mp=\dimen130
-\Gm@even@mp=\dimen131
-\Gm@layoutwidth=\dimen132
-\Gm@layoutheight=\dimen133
-\Gm@layouthoffset=\dimen134
-\Gm@layoutvoffset=\dimen135
-\Gm@dimlist=\toks28
+\Gm@bindingoffset=\dimen130
+\Gm@wd@mp=\dimen131
+\Gm@odd@mp=\dimen132
+\Gm@even@mp=\dimen133
+\Gm@layoutwidth=\dimen134
+\Gm@layoutheight=\dimen135
+\Gm@layouthoffset=\dimen136
+\Gm@layoutvoffset=\dimen137
+\Gm@dimlist=\toks29
 
 ("C:\Users\colin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
 cfg"))
@@ -893,7 +903,7 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 .sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen136
+\@linkdim=\dimen138
 \Hy@linkcounter=\count117
 \Hy@pagecounter=\count118
 
@@ -922,10 +932,10 @@ Package hyperref Info: Bookmarks ON on input line 4688.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen137
+\XeTeXLinkMargin=\dimen139
 \Fld@menulength=\count121
-\Field@Width=\dimen138
-\Fld@charsize=\dimen139
+\Field@Width=\dimen140
+\Fld@charsize=\dimen141
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -955,22 +965,22 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip60
+\Hy@SectionHShift=\skip62
 )
 ("C:\Users\colin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
 sty"
 \lst@mode=\count127
 \lst@gtempboxa=\box32
-\lst@token=\toks29
+\lst@token=\toks30
 \lst@length=\count128
-\lst@currlwidth=\dimen140
+\lst@currlwidth=\dimen142
 \lst@column=\count129
 \lst@pos=\count130
-\lst@lostspace=\dimen141
-\lst@width=\dimen142
+\lst@lostspace=\dimen143
+\lst@width=\dimen144
 \lst@newlines=\count131
 \lst@lineno=\count132
-\lst@maxwidth=\dimen143
+\lst@maxwidth=\dimen145
 
 ("C:\Users\colin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.s
 ty"
@@ -1024,16 +1034,16 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count135
-\scratchdimen=\dimen144
+\scratchdimen=\dimen146
 \scratchbox=\box34
 \nofMPsegments=\count136
 \nofMParguments=\count137
-\everyMPshowfont=\toks30
+\everyMPshowfont=\toks31
 \MPscratchCnt=\count138
-\MPscratchDim=\dimen145
+\MPscratchDim=\dimen147
 \MPnumerator=\count139
 \makeMPintoPDFobject=\count140
-\everyMPtoPDFconversion=\toks31
+\everyMPtoPDFconversion=\toks32
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: floatrow package is loaded.
@@ -1158,7 +1168,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 ...erline {2}Graphical Models}{30}{chapter.2}
+l.76 ...tional Independence}{31}{subsection.1.7.6}
                                                    [1
 
 ])
@@ -1179,7 +1189,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 25.
 ("C:\Users\colin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<images/introprob/images_first-look-at-prob-spyder-setup.png, id=243, 773.89125
+<images/introprob/images_first-look-at-prob-spyder-setup.png, id=253, 773.89125
 pt x 558.085pt>
 File: images/introprob/images_first-look-at-prob-spyder-setup.png Graphic file 
 (type png)
@@ -1194,7 +1204,7 @@ p.png used on input line 27.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 32.
 
-<images/introprob/images_sec-intro-histogram-counts.jpg, id=253, 361.35pt x 289
+<images/introprob/images_sec-intro-histogram-counts.jpg, id=263, 361.35pt x 289
 .08pt>
 File: images/introprob/images_sec-intro-histogram-counts.jpg Graphic file (type
  jpg)
@@ -1204,7 +1214,7 @@ Package pdftex.def Info: images/introprob/images_sec-intro-histogram-counts.jpg
 (pdftex.def)             Requested size: 180.67456pt x 144.53964pt.
  [4 <./images/introprob/images_first-look-at-prob-spyder-setup.png> <./images/i
 ntroprob/images_sec-intro-histogram-counts.jpg>]
-<images/introprob/images_sec-intro-histogram-frequencies.jpg, id=270, 361.35pt 
+<images/introprob/images_sec-intro-histogram-frequencies.jpg, id=280, 361.35pt 
 x 289.08pt>
 File: images/introprob/images_sec-intro-histogram-frequencies.jpg Graphic file 
 (type jpg)
@@ -1214,7 +1224,7 @@ s.jpg used on input line 65.
 (pdftex.def)             Requested size: 180.67456pt x 144.53964pt.
 
 <images/introprob/images_sec-intro-frequency-of-heads-vs-number-of-flips.jpg, i
-d=271, 578.16pt x 289.08pt>
+d=281, 578.16pt x 289.08pt>
 File: images/introprob/images_sec-intro-frequency-of-heads-vs-number-of-flips.j
 pg Graphic file (type jpg)
 
@@ -1243,7 +1253,7 @@ Overfull \hbox (9.89017pt too wide) in paragraph at lines 74--75
  []
 
 [10]
-<images/randvar/images_sec-random-variables-main.png, id=369, 827.09pt x 604.25
+<images/randvar/images_sec-random-variables-main.png, id=379, 827.09pt x 604.25
 75pt>
 File: images/randvar/images_sec-random-variables-main.png Graphic file (type pn
 g)
@@ -1252,7 +1262,7 @@ Package pdftex.def Info: images/randvar/images_sec-random-variables-main.png us
 ed on input line 86.
 (pdftex.def)             Requested size: 330.83012pt x 241.69872pt.
  [11 <./images/randvar/images_sec-random-variables-main.png>]) (jointdist.tex
-<images/jointdist/images_sec-joint-rv-prob-space.png, id=380, 395.4775pt x 285.
+<images/jointdist/images_sec-joint-rv-prob-space.png, id=390, 395.4775pt x 285.
 065pt>
 File: images/jointdist/images_sec-joint-rv-prob-space.png Graphic file (type pn
 g)
@@ -1261,7 +1271,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-prob-space.png us
 ed on input line 13.
 (pdftex.def)             Requested size: 158.18819pt x 114.02397pt.
 
-<images/jointdist/images_sec-joint-rv-rearrange-table.png, id=381, 582.175pt x 
+<images/jointdist/images_sec-joint-rv-rearrange-table.png, id=391, 582.175pt x 
 574.145pt>
 File: images/jointdist/images_sec-joint-rv-rearrange-table.png Graphic file (ty
 pe png)
@@ -1272,7 +1282,7 @@ ng used on input line 17.
 
 [12 <./images/jointdist/images_sec-joint-rv-prob-space.png>] [13 <./images/join
 tdist/images_sec-joint-rv-rearrange-table.png>] [14] [15]
-<images/jointdist/images_sec-joint-rv-marg-rows.png, id=462, 717.68124pt x 290.
+<images/jointdist/images_sec-joint-rv-marg-rows.png, id=472, 717.68124pt x 290.
 08376pt>
 File: images/jointdist/images_sec-joint-rv-marg-rows.png Graphic file (type png
 )
@@ -1281,7 +1291,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-marg-rows.png use
 d on input line 180.
 (pdftex.def)             Requested size: 287.06741pt x 116.03143pt.
  [16 <./images/jointdist/images_sec-joint-rv-marg-rows.png>]
-<images/jointdist/images_sec-joint-rv-marg-cols.png, id=475, 424.58624pt x 496.
+<images/jointdist/images_sec-joint-rv-marg-cols.png, id=485, 424.58624pt x 496.
 85625pt>
 File: images/jointdist/images_sec-joint-rv-marg-cols.png Graphic file (type png
 )
@@ -1290,7 +1300,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-marg-cols.png use
 d on input line 202.
 (pdftex.def)             Requested size: 169.83148pt x 198.73897pt.
 
-<images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png, id=476, 430
+<images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png, id=486, 430
 .60875pt x 355.3275pt>
 File: images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png Graphic
  file (type png)
@@ -1301,7 +1311,7 @@ t-table.png used on input line 224.
 (pdftex.def)             Requested size: 172.24043pt x 142.12846pt.
 
 [17 <./images/jointdist/images_sec-joint-rv-marg-cols.png>]
-<images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png, id=484, 695.59875p
+<images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png, id=494, 695.59875p
 t x 492.84125pt>
 File: images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png Graphic file (
 type png)
@@ -1312,7 +1322,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-marg-many-rv-marg
 (pdftex.def)             Requested size: 313.01654pt x 221.7765pt.
  [18 <./images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png> <./i
 mages/jointdist/images_sec-joint-rv-marg-many-rv-marg.png>]
-<images/jointdist/images_sec-joint-rv-cond-restrict.png, id=491, 717.68124pt x 
+<images/jointdist/images_sec-joint-rv-cond-restrict.png, id=501, 717.68124pt x 
 235.88126pt>
 File: images/jointdist/images_sec-joint-rv-cond-restrict.png Graphic file (type
  png)
@@ -1321,7 +1331,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-cond-restrict.png
  used on input line 266.
 (pdftex.def)             Requested size: 287.06741pt x 94.35083pt.
 
-<images/jointdist/images_sec-joint-rv-cond-renormalize.png, id=492, 686.565pt x
+<images/jointdist/images_sec-joint-rv-cond-renormalize.png, id=502, 686.565pt x
  132.495pt>
 File: images/jointdist/images_sec-joint-rv-cond-renormalize.png Graphic file (t
 ype png)
@@ -1333,7 +1343,7 @@ png used on input line 270.
 [19 <./images/jointdist/images_sec-joint-rv-cond-restrict.png> <./images/jointd
 ist/images_sec-joint-rv-cond-renormalize.png>]) (conditioning.tex [20])
 (infbayes.tex [21] [22] [23]
-<images/infbayes/images_sec-bayes-computational-view.png, id=529, 583.17876pt x
+<images/infbayes/images_sec-bayes-computational-view.png, id=539, 583.17876pt x
  423.5825pt>
 File: images/infbayes/images_sec-bayes-computational-view.png Graphic file (typ
 e png)
@@ -1344,7 +1354,7 @@ g used on input line 141.
 
 [24]) (indepstruct.tex [25 <./images/infbayes/images_sec-bayes-computational-vi
 ew.png>]
-<images/indepstruct/images_sec-joint-rv-ex-marg.png, id=543, 570.13pt x 216.81p
+<images/indepstruct/images_sec-joint-rv-ex-marg.png, id=553, 570.13pt x 216.81p
 t>
 File: images/indepstruct/images_sec-joint-rv-ex-marg.png Graphic file (type png
 )
@@ -1352,29 +1362,35 @@ File: images/indepstruct/images_sec-joint-rv-ex-marg.png Graphic file (type png
 Package pdftex.def Info: images/indepstruct/images_sec-joint-rv-ex-marg.png use
 d on input line 39.
 (pdftex.def)             Requested size: 228.04796pt x 86.72246pt.
- [26 <./images/indepstruct/images_sec-joint-rv-ex-marg.png>] [27] [28]) [29]
+ [26 <./images/indepstruct/images_sec-joint-rv-ex-marg.png>] [27] [28] [29] [30
+] [31]) [32]
 Chapter 2.
-[30
+[33
 
 ]
 Chapter 3.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
-[31
+[34
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
+Appendix A.
+(notation.tex [35
+
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
+ [36]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
  (6008notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 38.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 38.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `6008notes.out' has not changed.
-(rerunfilecheck)             Checksum: 91ECC1152CEAC6E8AD113FDE189312F1;3729.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 38.
+(rerunfilecheck)             Checksum: E04E285CA09803618D7DC6792F3DE9EF;3853.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 11227 strings out of 493634
- 165098 string characters out of 3135239
- 295623 words of memory out of 3000000
- 14125 multiletter control sequences out of 15000+200000
+ 11316 strings out of 493634
+ 166293 string characters out of 3135239
+ 297167 words of memory out of 3000000
+ 14196 multiletter control sequences out of 15000+200000
  85984 words of font info for 146 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  39i,14n,40p,1037b,1931s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1392,18 +1408,19 @@ habx\dpi657\matha10.pk>{C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/
 enc/dvips/fontname/8r.enc}<C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/colin/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/colin/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users
-/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/rsfs/rsfs10.pfb><C:
-/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb>
-<C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.p
-fb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb
-8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/
-utmr8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/ti
-mes/utmr8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
-w/times/utmri8a.pfb>
-Output written on 6008notes.pdf (33 pages, 1319734 bytes).
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/User
+s/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+rsfs/rsfs10.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
+rw/symbol/usyr.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/urw/symbol/usyr.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/urw/times/utmb8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/urw/times/utmr8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/urw/times/utmr8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on 6008notes.pdf (38 pages, 1343700 bytes).
 PDF statistics:
- 864 PDF objects out of 1000 (max. 8388607)
- 246 named destinations out of 1000 (max. 500000)
- 428 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 907 PDF objects out of 1000 (max. 8388607)
+ 255 named destinations out of 1000 (max. 500000)
+ 444 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -38,8 +38,16 @@
 %\usepackage{newtxtext,newtxmath}
 \usepackage{mathptmx}
 
-% define symbol for condtional independence
+% wrap within tables
+\usepackage{array}
+\newcolumntype{L}{>{\centering\arraybackslash}m{12cm}}
+
+
+% define symbols for condtional independence
+%\usepackage{centernot}
+\usepackage{cancel}
 \newcommand{\bigCI}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
+\newcommand{\nbigCI}{\cancel{\bigCI}}
 
 \usepackage{subfiles}
 \usepackage[dvips,letterpaper,margin=0.75in,bottom=0.5in]{geometry}

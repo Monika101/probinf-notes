@@ -68,8 +68,12 @@
 \contentsline {subsection}{\numberline {1.7.1}Independent Events}{25}{subsection.1.7.1}
 \contentsline {subsection}{\numberline {1.7.2}Independent Random Variables}{26}{subsection.1.7.2}
 \contentsline {paragraph}{Exercise: Independent Random Variables}{26}{section*.32}
-\contentsline {subsection}{\numberline {1.7.3}Practice Problem: Conditional Independence}{27}{subsection.1.7.3}
-\contentsline {subsection}{\numberline {1.7.4}Mutual vs Pairwise Independence}{27}{subsection.1.7.4}
-\contentsline {subsection}{\numberline {1.7.5}Conditional Independence}{29}{subsection.1.7.5}
-\contentsline {chapter}{\numberline {2}Graphical Models}{30}{chapter.2}
-\contentsline {chapter}{\numberline {3}Learning a Probabilistic Model from Data}{31}{chapter.3}
+\contentsline {subsection}{\numberline {1.7.3}Mutual vs Pairwise Independence}{27}{subsection.1.7.3}
+\contentsline {subsection}{\numberline {1.7.4}Conditional Independence}{28}{subsection.1.7.4}
+\contentsline {paragraph}{Part $(a)$:}{28}{section*.33}
+\contentsline {paragraph}{Part $(b)$:}{29}{section*.34}
+\contentsline {subsection}{\numberline {1.7.5}Explaining Away}{29}{subsection.1.7.5}
+\contentsline {subsection}{\numberline {1.7.6}Practice Problem: Conditional Independence}{31}{subsection.1.7.6}
+\contentsline {chapter}{\numberline {2}Graphical Models}{33}{chapter.2}
+\contentsline {chapter}{\numberline {3}Learning a Probabilistic Model from Data}{34}{chapter.3}
+\contentsline {chapter}{\numberline {A}Notation Summary}{35}{appendix.A}
