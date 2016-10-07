@@ -83,8 +83,27 @@
 \contentsline {paragraph}{Solution:}{35}{section*.36}
 \contentsline {section}{\numberline {1.9}Measuring Randomness}{36}{section.1.9}
 \contentsline {subsection}{\numberline {1.9.1}Introduction to Information-Theoretic Measures of Randomness}{36}{subsection.1.9.1}
-\contentsline {section}{\numberline {1.10}Towards Infinity in Modeling Uncertainty}{36}{section.1.10}
-\contentsline {subsection}{\numberline {1.10.1}Infinite Outcomes}{36}{subsection.1.10.1}
-\contentsline {chapter}{\numberline {2}Graphical Models}{37}{chapter.2}
-\contentsline {chapter}{\numberline {3}Learning a Probabilistic Model from Data}{38}{chapter.3}
-\contentsline {chapter}{\numberline {A}Notation Summary}{39}{appendix.A}
+\contentsline {subsection}{\numberline {1.9.2}Shannon Information Content}{37}{subsection.1.9.2}
+\contentsline {subsection}{\numberline {1.9.3}Shannon Entropy}{37}{subsection.1.9.3}
+\contentsline {paragraph}{Notation:}{38}{section*.37}
+\contentsline {subsection}{\numberline {1.9.4}Information Divergence}{38}{subsection.1.9.4}
+\contentsline {subsection}{\numberline {1.9.5}Proof of Gibbs' Inequality}{40}{subsection.1.9.5}
+\contentsline {paragraph}{Gibbs' inequality:}{40}{section*.38}
+\contentsline {paragraph}{Proof:}{40}{section*.39}
+\contentsline {paragraph}{Claim:}{41}{section*.40}
+\contentsline {paragraph}{Proof:}{41}{section*.41}
+\contentsline {subsection}{\numberline {1.9.6}Mutual Information}{42}{subsection.1.9.6}
+\contentsline {subsection}{\numberline {1.9.7}Exercise: Mutual Information}{42}{subsection.1.9.7}
+\contentsline {subsection}{\numberline {1.9.8}Information-Theoretic Measures of Randomness: Where We'll See Them Next}{43}{subsection.1.9.8}
+\contentsline {section}{\numberline {1.10}Towards Infinity in Modeling Uncertainty}{43}{section.1.10}
+\contentsline {subsection}{\numberline {1.10.1}Infinite Outcomes}{43}{subsection.1.10.1}
+\contentsline {subsection}{\numberline {1.10.2}The Geometric Distribution}{44}{subsection.1.10.2}
+\contentsline {subsection}{\numberline {1.10.3}Practice Problem: The Geometric Distribution}{44}{subsection.1.10.3}
+\contentsline {paragraph}{Solution: }{44}{section*.42}
+\contentsline {paragraph}{Solution: }{44}{section*.43}
+\contentsline {subsection}{\numberline {1.10.4}Discrete Probability Spaces and Random Variables}{44}{subsection.1.10.4}
+\contentsline {paragraph}{Definition of a ``discrete probability space'':}{45}{section*.44}
+\contentsline {paragraph}{Definition of a ``discrete random variable'':}{45}{section*.45}
+\contentsline {chapter}{\numberline {2}Graphical Models}{46}{chapter.2}
+\contentsline {chapter}{\numberline {3}Learning a Probabilistic Model from Data}{47}{chapter.3}
+\contentsline {chapter}{\numberline {A}Notation Summary}{48}{appendix.A}

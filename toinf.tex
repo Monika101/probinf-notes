@@ -6,7 +6,76 @@
 
 \subsection{Infinite Outcomes}
 
+What if we want an infinite number of outcomes? For example, consider an underlying experiment where we keep flipping a coin until we see the first heads. We might have to flip an arbitrarily large number of tosses! Here, the sample space would consist of getting heads for the first time after 1 toss, after 2 tosses, and so forth, ad infinitum.
+
+On a computer, we can't actually store an arbitrary probability table with an infinite number of entries.
+
+A few workarounds:
+
+\begin{itemize}
+\item Approximate the probability distribution with a finite probability space.
+
+\item In the above example, we could for example truncate and lump together all the possible outcomes in which heads appears after the 1000-th toss into a single possible outcome; we lose the ability to reason about the first heads appearing on, say, the 2000-th toss, but we could argue that heads appearing after the 1000th toss is extremely rare anyways.
+
+\item For very specific probability distributions, there can be a way for us to represent the distribution ``in closed form'' meaning that if we just keep track of a few numbers, these few numbers are enough to tell us what the probability is for any possible outcome in an infinitely large sample space.
+\end{itemize}
+
+Recall that the binomial distribution is an example of this: with just two numbers, we can query any entry in a probability table with far more than just two entries!
+
+\subsection{The Geometric Distribution}
+
+We now give an example of a distribution with an infinite alphabet size called the geometric distribution that has only 1 parameter. Thus, storing 1 number tells you what all the probability table entries are, even though there are an infinite number of entries!
+
+TODO - add notes from video
+
+%Okay, I'm going to talk about the geometric distribution. Basically what this is looking at is let's say I have some experiment that succeeds with some probability. How many times do I have to run independent trials of this experiment until I see the first success? So I'm going to word this in terms of coin flipping. Let's say that I have a biased coin, where if I toss it, the probability of heads is p. And so I'm going to keep tossing this coin until I see the first heads. This is like I fail a bunch of times until I first succeed. So what are the possible outcomes? Well, it could be that I get heads in one toss, or I get tails and then I get heads, or I get 2 tails and then heads, and so forth. So this here is our sample space. And so now we're going to assign probabilities to each of these outcomes. And so well, what's the probability of heads in one toss? Well, it's just p. So what about the probability of tails and then heads? Well, since the tosses are independent, this is going to be the probability of tails first and then heads second. So again, this product is because these two coin flips are independent. And so this is just going to be 1 minus p times p. And similarly, the probability of 2 tails and then a heads is going to be just the probability 1 minus p to the power of 2 times p. And you can keep going. But getting back to the original question "how many tosses until the first heads?"-- we can phrase that in terms of a random variable. So let random variable X be the number of tosses until we see the first heads. So well, the possible outcomes here are, of course, 1, 2, 3, and so forth, so the set of positive integers. I'll denote this as script X. And this is the alphabet of random variable X, meaning that these are the possible values that random variable X can take on. As a reminder, a random variable is a function that maps from the sample space to this alphabet. So what does that mean? Well, X takes as input an element in the sample space, so for example, heads. Well, what is this? This is going to be 1 because this is heads in one toss. And similarly, X of tails and then heads, well, this is going to be equal to 2, because we have two tosses until the first heads. And so forth. So what is the probability that X is equal to some little x? So this here is shorthand. So X equals x is shorthand for saying the set of all little omega within the sample space such that X of omega is equal to little x. So for example, if little x is 1, then we're looking at all possible outcomes in the sample space for which X of that outcome, is 1. So there's only one possible answer there, which is "H". So anyways, by doing this mapping, you can see that the probability of X being equal to little x is just going to be the probability of x minus 1 tails followed by heads on the xth toss. So as discussed earlier, this is just going to be 1 minus p to the power of x minus 1 and then times p. So this here... Again, this is defined for x equals 1, 2, and so forth. This here is called the probability mass function of random variable X. In particular, this is the probability mass function of a geometric random variable with parameter p. So we denote that by saying x is distributed as-- so this wiggle is read as "distributed as" geometric with parameter p. And this here is equivalent to saying random variable X has this probability mass function. And just as an ending remark, this is referred to as a geometric distribution because of the geometric decay in this probability as you increase x.
 
 
+\subsection{Practice Problem: The Geometric Distribution}
+
+Let $X \sim \text {Geo}(p)$ so that
+
+{\centering$p_ X(x) = (1-p)^{x-1} p\qquad \text {for }x=1, 2, \dots$ \par}
+ 
+\begin{itemize}
+\item Show that each of the table entries $p_X(x)$ is nonnegative for $x = 1, 2, \dots$.
+\end{itemize}
+
+\paragraph{Solution: } Note that $(1-p) \ge 0$, $x-1 \ge 0$, and $p \ge 0$, and so $(1-p)^{x-1}p \ge 0$ for all $p \in (0,1)$ and $x=1,2,3,\dots$
+
+\begin{itemize}
+\item Show that the sum of all the table entries is 1, i.e., $\sum _{x=1}^\infty p_ X(x) = 1$.
+\end{itemize}
+
+You may find the following result from calculus helpful: For $r\in (-1,1)$,
+
+{\centering$\sum _{i=0}^{\infty }r^{i}=\frac{1}{1-r}.$ \par}
+
+\paragraph{Solution: } For $p \in (0,1)$,
+
+{\centering$\sum _{x=1}^{\infty }p_{X}(x)=\sum _{x=1}^{\infty }(1-p)^{x-1}p\overset {(a)}{=}p\sum _{i=0}^{\infty }(1-p)^{i}\overset {(b)}{=}p\cdot \frac{1}{1-(1-p)}=p\cdot \frac{1}{p}=1,$ \par}
+ 
+where step $(a)$ substitutes $i=x-1$, and step $(b)$ uses the result above from calculus.
+
+
+\subsection{Discrete Probability Spaces and Random Variables}
+
+In the case of the geometric distribution, the sample space $\Omega$ is what's called ``countably infinite''. This means that it has an infinite (rather than finite) number of entries, and that there's actually a way for us to arrange the elements so that there's a 1st element, 2nd, 3rd, and so forth off into infinity. Note that the set of real numbers is not countable.
+
+Before this section, every time we used the phrases ``probability space'' and ``random variable'', we actually meant ``finite probability space'' and ``finite random variable''.
+
+More general than the finite probability space and finite random variable are the discrete probability space and discrete random variable:
+
+\paragraph{Definition of a ``discrete probability space'':} A discrete probability space $(\Omega ,\mathbb {P})$ is the same thing as a finite probability space except that the sample space $\Omega$ is allowed to be either finite or countably infinite. In particular, a discrete probability space consists of two ingredients:
+
+a finite or countably infinite sample space $\Omega$ that is the collectively exhaustive, mutually exclusive set of all possible outcomes
+
+an assignment of probability $\mathbb {P}$, where for any outcome $\omega \in \Omega$, we have $\mathbb {P}(\text {outcome }\omega )$ be a number at least 0 and at most 1, and
+
+{\centering$\sum _{\omega \in \Omega }\mathbb {P}(\text {outcome }\omega )=1.$ \par}
+ 
+\paragraph{Definition of a ``discrete random variable'':} A discrete random variable $X$ is the same thing as a finite random variable except that it's associated with a discrete probability space rather than a finite probability space. In particular, given a discrete probability space $(\Omega ,\mathbb {P})$, a discrete random variable $X$ maps $\Omega$ to a set of values $\mathcal{X}$ that the random variable can take on. Again, we can think of such a random variable $X$ as generated from a two step procedure: some possible outcome $\omega$ is sampled from the discrete probability space $(\Omega ,\mathbb {P})$, and then $X$ takes on the value given by $X(\omega)$.
+
+Formally defining random variables that are even more general than discrete random variables requires more sophisticated mathematical machinery that is beyond the scope of 6.008.1x.
 
 \end{document}

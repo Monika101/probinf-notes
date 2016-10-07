@@ -48,8 +48,18 @@
 \BOOKMARK [2][-]{subsection.1.8.4}{Practice Problem: The Law of Total Expectation}{section.1.8}% 48
 \BOOKMARK [1][-]{section.1.9}{Measuring Randomness}{chapter.1}% 49
 \BOOKMARK [2][-]{subsection.1.9.1}{Introduction to Information-Theoretic Measures of Randomness}{section.1.9}% 50
-\BOOKMARK [1][-]{section.1.10}{Towards Infinity in Modeling Uncertainty}{chapter.1}% 51
-\BOOKMARK [2][-]{subsection.1.10.1}{Infinite Outcomes}{section.1.10}% 52
-\BOOKMARK [0][-]{chapter.2}{Graphical Models}{}% 53
-\BOOKMARK [0][-]{chapter.3}{Learning a Probabilistic Model from Data}{}% 54
-\BOOKMARK [0][-]{appendix.A}{Notation Summary}{}% 55
+\BOOKMARK [2][-]{subsection.1.9.2}{Shannon Information Content}{section.1.9}% 51
+\BOOKMARK [2][-]{subsection.1.9.3}{Shannon Entropy}{section.1.9}% 52
+\BOOKMARK [2][-]{subsection.1.9.4}{Information Divergence}{section.1.9}% 53
+\BOOKMARK [2][-]{subsection.1.9.5}{Proof of Gibbs' Inequality}{section.1.9}% 54
+\BOOKMARK [2][-]{subsection.1.9.6}{Mutual Information}{section.1.9}% 55
+\BOOKMARK [2][-]{subsection.1.9.7}{Exercise: Mutual Information}{section.1.9}% 56
+\BOOKMARK [2][-]{subsection.1.9.8}{Information-Theoretic Measures of Randomness: Where We'll See Them Next}{section.1.9}% 57
+\BOOKMARK [1][-]{section.1.10}{Towards Infinity in Modeling Uncertainty}{chapter.1}% 58
+\BOOKMARK [2][-]{subsection.1.10.1}{Infinite Outcomes}{section.1.10}% 59
+\BOOKMARK [2][-]{subsection.1.10.2}{The Geometric Distribution}{section.1.10}% 60
+\BOOKMARK [2][-]{subsection.1.10.3}{Practice Problem: The Geometric Distribution}{section.1.10}% 61
+\BOOKMARK [2][-]{subsection.1.10.4}{Discrete Probability Spaces and Random Variables}{section.1.10}% 62
+\BOOKMARK [0][-]{chapter.2}{Graphical Models}{}% 63
+\BOOKMARK [0][-]{chapter.3}{Learning a Probabilistic Model from Data}{}% 64
+\BOOKMARK [0][-]{appendix.A}{Notation Summary}{}% 65
