@@ -26,9 +26,39 @@ Recall that the binomial distribution is an example of this: with just two numbe
 
 We now give an example of a distribution with an infinite alphabet size called the geometric distribution that has only 1 parameter. Thus, storing 1 number tells you what all the probability table entries are, even though there are an infinite number of entries!
 
-TODO - add notes from video
+Let's say I have some experiment that succeeds with some probability. How many times do I have to run independent trials of this experiment until I see the first success? 
 
-%Okay, I'm going to talk about the geometric distribution. Basically what this is looking at is let's say I have some experiment that succeeds with some probability. How many times do I have to run independent trials of this experiment until I see the first success? So I'm going to word this in terms of coin flipping. Let's say that I have a biased coin, where if I toss it, the probability of heads is p. And so I'm going to keep tossing this coin until I see the first heads. This is like I fail a bunch of times until I first succeed. So what are the possible outcomes? Well, it could be that I get heads in one toss, or I get tails and then I get heads, or I get 2 tails and then heads, and so forth. So this here is our sample space. And so now we're going to assign probabilities to each of these outcomes. And so well, what's the probability of heads in one toss? Well, it's just p. So what about the probability of tails and then heads? Well, since the tosses are independent, this is going to be the probability of tails first and then heads second. So again, this product is because these two coin flips are independent. And so this is just going to be 1 minus p times p. And similarly, the probability of 2 tails and then a heads is going to be just the probability 1 minus p to the power of 2 times p. And you can keep going. But getting back to the original question "how many tosses until the first heads?"-- we can phrase that in terms of a random variable. So let random variable X be the number of tosses until we see the first heads. So well, the possible outcomes here are, of course, 1, 2, 3, and so forth, so the set of positive integers. I'll denote this as script X. And this is the alphabet of random variable X, meaning that these are the possible values that random variable X can take on. As a reminder, a random variable is a function that maps from the sample space to this alphabet. So what does that mean? Well, X takes as input an element in the sample space, so for example, heads. Well, what is this? This is going to be 1 because this is heads in one toss. And similarly, X of tails and then heads, well, this is going to be equal to 2, because we have two tosses until the first heads. And so forth. So what is the probability that X is equal to some little x? So this here is shorthand. So X equals x is shorthand for saying the set of all little omega within the sample space such that X of omega is equal to little x. So for example, if little x is 1, then we're looking at all possible outcomes in the sample space for which X of that outcome, is 1. So there's only one possible answer there, which is "H". So anyways, by doing this mapping, you can see that the probability of X being equal to little x is just going to be the probability of x minus 1 tails followed by heads on the xth toss. So as discussed earlier, this is just going to be 1 minus p to the power of x minus 1 and then times p. So this here... Again, this is defined for x equals 1, 2, and so forth. This here is called the probability mass function of random variable X. In particular, this is the probability mass function of a geometric random variable with parameter p. So we denote that by saying x is distributed as-- so this wiggle is read as "distributed as" geometric with parameter p. And this here is equivalent to saying random variable X has this probability mass function. And just as an ending remark, this is referred to as a geometric distribution because of the geometric decay in this probability as you increase x.
+I have a biased coin, where if I toss it, the probability of heads $\mathbb{P}(H) = p$. I'm going to keep tossing this coin until I see the first heads. What are the possible outcomes? Well, it could be that I get heads in one toss, or I get tails and then I get heads, or I get 2 tails and then heads, and so forth. So our sample space is:
+
+{\centering$\Omega = \{ H, TH, TTH, \dots \}$ \par}
+
+We're going to assign probabilities to each of these outcomes. The probability of heads in one toss is just $\mathbb{P}(H) = p$. The probability of tails and then heads? Since the tosses are independent,
+
+\begin{eqnarray*}
+\mathbb{P}(TH) &=& \mathbb{P}(tails 1st)\mathbb{P}(heads 2nd) \\
+							 &=& (1-p) \cdot p
+\end{eqnarray*}
+
+Similarly, the probability of 2 tails and then a heads is going to be $\mathbb{P}(TH) = (1-p)^2 \cdot p$and so on.
+
+But return to the original question, ``how many tosses until the first heads?'' We can phrase that in terms of a random variable $X$, the number of tosses until we see the first heads. The possible outcomes are, of course, $\mathcal{X} = \{1, 2, 3, \dots \}$, the set of positive integers. This is the alphabet of random variable $X$, the possible values that random variable $X$ can take on. 
+
+As a reminder, a random variable is a function that maps from the sample space to this alphabet, $X: \Omega \rightarrow \mathcal(X)$. $X$ takes as input an element in the sample space, for example, heads. Then $X(H) = 1$ because this is heads in one toss. And similarly, Then $X(TH) = 2$, because we have two tosses until the first heads. And so forth. 
+
+So what is $\mathbb{P}(X = x)$? $X = x$ is shorthand: 
+
+{\centering$\{X = x\} \Longleftrightarrow \{ \omega \in \Omega : X(\omega) = x \}$ \par}
+
+For example, if $x = 1$, then we're looking at all possible outcomes in the sample space for which X of that outcome, is 1. So there's only one possible answer there, which is "H". 
+
+By doing this mapping, you can see that
+
+\begin{eqnarray*}
+\mathbb{P}(X = x) &=& \mathbb{P}(x-1 tails followed by heads) \\
+									&=& (1-p)^{x-1} \cdot p \qquad x = 1, 2, \dots
+\end{eqnarray*}
+
+This is called the probability mass function of random variable $X$. In particular, it is the probability mass function of a geometric random variable with parameter $p$. So we denote that by saying $x$ is distributed as geometric with parameter $p$, $X \sim \text {Geo}(p)$. It is referred to as a geometric distribution because of the geometric decay in this probability as you increase $x$.
 
 
 \subsection{Practice Problem: The Geometric Distribution}

@@ -98,12 +98,35 @@
 \contentsline {section}{\numberline {1.10}Towards Infinity in Modeling Uncertainty}{43}{section.1.10}
 \contentsline {subsection}{\numberline {1.10.1}Infinite Outcomes}{43}{subsection.1.10.1}
 \contentsline {subsection}{\numberline {1.10.2}The Geometric Distribution}{44}{subsection.1.10.2}
-\contentsline {subsection}{\numberline {1.10.3}Practice Problem: The Geometric Distribution}{44}{subsection.1.10.3}
-\contentsline {paragraph}{Solution: }{44}{section*.42}
-\contentsline {paragraph}{Solution: }{44}{section*.43}
-\contentsline {subsection}{\numberline {1.10.4}Discrete Probability Spaces and Random Variables}{44}{subsection.1.10.4}
+\contentsline {subsection}{\numberline {1.10.3}Practice Problem: The Geometric Distribution}{45}{subsection.1.10.3}
+\contentsline {paragraph}{Solution: }{45}{section*.42}
+\contentsline {paragraph}{Solution: }{45}{section*.43}
+\contentsline {subsection}{\numberline {1.10.4}Discrete Probability Spaces and Random Variables}{45}{subsection.1.10.4}
 \contentsline {paragraph}{Definition of a ``discrete probability space'':}{45}{section*.44}
 \contentsline {paragraph}{Definition of a ``discrete random variable'':}{45}{section*.45}
-\contentsline {chapter}{\numberline {2}Graphical Models}{46}{chapter.2}
-\contentsline {chapter}{\numberline {3}Learning a Probabilistic Model from Data}{47}{chapter.3}
-\contentsline {chapter}{\numberline {A}Notation Summary}{48}{appendix.A}
+\contentsline {chapter}{\numberline {2}Inference in Graphical Models}{46}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{46}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Introduction to Inference in Graphical Models}{46}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Efficiency in Computer Programs}{46}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Big O Notation}{46}{subsection.2.2.1}
+\contentsline {paragraph}{Big O notation:}{47}{section*.46}
+\contentsline {paragraph}{Example:}{47}{section*.47}
+\contentsline {paragraph}{Example:}{47}{section*.48}
+\contentsline {subsection}{\numberline {2.2.2}Big O Notation with Multiple Variables}{48}{subsection.2.2.2}
+\contentsline {paragraph}{Example:}{48}{section*.49}
+\contentsline {subsection}{\numberline {2.2.3}Important Remarks Regarding Big O Notation}{48}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Graphical Models}{48}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Graphical Models}{48}{subsection.2.3.1}
+\contentsline {paragraph}{Definition of an undirected pairwise graphical model}{51}{section*.50}
+\contentsline {paragraph}{Important:}{51}{section*.51}
+\contentsline {subsection}{\numberline {2.3.2}Trees}{51}{subsection.2.3.2}
+\contentsline {paragraph}{Theorem:}{52}{section*.52}
+\contentsline {paragraph}{Proof:}{52}{section*.53}
+\contentsline {subsection}{\numberline {2.3.3}Practice Problem: Computing the Normalization Constant }{52}{subsection.2.3.3}
+\contentsline {paragraph}{Solution:}{52}{section*.54}
+\contentsline {chapter}{\numberline {3}Learning a Probabilistic Model from Data}{53}{chapter.3}
+\contentsline {chapter}{\numberline {A}Notation Summary}{54}{appendix.A}
+\contentsline {chapter}{\numberline {B}Supplementary Information}{56}{appendix.B}
+\contentsline {section}{\numberline {B.1}External Resources}{56}{section.B.1}
+\contentsline {section}{\numberline {B.2}Hints from the Discussion Forum}{56}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Law of Total Expectation as Matrices}{56}{subsection.B.2.1}

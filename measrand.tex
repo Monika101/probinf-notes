@@ -26,7 +26,7 @@ More broadly but beyond the scope of 6.008.1x, information theory is often used 
 
 \subsection{Shannon Information Content}
 
-First, let's consider storing an integer that isn't random. Let's say we have an integer that is from $0,1,\dots ,63$. Then the number of bits needed to store this integer is $log_2?(64)=6$ bits: you tell me 6 bits and I can tell you exactly what the integer is.
+First, let's consider storing an integer that isn't random. Let's say we have an integer that is from $0,1,\dots ,63$. Then the number of bits needed to store this integer is $\log_2(64)=6$ bits: you tell me 6 bits and I can tell you exactly what the integer is.
 
 A different way to think about this result is that we don't \textit{a priori} know which of the 64 outcomes is going to be stored, and so each outcome is equally likely with probability $\frac{1}{64}$. Then the number of bits needed to store an event $\mathcal{A}$ is given by what's called the ``Shannon information content'' (also called self-information):
 
@@ -36,7 +36,7 @@ In particular, for an integer $x\in \{ 0,1,\dots ,63\}$, the Shannon information
 
 {\centering$\log _{2}\frac{1}{\mathbb {P}(\text {integer is }x)}=\log _{2}\frac{1}{1/64}=\log _{2}64=6\text { bits}.$ \par}
  
-If instead, the integer was deterministically 0 and never equal to any of the other values $0,1,\dots ,63$, then the Shannon information content of observing integer 0 is
+If instead, the integer was deterministically 0 and never equal to any of the other values $1,\dots ,63$, then the Shannon information content of observing integer 0 is
 
 {\centering$\log _{2}\frac{1}{\mathbb {P}(\text {integer is }0)}=\log _{2}\frac{1}{1}=0\text { bits}.$ \par}
 
@@ -44,7 +44,7 @@ This is not surprising in that a outcome that we deterministically always observ
 
 {\centering$\log _{2}\frac{1}{\mathbb {P}(\text {integer is }x)}=\log _{2}\frac{1}{0}=\infty \text { bits}.$ \par}
  
-How could observing one of the integers \{ 1,2,\dots ,63\} tell us infinite bits of information?! Well, this isn't an issue since the event that we observe any of these integers has probability 0 and is thus impossible. An interpration of Shannon information content is how surprised we would be to observe an event. In this sense, observing an impossible event would be infinitely surprising.
+How could observing one of the integers \{1,2,\dots ,63\} tell us infinite bits of information? Well, this isn't an issue since the event that we observe any of these integers has probability 0 and is thus impossible. An interpration of Shannon information content is how surprised we would be to observe an event. In this sense, observing an impossible event would be infinitely surprising.
 
 It is possible to have the Shannon information content of an event be some fractional number of bits (e.g., 0.7 bits). The interpretation is that from many repeats of the underlying experiment, the average number of bits needed to store the event is given by the Shannon information content, which can be fractional.
 
@@ -102,7 +102,7 @@ Information divergence is the price you pay in bits for trying to encode a sampl
 
 {\centering$D(p\parallel q)=\mathbb {E}_{X \sim p}\Big[\log _{2}\frac{1}{q(X)}\Big]-\mathbb {E}_{X \sim p}\Big[\log _{2}\frac{1}{p(X)}\Big].$ \par}
  
-Information divergence is always at least 0, and when it is equal to 0, then this means that $p$ and $q$are the same distribution (i.e., $p(x)=q(x)$ for all $x$). This property is called Gibbs' inequality.
+Information divergence is always at least 0, and when it is equal to 0, then this means that $p$ and $q$ are the same distribution (i.e., $p(x)=q(x)$ for all $x$). This property is called Gibbs' inequality.
 
 Gibbs' inequality makes information divergence seem a bit like a distance. However, information divergence is not like a distance in that it is not symmetric: in general, $D(p \parallel q) \ne D(q \parallel p)$.
 
@@ -177,7 +177,7 @@ Notice that in this example, $D(p \parallel q) \ne D(q \parallel p)$. They aren'
 
 We provide a proof for Gibbs' inequality here for those who are interested. For those of you up for the challenge, try to prove it yourself!
 
-There are various ways to prove Gibbs' inequality. We'll be using a way that relies on the fact that $\ln x\le x-1$ for all $x>0$, with equality if and only if $x=1$, which we provide a proof for at the end of this page, but for which you can also readily see from the following plot:
+There are various ways to prove Gibbs' inequality. We'll be using a way that relies on the fact that $\ln x\le x-1$ for all $x>0$, with equality if and only if $x=1$, which we provide a proof for at the end of this section, but for which you can also readily see from the following plot:
 
 {\centering\includegraphics[scale=0.4]{images_sec-gibbs-inequality-helper} \par}
 
@@ -217,7 +217,7 @@ Recall that inequality $\ln x\le x-1$ becomes an equality if and only if $x=1$. 
 
 \paragraph{Claim:} $\ln x\le x-1$ for all $x>0$ where equality holds if and only if $x=1$.
 
-\paragraph{Proof:} We show that the function $f$ given by $f(x)=x?1?\ln x$ is always at least 0 and achieves its minimum value at $x=1$. First, note that $f$ is differentiable for all $x>0$ (which implies that $f$ is continuous on $(0,\infty)$ and doesn't, for example, do some crazy jump midway through). In fact, the derivative of $f$ is given by
+\paragraph{Proof:} We show that the function $f$ given by $f(x)=x-1-\ln x$ is always at least 0 and achieves its minimum value at $x=1$. First, note that $f$ is differentiable for all $x>0$ (which implies that $f$ is continuous on $(0,\infty)$ and doesn't, for example, do some crazy jump midway through). In fact, the derivative of $f$ is given by
 
 {\centering$\frac{d}{dx}f(x)=\frac{d}{dx}(x-1-\ln x)=1-\frac{1}{x}.$ \par}
  

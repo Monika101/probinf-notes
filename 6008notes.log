@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.20)  6 OCT 2016 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.20)  10 OCT 2016 17:09
 entering extended mode
 **./6008notes.tex
 (6008notes.tex
@@ -1188,7 +1188,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 25.
 ("C:\Users\colin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<images/introprob/images_first-look-at-prob-spyder-setup.png, id=353, 773.89125
+<images/introprob/images_first-look-at-prob-spyder-setup.png, id=418, 773.89125
 pt x 558.085pt>
 File: images/introprob/images_first-look-at-prob-spyder-setup.png Graphic file 
 (type png)
@@ -1203,7 +1203,7 @@ p.png used on input line 27.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 32.
 
-<images/introprob/images_sec-intro-histogram-counts.jpg, id=363, 361.35pt x 289
+<images/introprob/images_sec-intro-histogram-counts.jpg, id=428, 361.35pt x 289
 .08pt>
 File: images/introprob/images_sec-intro-histogram-counts.jpg Graphic file (type
  jpg)
@@ -1213,7 +1213,7 @@ Package pdftex.def Info: images/introprob/images_sec-intro-histogram-counts.jpg
 (pdftex.def)             Requested size: 180.67456pt x 144.53964pt.
  [4 <./images/introprob/images_first-look-at-prob-spyder-setup.png> <./images/i
 ntroprob/images_sec-intro-histogram-counts.jpg>]
-<images/introprob/images_sec-intro-histogram-frequencies.jpg, id=380, 361.35pt 
+<images/introprob/images_sec-intro-histogram-frequencies.jpg, id=445, 361.35pt 
 x 289.08pt>
 File: images/introprob/images_sec-intro-histogram-frequencies.jpg Graphic file 
 (type jpg)
@@ -1223,7 +1223,7 @@ s.jpg used on input line 65.
 (pdftex.def)             Requested size: 180.67456pt x 144.53964pt.
 
 <images/introprob/images_sec-intro-frequency-of-heads-vs-number-of-flips.jpg, i
-d=381, 578.16pt x 289.08pt>
+d=446, 578.16pt x 289.08pt>
 File: images/introprob/images_sec-intro-frequency-of-heads-vs-number-of-flips.j
 pg Graphic file (type jpg)
 
@@ -1252,7 +1252,7 @@ Overfull \hbox (9.89017pt too wide) in paragraph at lines 74--75
  []
 
 [10]
-<images/randvar/images_sec-random-variables-main.png, id=479, 827.09pt x 604.25
+<images/randvar/images_sec-random-variables-main.png, id=544, 827.09pt x 604.25
 75pt>
 File: images/randvar/images_sec-random-variables-main.png Graphic file (type pn
 g)
@@ -1261,7 +1261,7 @@ Package pdftex.def Info: images/randvar/images_sec-random-variables-main.png us
 ed on input line 86.
 (pdftex.def)             Requested size: 330.83012pt x 241.69872pt.
  [11 <./images/randvar/images_sec-random-variables-main.png>]) (jointdist.tex
-<images/jointdist/images_sec-joint-rv-prob-space.png, id=490, 395.4775pt x 285.
+<images/jointdist/images_sec-joint-rv-prob-space.png, id=555, 395.4775pt x 285.
 065pt>
 File: images/jointdist/images_sec-joint-rv-prob-space.png Graphic file (type pn
 g)
@@ -1270,7 +1270,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-prob-space.png us
 ed on input line 13.
 (pdftex.def)             Requested size: 158.18819pt x 114.02397pt.
 
-<images/jointdist/images_sec-joint-rv-rearrange-table.png, id=491, 582.175pt x 
+<images/jointdist/images_sec-joint-rv-rearrange-table.png, id=556, 582.175pt x 
 574.145pt>
 File: images/jointdist/images_sec-joint-rv-rearrange-table.png Graphic file (ty
 pe png)
@@ -1281,7 +1281,7 @@ ng used on input line 17.
 
 [12 <./images/jointdist/images_sec-joint-rv-prob-space.png>] [13 <./images/join
 tdist/images_sec-joint-rv-rearrange-table.png>] [14] [15]
-<images/jointdist/images_sec-joint-rv-marg-rows.png, id=572, 717.68124pt x 290.
+<images/jointdist/images_sec-joint-rv-marg-rows.png, id=637, 717.68124pt x 290.
 08376pt>
 File: images/jointdist/images_sec-joint-rv-marg-rows.png Graphic file (type png
 )
@@ -1290,7 +1290,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-marg-rows.png use
 d on input line 180.
 (pdftex.def)             Requested size: 287.06741pt x 116.03143pt.
  [16 <./images/jointdist/images_sec-joint-rv-marg-rows.png>]
-<images/jointdist/images_sec-joint-rv-marg-cols.png, id=585, 424.58624pt x 496.
+<images/jointdist/images_sec-joint-rv-marg-cols.png, id=650, 424.58624pt x 496.
 85625pt>
 File: images/jointdist/images_sec-joint-rv-marg-cols.png Graphic file (type png
 )
@@ -1299,7 +1299,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-marg-cols.png use
 d on input line 202.
 (pdftex.def)             Requested size: 169.83148pt x 198.73897pt.
 
-<images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png, id=586, 430
+<images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png, id=651, 430
 .60875pt x 355.3275pt>
 File: images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png Graphic
  file (type png)
@@ -1310,7 +1310,7 @@ t-table.png used on input line 224.
 (pdftex.def)             Requested size: 172.24043pt x 142.12846pt.
 
 [17 <./images/jointdist/images_sec-joint-rv-marg-cols.png>]
-<images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png, id=594, 695.59875p
+<images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png, id=659, 695.59875p
 t x 492.84125pt>
 File: images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png Graphic file (
 type png)
@@ -1321,7 +1321,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-marg-many-rv-marg
 (pdftex.def)             Requested size: 313.01654pt x 221.7765pt.
  [18 <./images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png> <./i
 mages/jointdist/images_sec-joint-rv-marg-many-rv-marg.png>]
-<images/jointdist/images_sec-joint-rv-cond-restrict.png, id=601, 717.68124pt x 
+<images/jointdist/images_sec-joint-rv-cond-restrict.png, id=666, 717.68124pt x 
 235.88126pt>
 File: images/jointdist/images_sec-joint-rv-cond-restrict.png Graphic file (type
  png)
@@ -1330,7 +1330,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-cond-restrict.png
  used on input line 266.
 (pdftex.def)             Requested size: 287.06741pt x 94.35083pt.
 
-<images/jointdist/images_sec-joint-rv-cond-renormalize.png, id=602, 686.565pt x
+<images/jointdist/images_sec-joint-rv-cond-renormalize.png, id=667, 686.565pt x
  132.495pt>
 File: images/jointdist/images_sec-joint-rv-cond-renormalize.png Graphic file (t
 ype png)
@@ -1342,7 +1342,7 @@ png used on input line 270.
 [19 <./images/jointdist/images_sec-joint-rv-cond-restrict.png> <./images/jointd
 ist/images_sec-joint-rv-cond-renormalize.png>]) (conditioning.tex [20])
 (infbayes.tex [21] [22] [23]
-<images/infbayes/images_sec-bayes-computational-view.png, id=639, 583.17876pt x
+<images/infbayes/images_sec-bayes-computational-view.png, id=704, 583.17876pt x
  423.5825pt>
 File: images/infbayes/images_sec-bayes-computational-view.png Graphic file (typ
 e png)
@@ -1353,7 +1353,7 @@ g used on input line 141.
 
 [24]) (indepstruct.tex [25 <./images/infbayes/images_sec-bayes-computational-vi
 ew.png>]
-<images/indepstruct/images_sec-joint-rv-ex-marg.png, id=653, 570.13pt x 216.81p
+<images/indepstruct/images_sec-joint-rv-ex-marg.png, id=718, 570.13pt x 216.81p
 t>
 File: images/indepstruct/images_sec-joint-rv-ex-marg.png Graphic file (type png
 )
@@ -1364,7 +1364,7 @@ d on input line 39.
  [26 <./images/indepstruct/images_sec-joint-rv-ex-marg.png>] [27] [28] [29] [30
 ] [31])
 (decisions.tex [32]
-<images/decisions/images_sec-expectation-example1.png, id=695, 280.04625pt x 21
+<images/decisions/images_sec-expectation-example1.png, id=760, 280.04625pt x 21
 0.7875pt>
 File: images/decisions/images_sec-expectation-example1.png Graphic file (type p
 ng)
@@ -1373,7 +1373,7 @@ Package pdftex.def Info: images/decisions/images_sec-expectation-example1.png u
 sed on input line 59.
 (pdftex.def)             Requested size: 84.01451pt x 63.23672pt.
 
-<images/decisions/images_sec-expectation-example2.png, id=696, 283.0575pt x 212
+<images/decisions/images_sec-expectation-example2.png, id=761, 283.0575pt x 212
 .795pt>
 File: images/decisions/images_sec-expectation-example2.png Graphic file (type p
 ng)
@@ -1384,7 +1384,7 @@ sed on input line 67.
  [33 <./images/decisions/images_sec-expectation-example1.png> <./images/decisio
 ns/images_sec-expectation-example2.png>] [34] [35]) (measrand.tex [36] [37] [38
 ] [39]
-<images/measrand/images_sec-gibbs-inequality-helper.png, id=731, 578.16pt x 433
+<images/measrand/images_sec-gibbs-inequality-helper.png, id=796, 578.16pt x 433
 .62pt>
 File: images/measrand/images_sec-gibbs-inequality-helper.png Graphic file (type
  png)
@@ -1393,7 +1393,7 @@ Package pdftex.def Info: images/measrand/images_sec-gibbs-inequality-helper.png
  used on input line 182.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
  [40 <./images/measrand/images_sec-gibbs-inequality-helper.png>] [41]
-<images/measrand/images_sec-mutual-info-ex.png, id=753, 360.34625pt x 255.95625
+<images/measrand/images_sec-mutual-info-ex.png, id=818, 360.34625pt x 255.95625
 pt>
 File: images/measrand/images_sec-mutual-info-ex.png Graphic file (type png)
  <use images/measrand/images_sec-mutual-info-ex.png>
@@ -1403,72 +1403,122 @@ input line 288.
  [42 <./images/measrand/images_sec-mutual-info-ex.png>]) (toinf.tex [43] [44]) 
 [45]
 Chapter 2.
-[46
+(efficiency.tex [46
 
-]
+] [47]) (graphmod.tex [48]
+<images/graphmod/images_sec-graphical-models-2-rv-indep.png, id=872, 301.125pt 
+x 99.37125pt>
+File: images/graphmod/images_sec-graphical-models-2-rv-indep.png Graphic file (
+type png)
+ <use images/graphmod/images_sec-graphical-models-2-rv-indep.png>
+Package pdftex.def Info: images/graphmod/images_sec-graphical-models-2-rv-indep
+.png used on input line 17.
+(pdftex.def)             Requested size: 120.44786pt x 39.74779pt.
+
+<images/graphmod/images_sec-graphical-models-2-rv-possibly-dependent.png, id=87
+3, 300.12125pt x 100.375pt>
+File: images/graphmod/images_sec-graphical-models-2-rv-possibly-dependent.png G
+raphic file (type png)
+
+<use images/graphmod/images_sec-graphical-models-2-rv-possibly-dependent.png>
+Package pdftex.def Info: images/graphmod/images_sec-graphical-models-2-rv-possi
+bly-dependent.png used on input line 53.
+(pdftex.def)             Requested size: 120.04637pt x 40.14928pt.
+
+[49 <./images/graphmod/images_sec-graphical-models-2-rv-indep.png> <./images/gr
+aphmod/images_sec-graphical-models-2-rv-possibly-dependent.png>]
+<images/graphmod/images_sec-graphical-models-3-rv-markov-chain.png, id=880, 492
+.84125pt x 100.375pt>
+File: images/graphmod/images_sec-graphical-models-3-rv-markov-chain.png Graphic
+ file (type png)
+
+<use images/graphmod/images_sec-graphical-models-3-rv-markov-chain.png>
+Package pdftex.def Info: images/graphmod/images_sec-graphical-models-3-rv-marko
+v-chain.png used on input line 87.
+(pdftex.def)             Requested size: 197.133pt x 40.14928pt.
+
+[50 <./images/graphmod/images_sec-graphical-models-3-rv-markov-chain.png>]
+File: images/graphmod/images_sec-graphical-models-2-rv-indep.png Graphic file (
+type png)
+
+<use images/graphmod/images_sec-graphical-models-2-rv-indep.png>
+Package pdftex.def Info: images/graphmod/images_sec-graphical-models-2-rv-indep
+.png used on input line 138.
+(pdftex.def)             Requested size: 120.44786pt x 39.74779pt.
+File: images/graphmod/images_sec-graphical-models-2-rv-possibly-dependent.png G
+raphic file (type png)
+
+<use images/graphmod/images_sec-graphical-models-2-rv-possibly-dependent.png>
+Package pdftex.def Info: images/graphmod/images_sec-graphical-models-2-rv-possi
+bly-dependent.png used on input line 144.
+(pdftex.def)             Requested size: 120.04637pt x 40.14928pt.
+
+[51]
+File: images/graphmod/images_sec-graphical-models-3-rv-markov-chain.png Graphic
+ file (type png)
+ <use images/graphmod/images_sec-graphical-models-3-rv-markov-chain.png>
+Package pdftex.def Info: images/graphmod/images_sec-graphical-models-3-rv-marko
+v-chain.png used on input line 150.
+(pdftex.def)             Requested size: 197.133pt x 40.14928pt.
+)
+[52]
 Chapter 3.
-[47
+[53
 
 ]
 Appendix A.
-(notation.tex [48
+(notation.tex [54
+
+]) [55]
+Appendix B.
+(suppl.tex [56
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
- [49]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 49.
+ [57]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
  (6008notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
-
-
-Package rerunfilecheck Warning: File `6008notes.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `6008notes.out':
-(rerunfilecheck)             Before: 82AD5D9D958AA6FA53CC37197673D4F0;5581
-(rerunfilecheck)             After:  23BC045440E993B9E87E039B43F1B7E1;5538.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
+Package rerunfilecheck Info: File `6008notes.out' has not changed.
+(rerunfilecheck)             Checksum: 80BD077458FFE5F954D6689E6F3CCA4B;6655.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 11438 strings out of 493634
- 168677 string characters out of 3135239
+ 11518 strings out of 493634
+ 170457 string characters out of 3135239
  297167 words of memory out of 3000000
- 14242 multiletter control sequences out of 15000+200000
+ 14272 multiletter control sequences out of 15000+200000
  86406 words of font info for 148 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 39i,16n,40p,3585b,1931s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{subsection.1.10.5} has been referenced but does n
-ot exist, replaced by a fixed one
-
- <C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi480
-\mathx10.pk> <C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\ma
-thabx\dpi600\matha6.pk> <C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\public\mathabx\dpi657\mathb10.pk> <C:\Users\colin\AppData\Local\MiKTeX\2.9\fo
-nts\pk\ljfour\jknappen\ec\dpi600\ecit1000.pk> <C:\Users\colin\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha8.pk> <C:\Users\colin\AppDat
-a\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi657\mathx10.pk> <C:\Users\
-colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk> 
-<C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ect
-t1095.pk> <C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\matha
-bx\dpi657\matha10.pk>{C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/en
-c/dvips/fontname/8r.enc}<C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/colin/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/colin/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/
-colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/rs
-fs/rsfs10.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
-/symbol/usyr.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-urw/symbol/usyr.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/urw/times/utmb8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/urw/times/utmr8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/urw/times/utmr8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 6008notes.pdf (51 pages, 1484395 bytes).
+ 39i,16n,40p,3317b,1931s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi4
+80\mathx10.pk> <C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\
+mathabx\dpi600\matha6.pk> <C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\public\mathabx\dpi657\mathb10.pk> <C:\Users\colin\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecit1000.pk> <C:\Users\colin\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi600\matha8.pk> <C:\Users\colin\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi657\mathx10.pk> <C:\User
+s\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
+> <C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+ctt1095.pk> <C:\Users\colin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mat
+habx\dpi657\matha10.pk>{C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/
+enc/dvips/fontname/8r.enc}<C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/colin/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/colin/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/User
+s/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+rsfs/rsfs10.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
+rw/symbol/usyr.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/urw/symbol/usyr.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/urw/times/utmb8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/urw/times/utmr8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/urw/times/utmr8a.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on 6008notes.pdf (59 pages, 1575572 bytes).
 PDF statistics:
- 1130 PDF objects out of 1200 (max. 8388607)
- 314 named destinations out of 1000 (max. 500000)
- 624 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1266 PDF objects out of 1440 (max. 8388607)
+ 351 named destinations out of 1000 (max. 500000)
+ 743 words of extra memory for PDF output out of 10000 (max. 10000000)
 

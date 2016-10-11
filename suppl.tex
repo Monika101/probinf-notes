@@ -1,0 +1,76 @@
+\documentclass[6008notes.tex]{subfiles}
+\begin{document}
+\graphicspath{ {images/suppl/} }
+
+\section{External Resources}
+
+\href{https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2005/readings/ln14.pdf}{``Missed Expections'' chapted from MIT 6.042 course on OCW}
+
+\section{Hints from the Discussion Forum}
+
+\subsection{Law of Total Expectation as Matrices}
+
+\textbf{Posted by Community TA Derek\_edX}, approximately October 5th, 2016.
+
+In some sense the law of Total Expectation is just playing around with associativity. The below easily covers all finite cases. (If we take limits we could go beyond... but that's outside the scope.)
+
+In any case, here is a different way to look at the law of total expectation using matrices.
+
+\textbf{-- setup--}
+
+a matrix, $A$, has all payoffs of $X$, weighted by their respective probabilities. For simplicity, let $A$ be a square matrix. (Note that if $A$ is not 'naturally' square, we can always add more zeros until it is square)
+
+$h = \begin{bmatrix}
+1\\ 
+1\\ 
+\vdots\\ 
+1
+\end{bmatrix}$
+
+Thus if we sum up all entries in $A$, we get the expected value of $X$. 
+That is : $E[X] = h^{T} A h$
+
+$v$= vector with ${E}[X\mid \mathcal{B}_{i}]$ in the ith spot
+
+p= a vector with ${P}(\mathcal{B}_{i})$ in the $i$th spot
+
+Much as we partition a sample space, all we need to do now is partition $A$ so that its columns correspond to events $\mathcal{B}_{0},\dots ,\mathcal{B}_{n-1}$ (For the avoidance of doubt, $A$ should be set up in advance so that each entry in column $j$ corresponds to a probability times payoff associated with $B_j$, or else such entry is an 'artificially' added zero.)
+
+$A = \bigg[\begin{array}{c|c|c|c}
+A_0 &A_1 &\cdots &A_{n-1}
+\end{array}\bigg]$
+
+$Y = 
+\bigg[\begin{array}{c|c|c|c}
+\frac{1}{p(B_0)}A_0  &\frac{1}{p(B_1)}A_1 &\cdots &\frac{1}{p(B_{n-1})}A_{n-1}
+\end{array}\bigg]$
+
+$D = \begin{bmatrix}
+p(B_0) & 0 &0  &0 \\ 
+0 & p(B_1)& 0 & 0\\ 
+0 & 0 &  \ddots & 0 \\ 
+0 & 0 & 0 & p(B_{n-1})  
+\end{bmatrix}$
+
+Thus: $A=YD$
+
+\textbf{--main argument--}
+
+By definition: $E[X] = h^{T} A h$
+
+$E[X] = h^{T} \big(YD \big) h$
+
+by associativity: $E[X] = \big(h^{T} Y \big) \big( D h \big)$
+
+$E[X] = \big(v\big)^{T} \big(p \big) = v ^T p$
+
+note $v^T p = \sum _{i=0}^{n-1}\mathbb {E}[X\mid \mathcal{B}_{i}]\mathbb {P}(\mathcal{B}_{i})$
+
+
+
+
+
+
+
+
+\end{document}

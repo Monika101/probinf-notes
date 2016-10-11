@@ -1,0 +1,98 @@
+\documentclass[6008notes.tex]{subfiles}
+\begin{document}
+\graphicspath{ {images/efficiency/} }
+
+\section{Introduction}
+
+\subsection{Introduction to Inference in Graphical Models}
+
+As we saw earlier, inference about hidden random variables from observations requires an exponential amount of computation. In this section, we will see that exploiting structure and probability distributions can lead to much more efficient inference.
+
+Interestingly, the class of probability distributions that have that structure is quite broad and applicable to a wide range of real world problems. We will formally describe and characterize these probability distributions. Surprisingly, the complexity of the inference algorithms for this class of probability distributions becomes linear in the number of variables involved.
+
+In this section, the core concept that we will introduce and use is graphical models. Graphical models combine graph theory with probability to capture structure in probability distributions. We will use graphical models to describe the structure, to reason about conditional independence relationships in these probability distributions, and to do derive efficient inference algorithms.
+
+The algorithms you will see in the section are closely related to two famous algorithms. The first one is the Kalman filter. It was used to guide the Apollo mission, and is used today in many important engineering applications.
+
+The second algorithm is the Viterbi algorithm. It was originally designed to decode messages in noisy communication networks. And today it is used in almost every wireless communication protocol.
+
+
+\section{Efficiency in Computer Programs}
+
+\subsection{Big O Notation}
+
+We now give a primer on how to measure how fast and how much space a computer program takes. If we're solving large-scale inference problems, we want the inference to be fast and to be able to handle large probabilistic models (in terms of the number of random variables), which demands using computer memory wisely.
+
+Of course, when it comes to storing probability tables, one could make the argument that there's no need to store all the probabilities. Instead, for a random variable taking on $k$ values, without any known structure for the distribution (e.g., whether it is, for instance, a binomial distribution), then there are $k$ probabilities, but we actually only need to keep track of $k-1$ of them since the last table entry is just going to be one minus the sum of all the other entries!
+
+In talking about how much space a computer program needs to use, we don't want to worry about whether it's $k$ numbers vs $k-1$ numbers. In both of these cases, what matters is that the computer program needs to store roughly $k$ numbers. In fact, we won't even care about whether it's $k$ vs $2k$. What matters is that the amount of storage needed is roughly linear in $k$.
+
+This same idea comes into play when we talk about how fast a computer program runs. We will count the number of ``basic'' operations such as variable assignment, addition, multiplication, and table look-ups. The idea is that each basic operation takes about the same fixed unit of time.
+
+Let's take a look at a specific example:
+
+Suppose we marginalizing out $Y$ with a joint probability table $p_{X,Y}$, represented in a dictionaries-within-a-dictionary representation \lstinline{p_XY}, to obtain the probability table for $X$ stored as a dictionary \lstinline{p_X}.
+
+\begin{lstlisting}
+p_X = {}
+for x in X_alphabet:
+    total = 0
+    for y in Y_alphabet:
+        total = total + p_XY[x][y]
+    p_X[x] = total
+\end{lstlisting}
+		
+How many basic operations does a computer have to do when running this code? Well, let's suppose initializing a dictionary and assigning it to variable \lstinline{p_X} takes 1 basic operation (it likely takes more due to initializing the dictionary but that's okay -- we will be a bit sloppy with some constant factors here).
+
+Next, the line \lstinline{total = 0} happens $|\mathcal{X}|$ times, each time incurring a cost of 1 basic operation, so in total it costs $|\mathcal{X}|$ basic operations.
+
+Next, the line \lstinline{total = total + p_XY[x][y]} involves a table lookup, an addition, and a variable assignment so 3 basic operations (note that the table lookup might take more basic operations than just 1 to deal with the nested dictionaries), but since these 3 basic operations are nested in two for loops, we multiply by the number of times we're in the inner-most for loop: $3|\mathcal{X}\mathcal{Y}|$ basic operations.
+
+Finally the line \lstinline{p_X[x] = total} does a variable assignment and also indexes into a dictionary so let's say it costs 2 basic operations, which then gets multiplied by the number of times we reach that part in the outer for loop: $2|\mathcal{X}|$ basic operations.
+
+Summing everything up, we get $1 + 3|\mathcal{X}|+3|\mathcal{X}||\mathcal{Y}|$ basic operations. Let's say $k=|\mathcal{X}||\mathcal{Y}|$. Then we have $1+3k+3k^2$ basic operations, which scales like $k^2$, the dominating term. We won't worry about the constants being a little off.
+
+To formalize such rough measures of growth, we now introduce big O notation.
+
+\paragraph{Big O notation:} We say that a function $f$ that depends on a variable $n$ is $\mathcal{O}(g(n))$ (read as "big O of g of n") if there exists some minimum $n_0$ such that for all $n \ge n_0$,
+{\centering$f(n) \le c \cdot g(n)$ \par}
+for some constant $c>0$. Notationally, we write either $f(n) = \mathcal{O}(g(n))$ or $f(n) \in \mathcal{O}(g(n))$. Note that the $\mathcal{O}$ stands for ``order'' so you could think of $f$ being $\mathcal{O}(g(n))$ as $f$ growing on the order of $g$ as a function of $n$.
+
+\paragraph{Example:} Storing the probability table for a random variable with alphabet size $k$ takes $\mathcal{O}(k)$ amount of space. Even if we wanted to be efficient and store $k-1$ numbers, $k-1$ is still $\mathcal{O}(k)$, and in fact $k-1 \le k$ for all $k$, satisfying the definition of big O notation (with $n_0$ being set to whatever we want, and $c$ set to 1).
+
+\paragraph{Example:} With joint probability table $p_{X,Y}$ where $X$ and $Y$ each take on $k$ values, then marginalization to compute $p_X$ costs $\mathcal{O}(k^2)$ basic operations. For xample, using the way we counted the number of basic operations earlier, $1+3k+3k^2 \le 6k^2$ for all $k \ge 2$, satisfying the definition of big O notation with $n_0=2$ and $c=6$.
+
+The basic idea is that when $n$ is large enough (specifically larger than some $n_0$), then we'll always have that $f(n)$ grows at most as fast as $g(n)$ scaled by a constant that does not depend on $n$.
+
+\subsection{Big O Notation with Multiple Variables}
+
+Big O notation can be used with functions that depend on multiple variables.
+
+\paragraph{Example:} In our material coverage for Bayes' theorem for random variables, we saw in an exercise where we have $n$ random variables that we want a posterior distribution over, where each of these random variables has alphabet size $k$. Then computing the denominator of Bayes' theorem involves summing over $k^n$ table entries, a computation that takes running time $\mathcal{O}(k^ n)$.
+
+\subsection{Important Remarks Regarding Big O Notation}
+
+In how big O notation is defined, it looks at an upper bound on how fast a function grows. For example, a function that grows linearly in $n$ is$\mathcal{O}(n^2)$ and also $\mathcal{O}(2^n)$, both of which grow much faster than linear. Typically, when using big O notation such as $f(n) = \mathcal{O}(g(n))$, we will pick $g$ that grows at a rate that matches or closely matches the actual growth rate of $f$.
+
+An example of a mathematical operation for which people often use a function $g$ that doesn't actually match $f$ in order of growth is multiplying two $n$-by-$n$ matrices, for which the fastest algorithm known takes time $\mathcal{O}(n^{2.373})$ but since the exponent 2.373 is peculiar and the algorithm that achieves it is quite complicated and not what's typically used in practice, often times for convenience people just say that multiplying two $n$-by-$n$ matrices takes time $\mathcal{O}(n^3)$. Note that when they say such a statement, they are not explicitly saying which matrix multiplication algorithm is used either.
+
+Finally, some terminology:
+
+\begin{itemize}
+\item If $f(n) = \mathcal{O}(1)$, then we say that $f$ is constant with respect to input n.
+
+\item If $f(n) = \mathcal{O}(\log n)$, then we say that $f$ grows logarithmically respect to input $n$. For example, if $f$ is the running time of a computer program, then we would say that $f$ has logarithmic running time in $n$.
+
+\item If $f(n) = \mathcal{O}(n)$, then we say that $f$ grows linearly in $n$. For example, if $f$ is the running time of a computer program, then we would say that $f$ has linear running time in $n$.
+
+\item If $f(n) = \mathcal{O}(n^2)$, then we say that $f$ grows quadratically in $n$. For example, if $f$ is the running time of a computer program, then we would say that $f$ has quadratic running time in $n$.
+
+\item If $f(n) = \mathcal{O}(b^n)$ for some constant $b>1$, then we say that $f$ grows exponentially in $n$. For example, if $f$ is the running time of a computer program, then we would say that $f$ has exponential running time in $n$.
+\end{itemize}
+
+The above are of course just a few examples. There are many other ``categories'' of functions such as $\mathcal{O}(n^3)$ corresponding to cubic growth in $n$.
+
+In much of our discussion to follow in 6.008.1x, we will analyze either the ``time complexity'' (i.e., how long it takes code to run in terms of number of basic operations, in big O) or ``space complexity'' (i.e., how much space a code uses for storing variables, also in big O).
+
+
+\end{document}

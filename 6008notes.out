@@ -60,6 +60,20 @@
 \BOOKMARK [2][-]{subsection.1.10.2}{The Geometric Distribution}{section.1.10}% 60
 \BOOKMARK [2][-]{subsection.1.10.3}{Practice Problem: The Geometric Distribution}{section.1.10}% 61
 \BOOKMARK [2][-]{subsection.1.10.4}{Discrete Probability Spaces and Random Variables}{section.1.10}% 62
-\BOOKMARK [0][-]{chapter.2}{Graphical Models}{}% 63
-\BOOKMARK [0][-]{chapter.3}{Learning a Probabilistic Model from Data}{}% 64
-\BOOKMARK [0][-]{appendix.A}{Notation Summary}{}% 65
+\BOOKMARK [0][-]{chapter.2}{Inference in Graphical Models}{}% 63
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 64
+\BOOKMARK [2][-]{subsection.2.1.1}{Introduction to Inference in Graphical Models}{section.2.1}% 65
+\BOOKMARK [1][-]{section.2.2}{Efficiency in Computer Programs}{chapter.2}% 66
+\BOOKMARK [2][-]{subsection.2.2.1}{Big O Notation}{section.2.2}% 67
+\BOOKMARK [2][-]{subsection.2.2.2}{Big O Notation with Multiple Variables}{section.2.2}% 68
+\BOOKMARK [2][-]{subsection.2.2.3}{Important Remarks Regarding Big O Notation}{section.2.2}% 69
+\BOOKMARK [1][-]{section.2.3}{Graphical Models}{chapter.2}% 70
+\BOOKMARK [2][-]{subsection.2.3.1}{Graphical Models}{section.2.3}% 71
+\BOOKMARK [2][-]{subsection.2.3.2}{Trees}{section.2.3}% 72
+\BOOKMARK [2][-]{subsection.2.3.3}{Practice Problem: Computing the Normalization Constant }{section.2.3}% 73
+\BOOKMARK [0][-]{chapter.3}{Learning a Probabilistic Model from Data}{}% 74
+\BOOKMARK [0][-]{appendix.A}{Notation Summary}{}% 75
+\BOOKMARK [0][-]{appendix.B}{Supplementary Information}{}% 76
+\BOOKMARK [1][-]{section.B.1}{External Resources}{appendix.B}% 77
+\BOOKMARK [1][-]{section.B.2}{Hints from the Discussion Forum}{appendix.B}% 78
+\BOOKMARK [2][-]{subsection.B.2.1}{Law of Total Expectation as Matrices}{section.B.2}% 79
