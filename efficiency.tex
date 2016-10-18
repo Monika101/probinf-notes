@@ -55,7 +55,9 @@ Summing everything up, we get $1 + 3|\mathcal{X}|+3|\mathcal{X}||\mathcal{Y}|$ b
 To formalize such rough measures of growth, we now introduce big O notation.
 
 \paragraph{Big O notation:} We say that a function $f$ that depends on a variable $n$ is $\mathcal{O}(g(n))$ (read as "big O of g of n") if there exists some minimum $n_0$ such that for all $n \ge n_0$,
+
 {\centering$f(n) \le c \cdot g(n)$ \par}
+
 for some constant $c>0$. Notationally, we write either $f(n) = \mathcal{O}(g(n))$ or $f(n) \in \mathcal{O}(g(n))$. Note that the $\mathcal{O}$ stands for ``order'' so you could think of $f$ being $\mathcal{O}(g(n))$ as $f$ growing on the order of $g$ as a function of $n$.
 
 \paragraph{Example:} Storing the probability table for a random variable with alphabet size $k$ takes $\mathcal{O}(k)$ amount of space. Even if we wanted to be efficient and store $k-1$ numbers, $k-1$ is still $\mathcal{O}(k)$, and in fact $k-1 \le k$ for all $k$, satisfying the definition of big O notation (with $n_0$ being set to whatever we want, and $c$ set to 1).

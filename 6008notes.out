@@ -71,9 +71,18 @@
 \BOOKMARK [2][-]{subsection.2.3.1}{Graphical Models}{section.2.3}% 71
 \BOOKMARK [2][-]{subsection.2.3.2}{Trees}{section.2.3}% 72
 \BOOKMARK [2][-]{subsection.2.3.3}{Practice Problem: Computing the Normalization Constant }{section.2.3}% 73
-\BOOKMARK [0][-]{chapter.3}{Learning a Probabilistic Model from Data}{}% 74
-\BOOKMARK [0][-]{appendix.A}{Notation Summary}{}% 75
-\BOOKMARK [0][-]{appendix.B}{Supplementary Information}{}% 76
-\BOOKMARK [1][-]{section.B.1}{External Resources}{appendix.B}% 77
-\BOOKMARK [1][-]{section.B.2}{Hints from the Discussion Forum}{appendix.B}% 78
-\BOOKMARK [2][-]{subsection.B.2.1}{Law of Total Expectation as Matrices}{section.B.2}% 79
+\BOOKMARK [1][-]{section.2.4}{Inference in Graphical Models - Marginalization}{chapter.2}% 74
+\BOOKMARK [2][-]{subsection.2.4.1}{Two Fundamental Inference Tasks in Graphical Models}{section.2.4}% 75
+\BOOKMARK [2][-]{subsection.2.4.2}{The Sum-Product Algorithm}{section.2.4}% 76
+\BOOKMARK [2][-]{subsection.2.4.3}{Speeding Up Sum-Product}{section.2.4}% 77
+\BOOKMARK [1][-]{section.2.5}{Special Case: Marginalization in Hidden Markov Models}{chapter.2}% 78
+\BOOKMARK [2][-]{subsection.2.5.1}{Introduction to Hidden Markov Models \(HMM's\)}{section.2.5}% 79
+\BOOKMARK [2][-]{subsection.2.5.2}{Hidden Markov Models: Three Ingredients}{section.2.5}% 80
+\BOOKMARK [2][-]{subsection.2.5.3}{Formulating HMM's}{section.2.5}% 81
+\BOOKMARK [2][-]{subsection.2.5.4}{Forward and Backward Messages for HMM's}{section.2.5}% 82
+\BOOKMARK [0][-]{chapter.3}{Learning a Probabilistic Model from Data}{}% 83
+\BOOKMARK [0][-]{appendix.A}{Notation Summary}{}% 84
+\BOOKMARK [0][-]{appendix.B}{Supplementary Information}{}% 85
+\BOOKMARK [1][-]{section.B.1}{External Resources}{appendix.B}% 86
+\BOOKMARK [1][-]{section.B.2}{Hints from the Discussion Forum}{appendix.B}% 87
+\BOOKMARK [2][-]{subsection.B.2.1}{Law of Total Expectation as Matrices}{section.B.2}% 88

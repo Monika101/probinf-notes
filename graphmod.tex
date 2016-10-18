@@ -41,7 +41,7 @@ There is one table that depends on exactly 2 random variables: $\psi _{1, 2} = p
 
 \item (c) $p_{X_2}$ and $p_{X_1 \mid X_2}$.
 
-Here, there is one table that depends on exactly 1 random variable: $p_{X_2}$. We call this ?X2=pX2.
+Here, there is one table that depends on exactly 1 random variable: $p_{X_2}$. We call this $\phi _{X_2} = p_{X_2}$.
 
 There is one table that depends on exactly 2 random variables: $\psi _{1, 2} = p_{X_1 \mid X_2}$. (This $\psi _{1, 2}$ is different from the ones in (a) and (b).)
 \end{itemize}
@@ -57,23 +57,26 @@ Again, the line is there between $X_1$ and $X_2$ precisely because to store the 
 \textbf{Markov Chain}
 
 Next, suppose we have three random variables $X_1$, $X_2$ and $X_3$, where we make an assumption here that the joint probability table has factorization
+
 {\centering$p_{X_1,X_2,X_3}(x_1,x_2,x_3) = p_{X_1}(x_1) p_{X_2|X_1}(x_2|x_1) p_{X_3|X_2}(x_3|x_2). \qquad \qquad$ (3.1) \par}
 
 Note that this factorization is in general not true for three random variables $X_1$, $X_2$ and $X_3$.
 
 To see, this, we can apply the product rule (which is true for any three random variables $X_1$, $X_2$ and $X_3$):
+
 {\centering$p_{X_1,X_2,X_3}(x_1,x_2,x_3) = p_{X_1}(x_1) p_{X_2|X_1}(x_2|x_1) p_{X_3|X_1, X_2}(x_3|x_1, x_2). \qquad \qquad$ (3.2) \par}
 
 To see what the assumption that equation (3.1) holds means, we equate it with the equation from the product rule (3.2) to get
 
-{\renewcommand{\arraystretch}{1.5}
+{\centering{\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{l l}
  & $p_{X_1}(x_1) p_{X_2|X_1}(x_2|x_1) p_{X_3|X_2}(x_3|x_2)$ \\ 
  & $= p_{X_1,X_2,X_3}(x_1,x_2,x_3)$ \\
  & $= p_{X_1}(x_1) p_{X_2|X_1}(x_2|x_1) p_{X_3|X_1, X_2}(x_3|x_1, x_2)$,	 
-\end{tabular}}
+\end{tabular}} \par}
 				
 from which we deduce that $p_{X_3|X_1,X_2}(x_3|x_1,x_2)=p_{X_3|X_2}(x_3|x_2)$. This means that given $X_2$, knowing $X_1$ does not tell us anything new about $X_3$:
+
 {\centering$X_1 \perp X_3 \mid X_2.$ \par}
  
 So assuming equation (3.1) holds means that we are making an assumption about conditional independence structure!
@@ -157,7 +160,7 @@ This graph is a tree since there are no loops and we can reach from any node to 
 
 Base case $n=1$: There is only 1 node so there are no edges, so the claim clearly holds.
 
-Inductive step: Suppose the claim holds for every tree of size (i.e., number of nodes) up to $k$. Thus, every tree of size $k$ nodes has $k-1$ edges. Now consider a tree $T$ with $k+1$ nodes. Take a leaf node $v$ from $T$ and note that the tree $T$ with $v$ removed is a tree $T?$ of size $k$, which by the inductive hypothesis has $k-1$ edges. Since $v$ is a leaf node though, it has exactly 1 neighbor, which means that the tree $T$ has 1 more edge than the tree $T?$, i.e., $T$ has $k$ edges. This finishes the inductive step. $\square$
+Inductive step: Suppose the claim holds for every tree of size (i.e., number of nodes) up to $k$. Thus, every tree of size $k$ nodes has $k-1$ edges. Now consider a tree $T$ with $k+1$ nodes. Take a leaf node $v$ from $T$ and note that the tree $T$ with $v$ removed is a tree $T'$ of size $k$, which by the inductive hypothesis has $k-1$ edges. Since $v$ is a leaf node though, it has exactly 1 neighbor, which means that the tree $T$ has 1 more edge than the tree $T'$, i.e., $T$ has $k$ edges. This finishes the inductive step. $\square$
 
 \subsection{Practice Problem: Computing the Normalization Constant }
 
@@ -177,12 +180,12 @@ where ``$\propto$'' means ``proportional to''.
 
 \paragraph{Solution:} We have
 
-{\renewcommand{\arraystretch}{1.5}
+{\centering{\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{l l l}
 1 & $=$ & $\sum _{x_{1}}\sum _{x_{2}}p_{X_{1},X_{2}}(x_{1},x_{2})$ \\
   & $=$ & $\sum _{x_{1}}\sum _{x_{2}}\frac{1}{Z}\phi _{1}(x_{1})\phi _{2}(x_{2})\psi _{12}(x_{1},x_{2})$ \\
   & $=$ & $\frac{1}{Z}\sum _{x_{1}}\sum _{x_{2}}\phi _{1}(x_{1})\phi _{2}(x_{2})\psi _{12}(x_{1},x_{2}),$ 
-\end{tabular}}
+\end{tabular}} \par}
 
 so
 
