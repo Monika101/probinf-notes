@@ -146,80 +146,128 @@ Here, the symbol $\propto$ means ``is proportional to'', and indicates that we m
 
 \subsection{Formulating HMM's}
 
-%Suppose you send your robot, Inquisition, to Mars. Unfortunately, it gets stuck in a canyon while landing and most of its sensors break. You know the canyon has 3 areas. Areas 1 and 3 are sunny and hot, while Area 2 is cold. You decide to plan a rescue mission for the robot from Area 3, knowing the following things about the robot:
-%
-%Every hour, it tries to move forward by one area (i.e. from Area 1 to Area 2, or Area 2 to Area 3). It succeeds with probability 0.75 and fails with probability 0.25. If it fails, it stays where it is. If it is in Area 3, it always stays there (and waits to be rescued).
-%
-%The temperature sensor still works. Every hour, we get a binary reading telling us whether the robot's current environment is hot or cold.
-%
-%We have no idea where the robot initially got stuck.
-%
-%Let's construct an HMM for this problem, which amounts to coming up with the transition matrix A, observation matrix B, and initial state distribution ?0.
-%
-%We'll start with the transition matrix. Remember that each row corresponds to the current state, and each column corresponds to the next state. We'll use 3 states, each corresponding to one area.
-%
-%If the robot is in Area 1, it stays where it is with probability 0.25, moves to Area 2 with probability 0.75, and can't move to Area 3.
-%
-%Similarly, if the robot is in Area 2, it stays where it is with probability 0.25, can't move back to Area 1, and moves to Area 3 with probability 0.75.
-%
-%If the robot is in Area 3, it always stays in Area 3.
-%
-%Each item above gives us one row of A. Putting it all together, we obtain
+Suppose you send your robot, Inquisition, to Mars. Unfortunately, it gets stuck in a canyon while landing and most of its sensors break. You know the canyon has 3 areas. Areas 1 and 3 are sunny and hot, while Area 2 is cold. You decide to plan a rescue mission for the robot from Area 3, knowing the following things about the robot:
 
+\begin{itemize}
+\item Every hour, it tries to move forward by one area (i.e. from Area 1 to Area 2, or Area 2 to Area 3). It succeeds with probability $0.75$ and fails with probability $0.25$. If it fails, it stays where it is. If it is in Area 3, it always stays there (and waits to be rescued).
 
+\item The temperature sensor still works. Every hour, we get a binary reading telling us whether the robot's current environment is hot or cold.
 
+\item We have no idea where the robot initially got stuck.
+\end{itemize}
 
-%Next, let's look at the observation matrix. There are two possible observations, hot and cold. Areas 1 and 3 always produce “hot" readings while Area 2 always produces a “cold" reading:
-%
-%
-%
-%
-%Last but not least, since we have no idea where the robot starts, our initial state distribution will be uniform:
-%
+Let's construct an HMM for this problem, which amounts to coming up with the transition matrix $A$, observation matrix $B$, and initial state distribution $\pi_0$.
 
+We'll start with the transition matrix. Remember that each row corresponds to the current state, and each column corresponds to the next state. We'll use 3 states, each corresponding to one area.
 
+\begin{itemize}
+\item If the robot is in Area 1, it stays where it is with probability 0.25, moves to Area 2 with probability 0.75, and can't move to Area 3.
+
+\item Similarly, if the robot is in Area 2, it stays where it is with probability 0.25, can't move back to Area 1, and moves to Area 3 with probability 0.75.
+
+\item If the robot is in Area 3, it always stays in Area 3.
+\end{itemize}
+
+Each item above gives us one row of A. Putting it all together, we obtain
+
+{\centering\includegraphics[scale=0.25]{images_sec-formulating-hmm-helper1} \par}
+
+Next, let's look at the observation matrix. There are two possible observations, hot and cold. Areas 1 and 3 always produce ``hot'' readings while Area 2 always produces a ``cold'' reading:
+
+{\centering\includegraphics[scale=0.25]{images_sec-formulating-hmm-helper2} \par}
+
+Last but not least, since we have no idea where the robot starts, our initial state distribution will be uniform:
+
+{\centering\includegraphics[scale=0.25]{images_sec-formulating-hmm-helper3} \par}
 
 
 \subsection{Forward and Backward Messages for HMM's}
 
-%Before doing any computation, we see that the sequence (hot,cold,hot) could only have been observed from the hidden state sequence (1,2,3). Make sure you convince yourself this is true before continuing!
-%
-%We'll start with the forward messages.
-%
- 	%?1?2	=	?x1?0?1(x1)?~(x1)?depends only on x1?(x1,x2)	 	 
-%The output message should have three different possibilities, one for each value of x2. We can therefore represent it as a vector indexed by x2. For each term in the sum (i.e. each possible value of x1):
-%
-%?0?1 comes from from the initial distribution. Normally it would come from the previous message, but our first forward message is always set to initial state distribution.
-%
-%?~ comes from the column of B corresponding to our observation y1= hot.
-%
-%? comes from a row of A: we are fixing x1 and asking about possible values for x2, which corresponds exactly to the transition distributions given in the rows of A (remember that the rows of A correspond to the current state and the columns correspond to the next state).
-%
-%So, we obtain
-%
-%?1?2=13?1?(.25.750)?x1=1+13?0?(0.25.75)?x1=2+13?1?(001)?x1=3?(134)
-%Since our probabilities are eventually computed by multiplying messages and normalizing, we can arbitrary renormalize at any step to make the computation easier.
-%
-%For the second message, we perform a similar computation:
-%
-%?2?3=?x2?1?2(x2)?~(x2)?(x2,x3)=1?0?(.25.750)?x2=1+3?1?(0.25.75)?x2=2+4?0?(001)?x2=3?(013)
-%The backwards messages are computed using a similar formula:
-%
-%?3?2=?x3?4?3(x3)?~(x3)?depends only on x3?(x2,x3)
-%The first backwards message, ?4?3(x3), is always initialized to uniform since we have no information about what the last state should be. Note that this is equivalent to not including that term at all.
-%
-%For each value of x3, the transition term ?(x2,x3) is now drawn from a column of A, since we are interested in the probability of arriving at x3 from each possible state for x2. We compute the messages as:
-%
-%?3?2=1?(.2500)?x3=1+0?(.75.250)?x3=2+1?(0.751)?x3=3?(134)
-%Similarly, the second backwards message is:
-%
-%?2?1=1?0?(.2500)?x2=1+3?1?(.75.250)?x2=2+4?0?(0.751)?x2=3?(310)
-%Notice from the symmetry of the problem that our forwards messages and backwards messages were the same.
-%
-%To compute the marginal distribution for X2 given the data, we multiply the messages and the observation:
-%
-%pX2|Y1,…,Yn(x2|y1,…,yn)??1?2(x2)?3?2(x2)?~(x2)?(134)?(134)?(010)=(010)
-%Notice that in this case, because of our simplified observation model, the observation “cold" allowed us to determine the state. This matches up with our earlier conclusion that the robot must have been in Area 2 during the second hour.
+Before doing any computation, we see that the sequence (hot,cold,hot) could only have been observed from the hidden state sequence (1,2,3). Make sure you convince yourself this is true before continuing!
+
+We'll start with the forward messages.
+
+{\centering$\sum _{x_1} \underbrace{\alpha _{0 \to 1}(x_1) \tilde{\phi }(x_1)}_{\text {depends only on $x_1$}} \psi (x_1,x_2)$ \par}
+
+The output message should have three different possibilities, one for each value of $x_2$. We can therefore represent it as a vector indexed by $x_2$. For each term in the sum (i.e. each possible value of $x_1$):
+
+\begin{itemize}
+\item $\alpha _{0 \to 1}$ comes from from the initial distribution. Normally it would come from the previous message, but our first forward message is always set to initial state distribution.
+
+\item $\tilde{\phi }$ comes from the column of $B$ corresponding to our observation $y_1=$ hot.
+
+\item $\psi$ comes from a row of $A$: we are fixing $x_1$ and asking about possible values for $x_1$, which corresponds exactly to the transition distributions given in the rows of $A$ (remember that the rows of $A$ correspond to the current state and the columns correspond to the next state).
+\end{itemize}
+
+So, we obtain
+
+\begin{eqnarray*}
+		\alpha_{1 \to 2} &= &
+		\overbrace{\frac{1}{3} \cdot 1 \cdot \begin{pmatrix} .25 \\ .75 \\ 0 \end{pmatrix}}^{x_1 = 1} +
+		\overbrace{\frac{1}{3} \cdot 0 \cdot \begin{pmatrix} 0 \\ .25 \\ .75 \end{pmatrix}}^{x_1 = 2} +
+		\overbrace{\frac{1}{3} \cdot 1 \cdot \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}}^{x_1 = 3} \\
+		&\propto& \begin{pmatrix} 1 \\ 3 \\ 4 \end{pmatrix}
+\end{eqnarray*}
+						
+Since our probabilities are eventually computed by multiplying messages and normalizing, we can arbitrary renormalize at any step to make the computation easier.
+
+For the second message, we perform a similar computation:
+
+\begin{eqnarray*}
+		\alpha_{2 \to 3} &= &
+				\sum_{x_2} {\alpha_{1 \to 2}(x_2) \tilde{\phi}(x_2)} \psi(x_2,x_3) \\
+		&= &
+				\overbrace{1 \cdot 0 \cdot \begin{pmatrix} .25 \\ .75 \\ 0 \end{pmatrix}}^{x_2 = 1} +
+				\overbrace{3 \cdot 1 \cdot \begin{pmatrix} 0 \\ .25 \\ .75 \end{pmatrix}}^{x_2 = 2} +
+				\overbrace{4 \cdot 0 \cdot \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}}^{x_2 = 3} \\
+		&\propto& \begin{pmatrix} 0 \\ 1 \\ 3 \end{pmatrix}
+\end{eqnarray*}
+						
+The backwards messages are computed using a similar formula:
+
+\begin{eqnarray*}
+                \beta_{3 \to 2} &=& \sum_{x_3} \underbrace{\beta_{4 \to 3}(x_3) \tilde{\phi}(x_3)}_{\text{depends only on $x_3$}} \psi(x_2,x_3)
+\end{eqnarray*}
+						
+The first backwards message, $\beta _{4 \to 3}(x_3)$, is always initialized to uniform since we have no information about what the last state should be. Note that this is equivalent to not including that term at all.
+
+For each value of $x_3$, the transition term $\psi (x_2,x_3)$ is now drawn from a column of $A$, since we are interested in the probability of arriving at $x_3$ from each possible state for $x_2$. We compute the messages as:
+
+\begin{eqnarray*}
+		\beta_{3 \to 2} &= &
+				\overbrace{1 \cdot \begin{pmatrix} .25 \\ 0 \\ 0 \end{pmatrix}}^{x_3 = 1} +
+				\overbrace{0 \cdot \begin{pmatrix} .75 \\ .25 \\ 0 \end{pmatrix}}^{x_3 = 2} +
+				\overbrace{1 \cdot \begin{pmatrix} 0 \\ .75 \\ 1 \end{pmatrix}}^{x_3 = 3} \\
+		&\propto& \begin{pmatrix} 1 \\ 3 \\ 4 \end{pmatrix}
+\end{eqnarray*}
+
+Similarly, the second backwards message is:
+
+\begin{eqnarray*}
+		\beta_{2 \to 1} &= &
+		\overbrace{1 \cdot 0 \cdot \begin{pmatrix} .25 \\ 0 \\ 0 \end{pmatrix}}^{x_2 = 1} +
+		\overbrace{3 \cdot 1 \cdot \begin{pmatrix} .75 \\ .25 \\ 0 \end{pmatrix}}^{x_2 = 2} +
+		\overbrace{4 \cdot 0 \cdot \begin{pmatrix} 0 \\ .75 \\ 1 \end{pmatrix}}^{x_2 = 3} \\
+		&\propto& \begin{pmatrix} 3 \\ 1 \\ 0 \end{pmatrix}
+\end{eqnarray*}
+
+Notice from the symmetry of the problem that our forwards messages and backwards messages were the same.
+
+To compute the marginal distribution for $X_2$ given the data, we multiply the messages and the observation:
+
+\begin{eqnarray*}
+		p_{X_2 | Y_1, \ldots, Y_n}(x_2|y_1,\ldots,y_n) &\propto &
+				\alpha_{1 \to 2}(x_2)
+				\beta_{3 \to 2}(x_2)
+				\tilde{\phi}(x_2) \\
+		&\propto &
+				\begin{pmatrix} 1 \\ 3 \\ 4 \end{pmatrix} \cdot
+				\begin{pmatrix} 1 \\ 3 \\ 4 \end{pmatrix} \cdot
+				\begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} \\
+		&=& \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} \\
+\end{eqnarray*}
+
+Notice that in this case, because of our simplified observation model, the observation ``cold'' allowed us to determine the state. This matches up with our earlier conclusion that the robot must have been in Area 2 during the second hour.
 
 
 \end{document}

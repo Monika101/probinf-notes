@@ -195,23 +195,23 @@ If $q(a)=0$ for any $a\in \mathcal{X}$, then $D(p\parallel q)=\infty$, so trivia
 
 What's left to consider is when $q(a)>0$ for every $a\in \mathcal{X}$. Then
 
-{\renewcommand{\arraystretch}{1.5}
+{\centering{\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{l l l}
 $D(p\parallel q)$ & $=$ & $\sum _{a\in \mathcal{X}}p(a)\log _{2}\frac{p(a)}{q(a)}$ \\
   & $=$ & $\frac{1}{\ln 2}\sum _{a\in \mathcal{X}}p(a)\ln \frac{p(a)}{q(a)}$ \\
   & $=$ & $-\frac{1}{\ln 2}\sum _{a\in \mathcal{X}}p(a)\ln \frac{q(a)}{p(a)}.$ 
-\end{tabular}}
+\end{tabular}} \par}
 		
 Next, using the fact that $\ln x\le x-1$ for all $x>0$, and accounting for the minus sign outside the summation,
 
-{\renewcommand{\arraystretch}{1.5}
+{\centering{\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{l l l}
 $D(p\parallel q)$ & $=$ & $-\frac{1}{\ln 2}\sum _{a\in \mathcal{X}}p(a)\ln \frac{q(a)}{p(a)}$ \\
   & $=$ & $-\frac{1}{\ln 2}\sum _{a\in \mathcal{X}}p(a)\Big(\frac{q(a)}{p(a)}-1\Big)$ \\
   & $=$ & $-\frac{1}{\ln 2}\sum _{a\in \mathcal{X}}\big (q(a)-p(a)\big )$ \\
   & $=$ & $-\frac{1}{\ln 2}\big (\underbrace{\sum _{a\in \mathcal{X}}q(a)}_{1}-\underbrace{\sum _{a\in \mathcal{X}}p(a)}_{1}\big )$ \\
   & $=$ & $0$ 
-\end{tabular}}
+\end{tabular}} \par}
 			
 Recall that inequality $\ln x\le x-1$ becomes an equality if and only if $x=1$. Thus, the inequality above becomes an equality if and only if, for all $a\in \mathcal{X}$, we have $\ln \frac{q(a)}{p(a)}=\frac{q(a)}{p(a)}-1$, which holds if and only if $\frac{q(a)}{p(a)}=1$. Thus $D(p\parallel q)=0$ if and only if $p(a)=q(a)$ for all $a\in \mathcal{X}$. This finishes the proof. $\square$
 

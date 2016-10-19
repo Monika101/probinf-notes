@@ -45,99 +45,99 @@
 \contentsline {subsection}{\numberline {1.5.2}The Product Rule for Events}{20}{subsection.1.5.2}
 \contentsline {subsection}{\numberline {1.5.3}Bayes' Theorem for Events}{20}{subsection.1.5.3}
 \contentsline {paragraph}{Important note about dividing by probabilities:}{20}{section*.19}
-\contentsline {subsection}{\numberline {1.5.4}Practice Problem: Bayes' Theorem and Total Probability}{20}{subsection.1.5.4}
+\contentsline {subsection}{\numberline {1.5.4}Practice Problem: Bayes' Theorem and Total Probability}{21}{subsection.1.5.4}
 \contentsline {paragraph}{Solution:}{21}{section*.20}
 \contentsline {paragraph}{Alternate method to compute the denominator $\mathbb {P}(B_ i^ c)$:}{21}{section*.21}
-\contentsline {subsection}{\numberline {1.5.5}Take-Away Lessons:}{21}{subsection.1.5.5}
+\contentsline {subsection}{\numberline {1.5.5}Take-Away Lessons:}{22}{subsection.1.5.5}
 \contentsline {section}{\numberline {1.6}Inference with Bayes' Theorem for Random Variables}{22}{section.1.6}
 \contentsline {subsection}{\numberline {1.6.1}The Product Rule for Random Variables (Also Called the Chain Rule)}{22}{subsection.1.6.1}
 \contentsline {paragraph}{Interpretation:}{22}{section*.22}
-\contentsline {paragraph}{Claim:}{22}{section*.23}
-\contentsline {paragraph}{Proof:}{22}{section*.24}
-\contentsline {paragraph}{Important convention for this course:}{22}{section*.25}
+\contentsline {paragraph}{Claim:}{23}{section*.23}
+\contentsline {paragraph}{Proof:}{23}{section*.24}
+\contentsline {paragraph}{Important convention for this course:}{23}{section*.25}
 \contentsline {paragraph}{The product rule is symmetric:}{23}{section*.26}
 \contentsline {paragraph}{Interpretation:}{23}{section*.27}
-\contentsline {paragraph}{Many random variables:}{23}{section*.28}
-\contentsline {subsection}{\numberline {1.6.2}Bayes' Rule for Random Variables (Also Called Bayes' Theorem for Random Variables}{23}{subsection.1.6.2}
+\contentsline {paragraph}{Many random variables:}{24}{section*.28}
+\contentsline {subsection}{\numberline {1.6.2}Bayes' Rule for Random Variables (Also Called Bayes' Theorem for Random Variables}{24}{subsection.1.6.2}
 \contentsline {paragraph}{Bayes' theorem:}{24}{section*.29}
 \contentsline {paragraph}{Important:}{24}{section*.30}
-\contentsline {paragraph}{Proof:}{24}{section*.31}
-\contentsline {subsection}{\numberline {1.6.3}Bayes' Theorem for Random Variables: A Computational View}{24}{subsection.1.6.3}
+\contentsline {paragraph}{Proof:}{25}{section*.31}
+\contentsline {subsection}{\numberline {1.6.3}Bayes' Theorem for Random Variables: A Computational View}{25}{subsection.1.6.3}
 \contentsline {subsection}{\numberline {1.6.4}Maximum A Posteriori (MAP) Estimation}{25}{subsection.1.6.4}
-\contentsline {section}{\numberline {1.7}Independence Structure}{25}{section.1.7}
-\contentsline {subsection}{\numberline {1.7.1}Independent Events}{25}{subsection.1.7.1}
+\contentsline {section}{\numberline {1.7}Independence Structure}{26}{section.1.7}
+\contentsline {subsection}{\numberline {1.7.1}Independent Events}{26}{subsection.1.7.1}
 \contentsline {subsection}{\numberline {1.7.2}Independent Random Variables}{26}{subsection.1.7.2}
 \contentsline {paragraph}{Exercise: Independent Random Variables}{26}{section*.32}
 \contentsline {subsection}{\numberline {1.7.3}Mutual vs Pairwise Independence}{27}{subsection.1.7.3}
 \contentsline {subsection}{\numberline {1.7.4}Conditional Independence}{28}{subsection.1.7.4}
-\contentsline {paragraph}{Part $(a)$:}{28}{section*.33}
+\contentsline {paragraph}{Part $(a)$:}{29}{section*.33}
 \contentsline {paragraph}{Part $(b)$:}{29}{section*.34}
-\contentsline {subsection}{\numberline {1.7.5}Explaining Away}{29}{subsection.1.7.5}
-\contentsline {subsection}{\numberline {1.7.6}Practice Problem: Conditional Independence}{31}{subsection.1.7.6}
+\contentsline {subsection}{\numberline {1.7.5}Explaining Away}{30}{subsection.1.7.5}
+\contentsline {subsection}{\numberline {1.7.6}Practice Problem: Conditional Independence}{32}{subsection.1.7.6}
 \contentsline {section}{\numberline {1.8}Decisions and Expectations}{32}{section.1.8}
 \contentsline {subsection}{\numberline {1.8.1}Introduction to Decision Making and Expectations}{32}{subsection.1.8.1}
 \contentsline {subsection}{\numberline {1.8.2}The Expected Value of a Random Variable}{33}{subsection.1.8.2}
 \contentsline {paragraph}{Definition of expected value:}{34}{section*.35}
 \contentsline {subsection}{\numberline {1.8.3}Variance and Standard Deviation}{35}{subsection.1.8.3}
-\contentsline {subsection}{\numberline {1.8.4}Practice Problem: The Law of Total Expectation}{35}{subsection.1.8.4}
-\contentsline {paragraph}{Solution:}{35}{section*.36}
-\contentsline {section}{\numberline {1.9}Measuring Randomness}{36}{section.1.9}
-\contentsline {subsection}{\numberline {1.9.1}Introduction to Information-Theoretic Measures of Randomness}{36}{subsection.1.9.1}
+\contentsline {subsection}{\numberline {1.8.4}Practice Problem: The Law of Total Expectation}{36}{subsection.1.8.4}
+\contentsline {paragraph}{Solution:}{36}{section*.36}
+\contentsline {section}{\numberline {1.9}Measuring Randomness}{37}{section.1.9}
+\contentsline {subsection}{\numberline {1.9.1}Introduction to Information-Theoretic Measures of Randomness}{37}{subsection.1.9.1}
 \contentsline {subsection}{\numberline {1.9.2}Shannon Information Content}{37}{subsection.1.9.2}
-\contentsline {subsection}{\numberline {1.9.3}Shannon Entropy}{37}{subsection.1.9.3}
+\contentsline {subsection}{\numberline {1.9.3}Shannon Entropy}{38}{subsection.1.9.3}
 \contentsline {paragraph}{Notation:}{38}{section*.37}
 \contentsline {subsection}{\numberline {1.9.4}Information Divergence}{38}{subsection.1.9.4}
 \contentsline {subsection}{\numberline {1.9.5}Proof of Gibbs' Inequality}{40}{subsection.1.9.5}
-\contentsline {paragraph}{Gibbs' inequality:}{40}{section*.38}
-\contentsline {paragraph}{Proof:}{40}{section*.39}
+\contentsline {paragraph}{Gibbs' inequality:}{41}{section*.38}
+\contentsline {paragraph}{Proof:}{41}{section*.39}
 \contentsline {paragraph}{Claim:}{41}{section*.40}
 \contentsline {paragraph}{Proof:}{41}{section*.41}
 \contentsline {subsection}{\numberline {1.9.6}Mutual Information}{42}{subsection.1.9.6}
-\contentsline {subsection}{\numberline {1.9.7}Exercise: Mutual Information}{42}{subsection.1.9.7}
+\contentsline {subsection}{\numberline {1.9.7}Exercise: Mutual Information}{43}{subsection.1.9.7}
 \contentsline {subsection}{\numberline {1.9.8}Information-Theoretic Measures of Randomness: Where We'll See Them Next}{43}{subsection.1.9.8}
-\contentsline {section}{\numberline {1.10}Towards Infinity in Modeling Uncertainty}{43}{section.1.10}
-\contentsline {subsection}{\numberline {1.10.1}Infinite Outcomes}{43}{subsection.1.10.1}
+\contentsline {section}{\numberline {1.10}Towards Infinity in Modeling Uncertainty}{44}{section.1.10}
+\contentsline {subsection}{\numberline {1.10.1}Infinite Outcomes}{44}{subsection.1.10.1}
 \contentsline {subsection}{\numberline {1.10.2}The Geometric Distribution}{44}{subsection.1.10.2}
 \contentsline {subsection}{\numberline {1.10.3}Practice Problem: The Geometric Distribution}{45}{subsection.1.10.3}
 \contentsline {paragraph}{Solution: }{45}{section*.42}
 \contentsline {paragraph}{Solution: }{45}{section*.43}
 \contentsline {subsection}{\numberline {1.10.4}Discrete Probability Spaces and Random Variables}{45}{subsection.1.10.4}
-\contentsline {paragraph}{Definition of a ``discrete probability space'':}{45}{section*.44}
-\contentsline {paragraph}{Definition of a ``discrete random variable'':}{45}{section*.45}
-\contentsline {chapter}{\numberline {2}Inference in Graphical Models}{46}{chapter.2}
-\contentsline {section}{\numberline {2.1}Introduction}{46}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Introduction to Inference in Graphical Models}{46}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2}Efficiency in Computer Programs}{46}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Big O Notation}{46}{subsection.2.2.1}
-\contentsline {paragraph}{Big O notation:}{47}{section*.46}
-\contentsline {paragraph}{Example:}{47}{section*.47}
-\contentsline {paragraph}{Example:}{47}{section*.48}
-\contentsline {subsection}{\numberline {2.2.2}Big O Notation with Multiple Variables}{48}{subsection.2.2.2}
-\contentsline {paragraph}{Example:}{48}{section*.49}
-\contentsline {subsection}{\numberline {2.2.3}Important Remarks Regarding Big O Notation}{48}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Graphical Models}{49}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Graphical Models}{49}{subsection.2.3.1}
-\contentsline {paragraph}{Definition of an undirected pairwise graphical model}{51}{section*.50}
-\contentsline {paragraph}{Important:}{51}{section*.51}
-\contentsline {subsection}{\numberline {2.3.2}Trees}{51}{subsection.2.3.2}
-\contentsline {paragraph}{Theorem:}{52}{section*.52}
-\contentsline {paragraph}{Proof:}{52}{section*.53}
-\contentsline {subsection}{\numberline {2.3.3}Practice Problem: Computing the Normalization Constant }{52}{subsection.2.3.3}
-\contentsline {paragraph}{Solution:}{52}{section*.54}
-\contentsline {section}{\numberline {2.4}Inference in Graphical Models - Marginalization}{53}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Two Fundamental Inference Tasks in Graphical Models}{53}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}The Sum-Product Algorithm}{53}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Speeding Up Sum-Product}{57}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}Special Case: Marginalization in Hidden Markov Models}{58}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Introduction to Hidden Markov Models (HMM's)}{58}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Hidden Markov Models: Three Ingredients}{58}{subsection.2.5.2}
-\contentsline {paragraph}{Clarification:}{59}{section*.55}
-\contentsline {paragraph}{Technical note:}{61}{section*.56}
-\contentsline {subsection}{\numberline {2.5.3}Formulating HMM's}{61}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}Forward and Backward Messages for HMM's}{61}{subsection.2.5.4}
-\contentsline {chapter}{\numberline {3}Learning a Probabilistic Model from Data}{62}{chapter.3}
-\contentsline {chapter}{\numberline {A}Notation Summary}{63}{appendix.A}
-\contentsline {chapter}{\numberline {B}Supplementary Information}{65}{appendix.B}
-\contentsline {section}{\numberline {B.1}External Resources}{65}{section.B.1}
-\contentsline {section}{\numberline {B.2}Hints from the Discussion Forum}{65}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Law of Total Expectation as Matrices}{65}{subsection.B.2.1}
+\contentsline {paragraph}{Definition of a ``discrete probability space'':}{46}{section*.44}
+\contentsline {paragraph}{Definition of a ``discrete random variable'':}{46}{section*.45}
+\contentsline {chapter}{\numberline {2}Inference in Graphical Models}{47}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{47}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Introduction to Inference in Graphical Models}{47}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Efficiency in Computer Programs}{47}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Big O Notation}{47}{subsection.2.2.1}
+\contentsline {paragraph}{Big O notation:}{48}{section*.46}
+\contentsline {paragraph}{Example:}{48}{section*.47}
+\contentsline {paragraph}{Example:}{48}{section*.48}
+\contentsline {subsection}{\numberline {2.2.2}Big O Notation with Multiple Variables}{49}{subsection.2.2.2}
+\contentsline {paragraph}{Example:}{49}{section*.49}
+\contentsline {subsection}{\numberline {2.2.3}Important Remarks Regarding Big O Notation}{49}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Graphical Models}{50}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Graphical Models}{50}{subsection.2.3.1}
+\contentsline {paragraph}{Definition of an undirected pairwise graphical model}{52}{section*.50}
+\contentsline {paragraph}{Important:}{52}{section*.51}
+\contentsline {subsection}{\numberline {2.3.2}Trees}{52}{subsection.2.3.2}
+\contentsline {paragraph}{Theorem:}{53}{section*.52}
+\contentsline {paragraph}{Proof:}{53}{section*.53}
+\contentsline {subsection}{\numberline {2.3.3}Practice Problem: Computing the Normalization Constant }{53}{subsection.2.3.3}
+\contentsline {paragraph}{Solution:}{53}{section*.54}
+\contentsline {section}{\numberline {2.4}Inference in Graphical Models - Marginalization}{54}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Two Fundamental Inference Tasks in Graphical Models}{54}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}The Sum-Product Algorithm}{54}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Speeding Up Sum-Product}{58}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}Special Case: Marginalization in Hidden Markov Models}{59}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Introduction to Hidden Markov Models (HMM's)}{59}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Hidden Markov Models: Three Ingredients}{59}{subsection.2.5.2}
+\contentsline {paragraph}{Clarification:}{60}{section*.55}
+\contentsline {paragraph}{Technical note:}{62}{section*.56}
+\contentsline {subsection}{\numberline {2.5.3}Formulating HMM's}{62}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Forward and Backward Messages for HMM's}{63}{subsection.2.5.4}
+\contentsline {chapter}{\numberline {3}Learning a Probabilistic Model from Data}{66}{chapter.3}
+\contentsline {chapter}{\numberline {A}Notation Summary}{67}{appendix.A}
+\contentsline {chapter}{\numberline {B}Supplementary Information}{69}{appendix.B}
+\contentsline {section}{\numberline {B.1}External Resources}{69}{section.B.1}
+\contentsline {section}{\numberline {B.2}Hints from the Discussion Forum}{69}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Law of Total Expectation as Matrices}{69}{subsection.B.2.1}

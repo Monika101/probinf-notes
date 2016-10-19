@@ -165,11 +165,11 @@ Show that the law of total expectation is true.
 
 The main technical hurdle is that the events $\mathcal{B}_{1},\dots ,\mathcal{B}_{n}$ are specified directly in the sample space, whereas working with values that $X$ takes on requires mapping from the sample space to the alphabet of $X$.
 
-We will derive the law of total expectation starting from the right-hand side of the equation above, i.e., $\sum _{i=1}^{n}\mathbb {E}[X\mid \mathcal{B}_{i}]\mathbb {P}(\mathcal{B}_{i})$.
+We will derive the law of total expectation starting from the right-hand side of the equation above, \\ i.e., $\sum _{i=1}^{n}\mathbb {E}[X\mid \mathcal{B}_{i}]\mathbb {P}(\mathcal{B}_{i})$.
 
 We first write $\mathbb {E}[X\mid \mathcal{B}_{i}]$ in terms of a summation over outcomes in $\Omega$:
 
-{\renewcommand{\arraystretch}{1.5}
+{\centering{\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{l l l}
 $\mathbb {E}[X\mid \mathcal{B}_{i}]$ & $=$ & $\sum _{x\in \mathcal{X}}x\frac{\mathbb {P}(X=x,\mathcal{B}_{i})}{\mathbb {P}(\mathcal{B}_{i})}$ \\
   & $=$ & $\sum _{x\in \mathcal{X}}x\frac{\mathbb {P}(\{ \omega \in \Omega \; :\; X(\omega )=x\} \cap \mathcal{B}_{i})}{\mathbb {P}(\mathcal{B}_{i})}$ \\
@@ -178,11 +178,11 @@ $\mathbb {E}[X\mid \mathcal{B}_{i}]$ & $=$ & $\sum _{x\in \mathcal{X}}x\frac{\ma
   & $=$ & $\sum _{x\in \mathcal{X}}x\cdot \frac{\sum _{\omega \in \mathcal{B}_{i}\text { such that }X(\omega )=x}\mathbb {P}(\{ \omega \} )}{\mathbb {P}(\mathcal{B}_{i})}$ \\
   & $=$ & $\frac{1}{\mathbb {P}(\mathcal{B}_{i})}\sum _{x\in \mathcal{X}}x\sum _{\omega \in \mathcal{B}_{i}\text { such that }X(\omega )=x}\mathbb {P}(\{ \omega \} )$ \\
   & $=$ & $\frac{1}{\mathbb {P}(\mathcal{B}_{i})}\sum _{\omega \in \mathcal{B}_{i}}X(\omega )\mathbb {P}(\{ \omega \} ).$ 
-\end{tabular}}
+\end{tabular}} \par}
 		
 Thus,
 
-{\renewcommand{\arraystretch}{1.5}
+{\centering{\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{l l l}
 $\sum _{i=1}^{n}\mathbb {E}[X\mid \mathcal{B}_{i}]\mathbb {P}(\mathcal{B}_{i})$ & $=$ & $\sum _{i=1}^{n}\bigg(\frac{1}{\mathbb {P}(\mathcal{B}_{i})}\sum _{\omega \in \mathcal{B}_{i}}X(\omega )\mathbb {P}(\{ \omega \} )\bigg)\mathbb {P}(\mathcal{B}_{i})$ \\
   & $=$ & $\sum _{i=1}^{n}\sum _{\omega \in \mathcal{B}_{i}}X(\omega )\mathbb {P}(\{ \omega \} )$ \\
@@ -190,7 +190,7 @@ $\sum _{i=1}^{n}\mathbb {E}[X\mid \mathcal{B}_{i}]\mathbb {P}(\mathcal{B}_{i})$ 
   & $=$ & $\sum _{x\in \mathcal{X}}x\mathbb {P}(\{ \omega \in \Omega \text { such that }X(\omega )=x\} )$ \\
   & $=$ & $\sum _{x\in \mathcal{X}}xp_{X}(x)$ \\
   & $=$ & $\mathbb {E}[X].$ \\
-\end{tabular}}
+\end{tabular}} \par}
 
 
 

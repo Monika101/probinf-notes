@@ -8,7 +8,7 @@ Colin Leach
 
 ## Some technical details
 
-I used TeXnicCenter 2.02 and MiKTeX 2.9 on Windows. 
+I used TeXnicCenter 2.02 and MiKTeX 2.9 on Windows. So far as I have tested it, Tex Live on Linux Mint also works (type "pdflatex 6008notes.tex" in the directory containing this file).
 
 All the *\usepackage* commands are in header.tex, which gives you a good idea of the dependancies.
 
