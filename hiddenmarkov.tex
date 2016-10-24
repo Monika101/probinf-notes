@@ -49,8 +49,8 @@ Then as a graphical model, incorporating observations $Y_{1}=y_{1},\dots ,Y_{n}=
 
 {\centering{\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{l l l}
- & $$ & \\
- & $$ & 
+ & $p_{X_{1},\dots ,X_{n}\mid Y_{1},\dots ,Y_{n}}(x_{1},\dots ,x_{n}\mid y_{1},\dots ,y_{n})$ & \\
+ & $\propto \underbrace{p_{X_{1}}(x_{1})p_{Y\mid X}(y_{1}\mid x_{1})}_{\triangleq \widetilde{\phi }_{1}(x_{1})}\prod _{i=2}^{n}\big \{ \underbrace{p_{Y\mid X}(y_{i}\mid x_{i})}_{\triangleq \widetilde{\phi }_{i}(x_{i})}\big \} \prod _{i=1}^{n-1}\underbrace{p_{X_{\text {next}}\mid X_{\text {current}}}(x_{i+1}\mid x_{i})}_{\triangleq \psi _{i,i+1}(x_{i},x_{i+1})}.$ & 
 \end{tabular}} \par}
 
 The messages are:
@@ -81,7 +81,7 @@ We will use these conventions:
 
 \item Since $\psi _{i,i+1}$ is actually the same table/function for all $i$, we just call it $\psi$, i.e., $\psi (x_{i},x_{i+1})=p_{X_{\text {next}}\mid X_{\text {current}}}(x_{i+1}\mid x_{i})$
 
-\item Since $\widetilde{\phi}_{i}$ above is actually the same for all $i \ge 2$, we just call it $\widetilde{\phi}$, i.e., $\psi (x_{i},x_{i+1})=p_{X_{\text {next}}\mid X_{\text {current}}}(x_{i+1}\mid x_{i})$; we actually extend this to the case $i=1$ as well with the following notational convenience: we define $\alpha _{0\rightarrow 1}(x_{1})\triangleq p_{X_{1}}(x_{1})$, so that the forward messages now can be expressed in 1 formula:
+\item Since $\widetilde{\phi}_{i}$ above is actually the same for all $i \ge 2$, we just call it $\widetilde{\phi}$, i.e., $\widetilde{\phi }(x_{i})=p_{Y\mid X}(y_{i}\mid x_{i})$; we actually extend this to the case $i=1$ as well with the following notational convenience: we define $\alpha _{0\rightarrow 1}(x_{1})\triangleq p_{X_{1}}(x_{1})$, so that the forward messages now can be expressed in 1 formula:
 
 {\centering$\alpha _{i\rightarrow i+1}(x_{i+1})=\sum _{x_{i}}\widetilde{\phi }(x_{i})\psi (x_{i},x_{i+1})\alpha _{i-1\rightarrow i}(x_{i})\qquad \text {for all }i=1,2,\dots ,n-1$ \par}
  

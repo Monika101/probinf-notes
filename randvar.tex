@@ -13,7 +13,7 @@ We continue with our weather example.
 > prob_space = {'sunny': 1/2, 'rainy': 1/6, 'snowy': 1/3}
 \end{lstlisting}
 
-We can simulate tomorrow's weather using the above model of the world. Let's simulate two different values, one (which we'll call $W$ for ``weather'') for whether tomorrow will be sunny, rainy, or snowy, and another (which we'll call $I$ for ``indicator'') that is 1 if it is sunny and 0 otherwise:
+We can simulate tomorrow's weather using the above model of the world. Let's simulate two different values, one (which we'll call \lstinline{W} for ``weather'') for whether tomorrow will be sunny, rainy, or snowy, and another (which we'll call \lstinline{I} for ``indicator'') that is 1 if it is sunny and 0 otherwise:
 
 \begin{lstlisting}
 > random_outcome = comp_prob_inference.sample_from_finite_probability_space(prob_space)
@@ -24,11 +24,11 @@ We can simulate tomorrow's weather using the above model of the world. Let's sim
 >     I = 0
 \end{lstlisting}
 
-Print out the variables $W$ or $I$ to see that they take on specific values. Then re-run the above block of code a few times.
+Print out the variables \lstinline{W} or \lstinline{I} to see that they take on specific values. Then re-run the above block of code a few times.
 
-You should see that $W$ and $I$ change and are random (following the probabilities given by the probability space).
+You should see that \lstinline{W} and \lstinline{I} change and are random (following the probabilities given by the probability space).
 
-This code shows something that's of key importance that we'll see throughout the course. Variables $W$ and $I$ store the values of what are called random variables.
+This code shows something that's of key importance that we'll see throughout the course. Variables \lstinline{W} and \lstinline{I} store the values of what are called \textit{random variables}.
 
 \subsection{Random Variables}
 
@@ -95,6 +95,46 @@ These tables make it clear that a ``random variable'' really is just reassigning
 
 \paragraph{Technical note:} Even though the formal definition of a finite random variable doesn't actually make use of the probability assignment $\mathbb {P}$, the probability assignment will become essential as soon as we talk about how probability works with random variables.
 
+\subsection{Two Ways to Specify a Random Variable in Code}
+
+Two ways we can fully represent a random variable on a computer are as follows.
+
+\paragraph{Approach 1.} Go with the mathematical definition of a random variable. First, specify what the underlying probability space is:
+
+\begin{lstlisting}
+> prob_space = {'sunny': 1/2, 'rainy': 1/6, 'snowy': 1/3}
+\end{lstlisting}
+
+Then provide a way to map from the sample space to the alphabet:
+
+\begin{lstlisting}
+> W_mapping = {'sunny': 'sunny', 'rainy': 'rainy', 'snowy': 'snowy'}
+> I_mapping = {'sunny': 1, 'rainy': 0, 'snowy': 0}
+\end{lstlisting}
+
+Then we can generate a random sample/draw for random variables W and I:
+
+\begin{lstlisting}
+> random_outcome = comp_prob_inference.sample_from_finite_probability_space(prob_space)
+> W = W_mapping[random_outcome]
+> I = I_mapping[random_outcome]
+\end{lstlisting}
+
+\paragraph{Approach 2.} Remember how we wrote out probability tables for random variables W and I? Let's directly store these probability tables:
+
+\begin{lstlisting}
+> W_table = {'sunny': 1/2, 'rainy': 1/6, 'snowy': 1/3}
+> I_table = {0: 1/2, 1: 1/2}
+\end{lstlisting}
+
+Treating the tables as probability spaces, draw samples for W and I:
+
+\begin{lstlisting}
+> W = comp_prob_inference.sample_from_finite_probability_space(W_table)
+> I = comp_prob_inference.sample_from_finite_probability_space(I_table)
+\end{lstlisting}
+
+
 \subsection{Random Variables Notation and Terminology}
 
 In this course, we denote random variables with capital/uppercase letters, such as $X$, $W$, $I$, etc. We use the phrases ``probability table'', ``probability mass function'' (abbreviated as PMF), and ``probability distribution'' (often simply called a distribution) to mean the same thing, and in particular we denote the probability table for $X$ to be $p_ X$ or $p_ X(\cdot )$).
@@ -103,11 +143,11 @@ We write $p_ X(x)$ to denote the entry of the probability table that has label $
 
 Note that we use the same notation as in math where a function $f$ might also be written as $f(\cdot )$ to explicitly indicate that it is the function of one variable. Both $f$ and $f(\cdot )$ refer to a function whereas $f(x)$ refers to the value of the function $f$ evaluated at the point $x$.
 
-As an example of how to use all this notation, recall that a probability table consists of nonnegative entries that add up to 1. In fact, each of the entries is at most 1 (otherwise the numbers would add to more than 1). For a random variable $X$ taking on values in $X$, we can write out these constraints as:
+As an example of how to use all this notation, recall that a probability table consists of nonnegative entries that add up to 1. In fact, each of the entries is at most 1 (otherwise the numbers would add to more than 1). For a random variable $X$ taking on values in $\mathcal{X}$, we can write out these constraints as:
 
 {\centering$0 \le p_ X(x) \le 1\quad \text {for all }x\in \mathcal{X}, \qquad \sum _{x \in \mathcal{X}} p_ X(x) = 1.$ \par}
  
-Often in the course, if we are making statements about all possible outcomes of $X$, we will omit writing out the alphabet $X$ explicitly. For example, instead of the above, we might write the following equivalent statement:
+Often in the course, if we are making statements about all possible outcomes of $X$, we will omit writing out the alphabet $\mathcal{X}$ explicitly. For example, instead of the above, we might write the following equivalent statement:
 
 {\centering$0 \le p_ X(x) \le 1\quad \text {for all }x, \qquad \sum _ x p_ X(x) = 1.$ \par}
 

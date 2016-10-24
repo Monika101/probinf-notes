@@ -4,6 +4,12 @@
 
 \section{Inference with Bayes' Theorem for Random Variables}
 
+\subsection{Moving Toward Bayes' Theorem for Random Variables}
+
+We introduced inference in the context of random variables, where there was a simple way to visualize what was going on in terms of joint probability tables. Marginalization referred to summing out rows or columns. Conditioning referred to taking a slice of the table and renormalizing so entries within that slice summed to 1. We then saw a more general story in terms of events. In fact, we saw that for many inference problems, using random variables to solve the problem is not necessary – reasoning with events was enough! A powerful tool we saw was Bayes' theorem.
+
+We now return to random variables and build up to Bayes' theorem for random variables. This machinery will be extremely important as it will be how we automate inference for much larger problems in the later sections of the course, where we can have a large number of random variables at play, and a large amount of observations that we need to incorporate into our inference.
+
 \subsection{The Product Rule for Random Variables (Also Called the Chain Rule)}
 
 In many real world problems, we aren't given what the joint distribution of two random variables is although we might be given other information from which we can compute the joint distribution. Often times, we can compute out the joint distribution using what's called the product rule (often also called the chain rule). This is precisely the random variable version of the product rule for events.

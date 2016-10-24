@@ -1,0 +1,160 @@
+\documentclass[6008notes.tex]{subfiles}
+\begin{document}
+\graphicspath{ {images/mostprob/} }
+
+\section{Inference with Graphical Models - Most Probable Configuration}
+
+\subsection{Most Probable Configurations in Graphical Models}
+
+Recall that for tree-structured undirected graphical models, the sum-product algorithm allowed us to compute marginal distributions $p_{X_ i}(\cdot )$. Of course, we could fold in observations as well and compute $p_{X_ i|Y_1,\dots ,Y_ N}(\cdot |y_1,\dots ,y_ n)$, with $y_i$'s treated as constants. Applied to hidden Markov models (HMMs), this led to the forward-backward algorithm.
+
+For tree-structured undirected graphical models, we now ask for the most probable configuration:
+
+{\centering$(\hat{x}_1, \dots , \hat{x}_ n) = \arg \max _{x_1,\dots ,x_ n}p_{X_1,\dots ,X_ n}(x_1,\dots ,x_ n).$ \par}
+ 
+Being able to compute this efficiently would, as before, enable us to compute the most probable configuration given an observation (or even many observations): $\arg \max _{x_1,\dots ,x_ n} p_{X_1,\dots ,X_ n\mid Y}(x_1,\dots ,x_ n|y)$. Recall from the first part of the course that the most probable configuration given observation(s) is precisely the MAP estimate!
+
+Note that in these problems, we're interested in the $\arg \max$ (i.e., the value that achieves the maximum) rather than the actual maximum value itself.
+
+
+\subsection{The Max-Product Algorithm}
+
+\textbf{The Key Idea Behind Sum-Product and Max-Product}
+
+In deriving sum-product, the key idea was to push in summations. As a simple example, this amounts to the following:
+
+{\centering$\sum _{x_2}f(x_1)g(x_1,x_2) = f(x_1) \sum _{x_2}g(x_1,x_2),$ \par}
+ 
+for arbitrary functions $f$ and $g$.
+
+A similar idea applies when we want the maximum:
+
+{\centering$\max _{x_1, x_2}\{ f(x_1)g(x_1,x_2)\}  = \max _{x_1}\Big[ \max _{x_2} f(x_1)g(x_1,x_2) \Big] = \max _{x_1}\Big[ f(x_1) \max _{x_2} g(x_1,x_2) \Big],$ \par}
+ 
+where the second equality holds provided that $f(x_1)$ is nonnegative for all $x_1$. (Why would a negative value kill the equality?)
+
+For the equation above, think of the right-hand side function $f(x_1) \max _{x_2} g(x_1,x_2)$ as some 1-dimensional table with a number associated with each value of $x_1$. (In particular, suppose we've precomputed what $\max _{x_2} g(x_1, x_2)$ is for every value of $x_1$.) Then the argument $\hat{x}_1$ achieving the maximum is whichever $x_1$ has the highest value in the table. In other words, the highest value is
+
+{\centering$f(\hat{x}_1) \max _{x_2} g(\hat{x}_1,x_2),$ \par}
+ 
+from which we see that to get the optimal value of $x_2$, we just need to figure out which $x_2$ maximizes the function $g(\hat{x}_1,x_2)$.
+
+So we first found the optimal value $\hat{x}_1$ for $x_1$. Then we traced backward and found the best value for $\hat{x}_2$ given $\hat{x}_1$, where we could readily answer this query if when we first compute $\max _{x_2} g(x_1, x_2)$, we also store what value of $x_2$ achieves the maximum for each value of $x_1$.
+
+The intuition for this two-variable example carries over to the case when we have many variables represented by a tree-structured undirected graphical model and we want the most probable configuration. The resulting algorithm is the max-product algorithm.
+
+\textbf{Max-Product}
+
+As a reminder of notation, for random variables $X_1,\dots ,X_ n$ corresponding to a tree $G=(V,E)$,
+
+{\centering$p_{X_1,\dots ,X_ n}(x_1,\dots ,x_ n) = \frac{1}{Z} \Bigg( \prod _{i\in V} \phi _ i(x_ i) \Bigg) \Bigg( \prod _{(i,j)\in E} \psi _{i,j}(x_ i, x_ j) \Bigg).$ \par}
+ 
+The max-product algorithm is as follows. First, we pick a root node $r$ and compute messages going from the leaves to the root:
+
+{\centering$m_{i \to j}(x_ j) = \max _{x_ i} \left[ \phi _ i(x_ i) \psi _{i,j}(x_ i,x_ j) \prod _{k \in \mathcal{N}(i) \setminus \{ j\} } m_{k \to i}(x_ i) \right].$ \par}
+ 
+Note that this is formula is the same as that of sum-product except that the sum has been replaced by a max.
+
+As with our simple two-variable example, we want to keep track of which argument achieves the maximum. Otherwise, all we'd be computing is a scaled version of the probability of the most probable configuration. (Remember that in general we don't know the normalization constant $Z$, in which case we won't actually find out the probability of the most probable configuration! Luckily, the argument achieving the maximum doesn't care what the value of $Z$ is.)
+
+To keep track of which argument achieves the maximum, we compute \textit{traceback messages}:
+
+{\centering$t_{j \to i}(x_ j) = \arg \max _{x_ i} \left[ \phi _ i(x_ i) \psi _{ij}(x_ i,x_ j) \prod _{k \in \mathcal{N}(i) \setminus \{ j\} } m_{k \to i}(x_ i) \right].$ \par}
+ 
+After computing the messages and traceback messages going from the leaves to the root, we're ready to find the most probable configuration, starting from the root and going to the leaves. This is like how we figured out the optimal value for $x_1$ in our two-variable example first (i.e., node 1 was the root).
+
+For root node $r$, we compute the optimal value:
+
+{\centering$\hat{x}_ r = \arg \max _{x_ r} \left[\phi _ r(x_ r) \prod _{k \in \mathcal{N}(r)} m_{k \to r}(x_ r) \right].$ \par}
+ 
+We then work backwards to the leaves, using the traceback messages to assign values:
+
+{\centering$\hat{x}_ i = t_{j \to i}(\hat{x}_ j).$ \par}
+ 
+
+\subsection{Practice Problem: A Case When Traceback Tables Aren't Needed - Each Node Max-Marginal Has a Unique Most Probable Value}
+
+Recall that node max-marginal $\overline{p}_{X_ i}$ satisfies
+
+{\centering$\overline{p}_{X_{i}}(x_{i})\propto \underbrace{\max _{x_{1},x_{2},\dots ,x_{i-1},x_{i+1},\dots ,x_{n}}}_{\text {maximize over everything except }x_{i}}p_{X_{1},X_{2},\dots ,X_{n}}(x_{1},x_{2},\dots ,x_{n}).$ \par}
+ 
+Suppose that we knew that every node max-marginal $\overline{p}_{X_ i}$ had a unique maximum probable value $x_ i^*$, i.e.,
+
+{\centering$x_ i^* = \arg \max _{x_ i} \overline{p}_{X_ i}(x_ i), \qquad \text {and} \qquad \overline{p}_{X_ i}(x_ i) < \overline{p}_{X_ i}(x_ i^*) \quad \text {for all }x_ i \ne x_ i^*.$ \par}
+ 
+\paragraph{Show:} The joint probability table $p_{X_1,X_2,\dots ,X_ n}$ has a unique most probable configuration given by $x\triangleq (x_1^*,x_2^*,\dots ,x_ n^*)$ (i.e., we put together the unique maximum probable values for each of the node max-marginals).
+
+Hint: Start by supposing that there is a configuration $\widehat{x}\triangleq (\widehat{x}_1, \widehat{x}_2, \dots , \widehat{x}_ n)$ that is a most probable configuration, i.e.,
+
+{\centering$p_{X_1,\dots ,X_ n}(\widehat{x}_1, \dots , \widehat{x}_ n) \ge p_{X_1,\dots ,X_ n}(x_1, \dots , x_ n)\qquad \text {for all }x_1,\dots ,x_ n,$ \par}
+ 
+which also means that
+
+{\centering$p_{X_1,\dots ,X_ n}(\widehat{x}_1, \dots , \widehat{x}_ n) \ge p_{X_1,\dots ,X_ n}(x_1^*, \dots , x_ n^*).$ \par}
+ 
+You'll want to use the definition of a node max-marginal.
+
+\paragraph{Practical implication:} If you run the max-marginal variant of the max-product algorithm that more closely resembles the sum product algorithm, and you check the node max-marginals to find that the most probable value for each of these max-marginals is unique, then you don't need traceback messages and you also don't need to follow backpointers.
+
+\paragraph{Solution:} Following the hint, let $\widehat{x}\triangleq (\widehat{x}_1, \widehat{x}_2, \dots , \widehat{x}_ n)$ be a most probable configuration, which means that
+
+{\centering$p_{X_1,\dots ,X_ n}(\widehat{x}_1, \dots , \widehat{x}_ n) \ge p_{X_1,\dots ,X_ n}(x_1, \dots , x_ n)\qquad \text {for all }x_1,\dots ,x_ n.$ \par}
+ 
+In particular,
+
+{\centering$p_{X_1,\dots ,X_ n}(\widehat{x}_1, \dots , \widehat{x}_ n) \ge p_{X_1,\dots ,X_ n}(x_1^*, \dots , x_ n^*).$ \par}
+ 
+Then
+
+\begin{eqnarray*}
+&&\overline{p}_{X_i}(\widehat{x}_i) \\
+(\text{since }\widehat{x}\text{ is a most probable configuration})
+&&= p_{X_1, \dots, X_n}(\widehat{x}_1, \dots, \widehat{x}_n) \\
+(\text{since }\widehat{x}\text{ is a most probable configuration})
+&&= \max_{x_1, \dots, x_n}
+      p_{X_1, \dots, X_n}(x_1, \dots, x_n) \\
+&&= \max_{x_i} \max_{x_1, \dots, x_{i-1}, x_{i+1}, x_n}
+      p_{X_1, \dots, X_n}(x_1, \dots, x_n) \\
+&&= \max_{x_i} \overline{p}_{X_i}(x_i).
+\end{eqnarray*}
+
+Look at the very left-most side of this equation and the very right-most side: what the equation says is that $\widehat{x}_ i$ achieves the highest possible value in the node max-marginal $p_{X_i}$. And by assumption there is only one possible value for $X_i$ that achieves this highest node max-marginal value: $x_i^*$. So we conclude that indeed $\widehat{x}_ i = x_ i^*$.
+
+
+\subsection{Numerical Stability Issues: Max-Product to Min-Sum}
+
+This note presents an important implementation detail that is often helpful. As you noticed in mini-project 1 on movie recommendations, working in the log domain helps with numerical stability.
+
+Messages are computed by multiplying many potential function values and then propagating these products onwards to compute more messages. Meanwhile, potential functions can often consist of small numbers. Multiplying many small numbers may lead to underflow issues on computers, where multiplication just yields 0 when the product isn't actually 0.
+
+A popular fix to this issue is to work with negative logs. Log turns small values into large values since values in $(0,1]$ get mapped to $(-\infty,0]$, and negating then turns these numbers positive. Large potential values aren't affected as much.
+
+So taking the negative log of our messages, we get the following equations:
+
+\begin{eqnarray*}
+m_{i \to j}'(x_j)
+&=& \min_{x_i}
+      \left[
+        -\log\phi_i(x_i) - \log\psi_{ij}(x_i,x_j) +
+        \sum_{k \in \mathcal{N}(i) \setminus \{j\}} m_{k \to i}'(x_i)
+      \right], \\
+t_{j \to i}(x_j)
+&=& \arg\min_{x_i}
+      \left[
+        -\log\phi_i(x_i) - \log\psi_{ij}(x_i,x_j) +
+        \sum_{k \in \mathcal{N}(i) \setminus \{j\}} m_{k \to i}'(x_i)
+      \right], \\
+\hat{x}_r
+&=& \arg\min_{x_r}
+      \left[
+        -\log\phi_r(x_r) +
+        \prod_{k \in \mathcal{N}(r)} m_{k \to r}'(x_r)
+      \right], \\
+\hat{x}_i
+&=& t_{j \to i}(\hat{x}_j).
+\end{eqnarray*}
+
+Following the usual lack of imagination in naming these algorithms, this algorithm is called the \textit{min-sum algorithm} since it takes minimums of sums.
+
+
+\end{document}

@@ -14,7 +14,7 @@ The set of all possible outcomes for the experiment: this set is called the samp
 The probability of each outcome: for each possible outcome, assign a probability that is at least 0 and at most 1.
 (For the fair coin flip, $\mathbb {P}(\text {heads})=\frac{1}{2}$ and $\mathbb {P}(\text {tails})=\frac{1}{2}$.)
 
-Notation: Throughout this course, for any statement $\mathcal{S}$, ``$\mathbb {P}(\mathcal{S})$'' denotes the probability of $\mathcal{S}$ happening.
+\textbf{Notation:} Throughout this course, for any statement $\mathcal{S}$, ``$\mathbb {P}(\mathcal{S})$'' denotes the probability of $\mathcal{S}$ happening.
 
 In Python:
 
@@ -69,7 +69,7 @@ $\sum _{\omega \in \Omega }\mathbb {P}(\text {outcome }\omega )=1$
 
 A probability space is a data structure in that we can always visualize as a table of nonnegative entries that sum to 1. Let's see a concrete example of this, first writing the table out on paper and then coding it up.
 
-Example: Suppose we have a model of tomorrow's weather given as follows: sunny with probability 1/2, rainy with probability 1/6, and snowy with probability 1/3. Here's the probability space, shown as a table:
+\textbf{Example:} Suppose we have a model of tomorrow's weather given as follows: sunny with probability 1/2, rainy with probability 1/6, and snowy with probability 1/3. Here's the probability space, shown as a table:
 
 \begin{center}
 \begin{tabular}{c c c}
@@ -138,7 +138,7 @@ B_complement = sample_space.difference(B)  # equivalent also to "sample_space - 
 
 From the videos, we see that an event is a subset of the sample space $\Omega$. If you remember our table representation for a probability space, then an event could be thought of as a subset of the rows, and the probability of the event is just the sum of the probability values in those rows!
 
-The probability of an event $\mathcal{A}\subseteq \Omega$ is the sum of the probabilities of the possible outcomes in $\mathcal{A}$:
+The \textit{probability of an event} $\mathcal{A}\subseteq \Omega$ is the sum of the probabilities of the possible outcomes in $\mathcal{A}$:
 
 $\mathbb {P}(\mathcal{A})\triangleq \sum _{\omega \in \mathcal{A}}\mathbb {P}(\text {outcome }\omega )$,
  

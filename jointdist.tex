@@ -20,7 +20,7 @@ When we talk about two separate random variables, we could view them either as a
 
 The first table tells us what the underlying probability space is, which includes what the sample space is (just read off the outcome names) and what the probability is for each of the possible outcomes for the underlying experiment at hand.
 
-The second table is called a joint probability table $p_{W,T}$ for random variables $W$ and $T$, and we say that random variables $W$ and $T$ are jointly distributed with the above distribution. Since this table is a rearrangement of the earlier table, it also consists of nonnegative entries that add to 1.
+The second table is called a \textit{joint probability table} $p_{W,T}$ for random variables $W$ and $T$, and we say that random variables $W$ and $T$ are \textit{jointly distributed} with the above distribution. Since this table is a rearrangement of the earlier table, it also consists of nonnegative entries that add to 1.
 
 The joint probability table gives probabilities in which $W$ and $T$ co-occur with specific values. For example, in the above, the event that ``$W=\text {sunny}$'' and the event that ``$T=\text {hot}$'' co-occur with probability 3/10. Notationally, we write
 
@@ -213,7 +213,7 @@ For example,
  
 In general:
 
-\paragraph{Marginalization:} Consider two random variables $X$ and $Y$ (that take on values in the sets $\mathcal{X}$ and $\mathcal{Y}$ respectively) with joint probability table $p_{X,Y}$. For any $x\in \mathcal{X}$, the marginal probability that $X=x$ is given by
+\paragraph{Marginalization:} Consider two random variables $X$ and $Y$ (that take on values in the sets $\mathcal{X}$ and $\mathcal{Y}$ respectively) with joint probability table $p_{X,Y}$. For any $x\in \mathcal{X}$, the \textit{marginal probability} that $X=x$ is given by
 
 {\centering$p_{X}(x)=\sum _{y}p_{X,Y}(x,y).$ \par}
  
@@ -269,7 +269,7 @@ Second, we ``normalize'' the table so that its entries add up to 1, which corres
 
 {\centering\includegraphics[scale=0.4]{images_sec-joint-rv-cond-renormalize} \par}
 
-Notation: The resulting probability table $p_{T\mid W}(\cdot \mid \text {rainy})$ is associated with the random variable denoted $(T\mid W=\text {rainy})$; we use ``|'' to denote that we're conditioning on things to the right of ``|'' happening (these are things that we have observed or that we are given as having happened). We read ``$T\mid W=\text {rainy}$'' as either ``$T$ given $W$ is rainy'' or ``$T$ conditioned on $W$ being rainy''. To refer to specific entries of the table, we write, for instance,
+\paragraph{Notation:} The resulting probability table $p_{T\mid W}(\cdot \mid \text {rainy})$ is associated with the random variable denoted $(T\mid W=\text {rainy})$; we use ``|'' to denote that we're conditioning on things to the right of ``|'' happening (these are things that we have observed or that we are given as having happened). We read ``$T\mid W=\text {rainy}$'' as either ``$T$ given $W$ is rainy'' or ``$T$ conditioned on $W$ being rainy''. To refer to specific entries of the table, we write, for instance,
 
 {\centering$p_{T\mid W}(\text {cold}\mid \text {rainy})=\mathbb {P}(T=\text {cold}\mid W=\text {rainy})=\frac{4}{5}.$ \par}
  
