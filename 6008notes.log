@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.20)  24 OCT 2016 15:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.20)  24 OCT 2016 21:47
 entering extended mode
 **./6008notes.tex
 (6008notes.tex
@@ -1200,7 +1200,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 27.
 ("C:\Users\colin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<images/introprob/images_first-look-at-prob-spyder-setup.png, id=498, 773.89125
+<images/introprob/images_first-look-at-prob-spyder-setup.png, id=503, 773.89125
 pt x 558.085pt>
 File: images/introprob/images_first-look-at-prob-spyder-setup.png Graphic file 
 (type png)
@@ -1215,7 +1215,7 @@ p.png used on input line 29.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 34.
 
-<images/introprob/images_sec-intro-histogram-counts.jpg, id=509, 361.35pt x 289
+<images/introprob/images_sec-intro-histogram-counts.jpg, id=514, 361.35pt x 289
 .08pt>
 File: images/introprob/images_sec-intro-histogram-counts.jpg Graphic file (type
  jpg)
@@ -1225,7 +1225,7 @@ Package pdftex.def Info: images/introprob/images_sec-intro-histogram-counts.jpg
 (pdftex.def)             Requested size: 180.67456pt x 144.53964pt.
  [5 <./images/introprob/images_first-look-at-prob-spyder-setup.png> <./images/i
 ntroprob/images_sec-intro-histogram-counts.jpg>]
-<images/introprob/images_sec-intro-histogram-frequencies.jpg, id=527, 361.35pt 
+<images/introprob/images_sec-intro-histogram-frequencies.jpg, id=532, 361.35pt 
 x 289.08pt>
 File: images/introprob/images_sec-intro-histogram-frequencies.jpg Graphic file 
 (type jpg)
@@ -1235,7 +1235,7 @@ s.jpg used on input line 67.
 (pdftex.def)             Requested size: 180.67456pt x 144.53964pt.
 
 <images/introprob/images_sec-intro-frequency-of-heads-vs-number-of-flips.jpg, i
-d=528, 578.16pt x 289.08pt>
+d=533, 578.16pt x 289.08pt>
 File: images/introprob/images_sec-intro-frequency-of-heads-vs-number-of-flips.j
 pg Graphic file (type jpg)
 
@@ -1256,7 +1256,7 @@ Overfull \hbox (9.89017pt too wide) in paragraph at lines 74--75
  []
 
 [11]
-<images/randvar/images_sec-random-variables-main.png, id=625, 827.09pt x 604.25
+<images/randvar/images_sec-random-variables-main.png, id=630, 827.09pt x 604.25
 75pt>
 File: images/randvar/images_sec-random-variables-main.png Graphic file (type pn
 g)
@@ -1266,7 +1266,7 @@ ed on input line 86.
 (pdftex.def)             Requested size: 330.83012pt x 241.69872pt.
  [12 <./images/randvar/images_sec-random-variables-main.png>]) (jointdist.tex [
 13]
-<images/jointdist/images_sec-joint-rv-prob-space.png, id=656, 395.4775pt x 285.
+<images/jointdist/images_sec-joint-rv-prob-space.png, id=661, 395.4775pt x 285.
 065pt>
 File: images/jointdist/images_sec-joint-rv-prob-space.png Graphic file (type pn
 g)
@@ -1275,7 +1275,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-prob-space.png us
 ed on input line 13.
 (pdftex.def)             Requested size: 158.18819pt x 114.02397pt.
 
-<images/jointdist/images_sec-joint-rv-rearrange-table.png, id=657, 582.175pt x 
+<images/jointdist/images_sec-joint-rv-rearrange-table.png, id=662, 582.175pt x 
 574.145pt>
 File: images/jointdist/images_sec-joint-rv-rearrange-table.png Graphic file (ty
 pe png)
@@ -1286,7 +1286,7 @@ ng used on input line 17.
 
 [14 <./images/jointdist/images_sec-joint-rv-prob-space.png> <./images/jointdist
 /images_sec-joint-rv-rearrange-table.png>] [15] [16] [17]
-<images/jointdist/images_sec-joint-rv-marg-rows.png, id=746, 717.68124pt x 290.
+<images/jointdist/images_sec-joint-rv-marg-rows.png, id=751, 717.68124pt x 290.
 08376pt>
 File: images/jointdist/images_sec-joint-rv-marg-rows.png Graphic file (type png
 )
@@ -1295,7 +1295,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-marg-rows.png use
 d on input line 180.
 (pdftex.def)             Requested size: 287.06741pt x 116.03143pt.
 
-<images/jointdist/images_sec-joint-rv-marg-cols.png, id=747, 424.58624pt x 496.
+<images/jointdist/images_sec-joint-rv-marg-cols.png, id=752, 424.58624pt x 496.
 85625pt>
 File: images/jointdist/images_sec-joint-rv-marg-cols.png Graphic file (type png
 )
@@ -1305,7 +1305,7 @@ d on input line 202.
 (pdftex.def)             Requested size: 169.83148pt x 198.73897pt.
  [18 <./images/jointdist/images_sec-joint-rv-marg-rows.png> <./images/jointdist
 /images_sec-joint-rv-marg-cols.png>]
-<images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png, id=754, 430
+<images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png, id=759, 430
 .60875pt x 355.3275pt>
 File: images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png Graphic
  file (type png)
@@ -1315,7 +1315,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-marg-many-rv-join
 t-table.png used on input line 224.
 (pdftex.def)             Requested size: 172.24043pt x 142.12846pt.
 
-<images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png, id=755, 695.59875p
+<images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png, id=760, 695.59875p
 t x 492.84125pt>
 File: images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png Graphic file (
 type png)
@@ -1325,7 +1325,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-marg-many-rv-marg
 .png used on input line 230.
 (pdftex.def)             Requested size: 313.01654pt x 221.7765pt.
  [19 <./images/jointdist/images_sec-joint-rv-marg-many-rv-joint-table.png>]
-<images/jointdist/images_sec-joint-rv-cond-restrict.png, id=762, 717.68124pt x 
+<images/jointdist/images_sec-joint-rv-cond-restrict.png, id=767, 717.68124pt x 
 235.88126pt>
 File: images/jointdist/images_sec-joint-rv-cond-restrict.png Graphic file (type
  png)
@@ -1335,7 +1335,7 @@ Package pdftex.def Info: images/jointdist/images_sec-joint-rv-cond-restrict.png
 (pdftex.def)             Requested size: 287.06741pt x 94.35083pt.
 
 [20 <./images/jointdist/images_sec-joint-rv-marg-many-rv-marg.png>]
-<images/jointdist/images_sec-joint-rv-cond-renormalize.png, id=768, 686.565pt x
+<images/jointdist/images_sec-joint-rv-cond-renormalize.png, id=773, 686.565pt x
  132.495pt>
 File: images/jointdist/images_sec-joint-rv-cond-renormalize.png Graphic file (t
 ype png)
@@ -1347,7 +1347,7 @@ png used on input line 270.
 (conditioning.tex [21 <./images/jointdist/images_sec-joint-rv-cond-restrict.png
 > <./images/jointdist/images_sec-joint-rv-cond-renormalize.png>] [22] [23])
 (infbayes.tex [24] [25] [26]
-<images/infbayes/images_sec-bayes-computational-view.png, id=811, 583.17876pt x
+<images/infbayes/images_sec-bayes-computational-view.png, id=816, 583.17876pt x
  423.5825pt>
 File: images/infbayes/images_sec-bayes-computational-view.png Graphic file (typ
 e png)
@@ -1358,7 +1358,7 @@ g used on input line 147.
 
 [27 <./images/infbayes/images_sec-bayes-computational-view.png>])
 (indepstruct.tex [28]
-<images/indepstruct/images_sec-joint-rv-ex-marg.png, id=825, 570.13pt x 216.81p
+<images/indepstruct/images_sec-joint-rv-ex-marg.png, id=830, 570.13pt x 216.81p
 t>
 File: images/indepstruct/images_sec-joint-rv-ex-marg.png Graphic file (type png
 )
@@ -1369,7 +1369,7 @@ d on input line 39.
  [29 <./images/indepstruct/images_sec-joint-rv-ex-marg.png>] [30] [31] [32] [33
 ]) (decisions.tex
 [34] [35]
-<images/decisions/images_sec-expectation-example1.png, id=868, 280.04625pt x 21
+<images/decisions/images_sec-expectation-example1.png, id=873, 280.04625pt x 21
 0.7875pt>
 File: images/decisions/images_sec-expectation-example1.png Graphic file (type p
 ng)
@@ -1378,7 +1378,7 @@ Package pdftex.def Info: images/decisions/images_sec-expectation-example1.png u
 sed on input line 59.
 (pdftex.def)             Requested size: 84.01451pt x 63.23672pt.
 
-<images/decisions/images_sec-expectation-example2.png, id=869, 283.0575pt x 212
+<images/decisions/images_sec-expectation-example2.png, id=874, 283.0575pt x 212
 .795pt>
 File: images/decisions/images_sec-expectation-example2.png Graphic file (type p
 ng)
@@ -1389,7 +1389,7 @@ sed on input line 67.
  [36 <./images/decisions/images_sec-expectation-example1.png> <./images/decisio
 ns/images_sec-expectation-example2.png>] [37]) (measrand.tex [38] [39] [40] [41
 ] [42]
-<images/measrand/images_sec-gibbs-inequality-helper.png, id=904, 578.16pt x 433
+<images/measrand/images_sec-gibbs-inequality-helper.png, id=909, 578.16pt x 433
 .62pt>
 File: images/measrand/images_sec-gibbs-inequality-helper.png Graphic file (type
  png)
@@ -1398,7 +1398,7 @@ Package pdftex.def Info: images/measrand/images_sec-gibbs-inequality-helper.png
  used on input line 182.
 (pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
  [43 <./images/measrand/images_sec-gibbs-inequality-helper.png>] [44]
-<images/measrand/images_sec-mutual-info-ex.png, id=925, 360.34625pt x 255.95625
+<images/measrand/images_sec-mutual-info-ex.png, id=930, 360.34625pt x 255.95625
 pt>
 File: images/measrand/images_sec-mutual-info-ex.png Graphic file (type png)
  <use images/measrand/images_sec-mutual-info-ex.png>
@@ -1411,7 +1411,7 @@ Chapter 2.
 (efficiency.tex [49
 
 ] [50]) (graphmod.tex [51]
-<images/graphmod/images_sec-graphical-models-2-rv-indep.png, id=979, 301.125pt 
+<images/graphmod/images_sec-graphical-models-2-rv-indep.png, id=984, 301.125pt 
 x 99.37125pt>
 File: images/graphmod/images_sec-graphical-models-2-rv-indep.png Graphic file (
 type png)
@@ -1421,8 +1421,8 @@ Package pdftex.def Info: images/graphmod/images_sec-graphical-models-2-rv-indep
 (pdftex.def)             Requested size: 120.44786pt x 39.74779pt.
 
 [52 <./images/graphmod/images_sec-graphical-models-2-rv-indep.png>]
-<images/graphmod/images_sec-graphical-models-2-rv-possibly-dependent.png, id=98
-5, 300.12125pt x 100.375pt>
+<images/graphmod/images_sec-graphical-models-2-rv-possibly-dependent.png, id=99
+0, 300.12125pt x 100.375pt>
 File: images/graphmod/images_sec-graphical-models-2-rv-possibly-dependent.png G
 raphic file (type png)
 
@@ -1431,7 +1431,7 @@ Package pdftex.def Info: images/graphmod/images_sec-graphical-models-2-rv-possi
 bly-dependent.png used on input line 53.
 (pdftex.def)             Requested size: 120.04637pt x 40.14928pt.
 
-<images/graphmod/images_sec-graphical-models-3-rv-markov-chain.png, id=986, 492
+<images/graphmod/images_sec-graphical-models-3-rv-markov-chain.png, id=991, 492
 .84125pt x 100.375pt>
 File: images/graphmod/images_sec-graphical-models-3-rv-markov-chain.png Graphic
  file (type png)
@@ -1466,7 +1466,7 @@ v-chain.png used on input line 153.
 (pdftex.def)             Requested size: 197.133pt x 40.14928pt.
 
 [55]) (infgraph.tex [56]
-<images/infgraph/images_sec-graphical-models-five-node-example.png, id=1011, 37
+<images/infgraph/images_sec-graphical-models-five-node-example.png, id=1016, 37
 0.38374pt x 392.46625pt>
 File: images/infgraph/images_sec-graphical-models-five-node-example.png Graphic
  file (type png)
@@ -1478,7 +1478,7 @@ example.png used on input line 45.
 
 [57 <./images/infgraph/images_sec-graphical-models-five-node-example.png>]
 [58] [59]
-<images/infgraph/images_ex-sum-product-complexity-star-graph.png, id=1027, 422.
+<images/infgraph/images_ex-sum-product-complexity-star-graph.png, id=1032, 422.
 57875pt x 430.60875pt>
 File: images/infgraph/images_ex-sum-product-complexity-star-graph.png Graphic f
 ile (type png)
@@ -1489,7 +1489,7 @@ graph.png used on input line 154.
 (pdftex.def)             Requested size: 169.0285pt x 172.24043pt.
  [60 <./images/infgraph/images_ex-sum-product-complexity-star-graph.png>])
 (hiddenmarkov.tex
-<images/hiddenmarkov/images_sec-graphical-models-hmm.png, id=1033, 690.58pt x 2
+<images/hiddenmarkov/images_sec-graphical-models-hmm.png, id=1038, 690.58pt x 2
 56.96pt>
 File: images/hiddenmarkov/images_sec-graphical-models-hmm.png Graphic file (typ
 e png)
@@ -1498,7 +1498,7 @@ Package pdftex.def Info: images/hiddenmarkov/images_sec-graphical-models-hmm.pn
 g used on input line 11.
 (pdftex.def)             Requested size: 276.2271pt x 102.78217pt.
 
-<images/hiddenmarkov/images_sec-graphical-models-markov-chain.jpg, id=1034, 546
+<images/hiddenmarkov/images_sec-graphical-models-markov-chain.jpg, id=1039, 546
 .1203pt x 112.5003pt>
 File: images/hiddenmarkov/images_sec-graphical-models-markov-chain.jpg Graphic 
 file (type jpg)
@@ -1517,7 +1517,7 @@ Package pdftex.def Info: images/hiddenmarkov/images_sec-graphical-models-hmm.pn
 g used on input line 98.
 (pdftex.def)             Requested size: 276.2271pt x 102.78217pt.
  [62]
-<images/hiddenmarkov/images_sec-graphical-models-hmm-messages.png, id=1045, 690
+<images/hiddenmarkov/images_sec-graphical-models-hmm-messages.png, id=1050, 690
 .58pt x 280.04625pt>
 File: images/hiddenmarkov/images_sec-graphical-models-hmm-messages.png Graphic 
 file (type png)
@@ -1528,7 +1528,7 @@ ssages.png used on input line 127.
 (pdftex.def)             Requested size: 276.2271pt x 112.0165pt.
 
 <images/hiddenmarkov/images_sec-graphical-models-hmm-forward-message.png, id=10
-46, 690.58pt x 280.04625pt>
+51, 690.58pt x 280.04625pt>
 File: images/hiddenmarkov/images_sec-graphical-models-hmm-forward-message.png G
 raphic file (type png)
 
@@ -1538,7 +1538,7 @@ rward-message.png used on input line 133.
 (pdftex.def)             Requested size: 276.2271pt x 112.0165pt.
 
 [63 <./images/hiddenmarkov/images_sec-graphical-models-hmm-messages.png>]
-<images/hiddenmarkov/images_sec-formulating-hmm-helper1.png, id=1052, 631.35875
+<images/hiddenmarkov/images_sec-formulating-hmm-helper1.png, id=1057, 631.35875
 pt x 257.96375pt>
 File: images/hiddenmarkov/images_sec-formulating-hmm-helper1.png Graphic file (
 type png)
@@ -1549,7 +1549,7 @@ Package pdftex.def Info: images/hiddenmarkov/images_sec-formulating-hmm-helper1
 (pdftex.def)             Requested size: 157.8393pt x 64.49077pt.
  [64 <./images/hiddenmarkov/images_sec-graphical-models-hmm-forward-message.png
 >]
-<images/hiddenmarkov/images_sec-formulating-hmm-helper2.png, id=1059, 476.78125
+<images/hiddenmarkov/images_sec-formulating-hmm-helper2.png, id=1064, 476.78125
 pt x 258.9675pt>
 File: images/hiddenmarkov/images_sec-formulating-hmm-helper2.png Graphic file (
 type png)
@@ -1559,7 +1559,7 @@ Package pdftex.def Info: images/hiddenmarkov/images_sec-formulating-hmm-helper2
 .png used on input line 177.
 (pdftex.def)             Requested size: 119.195pt x 64.7417pt.
 
-<images/hiddenmarkov/images_sec-formulating-hmm-helper3.png, id=1060, 353.32pt 
+<images/hiddenmarkov/images_sec-formulating-hmm-helper3.png, id=1065, 353.32pt 
 x 194.7275pt>
 File: images/hiddenmarkov/images_sec-formulating-hmm-helper3.png Graphic file (
 type png)
@@ -1576,34 +1576,92 @@ Overfull \hbox (2.5935pt too wide) in paragraph at lines 75--75
 d - Each Node Max-Marginal
  []
 
-[68] [69]) [70]
+[68] [69]) (viterbi.tex
+<images/viterbi/images_sec-viterbi-example1.png, id=1093, 1021.8175pt x 385.44p
+t>
+File: images/viterbi/images_sec-viterbi-example1.png Graphic file (type png)
+ <use images/viterbi/images_sec-viterbi-example1.png>
+Package pdftex.def Info: images/viterbi/images_sec-viterbi-example1.png used on
+ input line 30.
+(pdftex.def)             Requested size: 255.45375pt x 96.35976pt.
+
+<images/viterbi/images_sec-viterbi-example2.png, id=1094, 891.33pt x 385.44pt>
+File: images/viterbi/images_sec-viterbi-example2.png Graphic file (type png)
+
+<use images/viterbi/images_sec-viterbi-example2.png>
+Package pdftex.def Info: images/viterbi/images_sec-viterbi-example2.png used on
+ input line 34.
+(pdftex.def)             Requested size: 222.83195pt x 96.35976pt.
+ [70 <./images/viterbi/images_sec-viterbi-example1.png>]
+<images/viterbi/images_sec-viterbi-trellis1.png, id=1100, 899.36pt x 227.85126p
+t>
+File: images/viterbi/images_sec-viterbi-trellis1.png Graphic file (type png)
+ <use images/viterbi/images_sec-viterbi-trellis1.png>
+Package pdftex.def Info: images/viterbi/images_sec-viterbi-trellis1.png used on
+ input line 38.
+(pdftex.def)             Requested size: 269.81007pt x 68.3559pt.
+ [71 <./images/viterbi/images_sec-viterbi-example2.png> <./images/viterbi/image
+s_sec-viterbi-trellis1.png>]
+<images/viterbi/images_sec-viterbi-trellis2.png, id=1108, 910.40125pt x 237.888
+75pt>
+File: images/viterbi/images_sec-viterbi-trellis2.png Graphic file (type png)
+ <use images/viterbi/images_sec-viterbi-trellis2.png>
+Package pdftex.def Info: images/viterbi/images_sec-viterbi-trellis2.png used on
+ input line 151.
+(pdftex.def)             Requested size: 273.12248pt x 71.36716pt.
+ [72 <./images/viterbi/images_sec-viterbi-trellis2.png>]
+<images/viterbi/images_sec-viterbi-trellis3.png, id=1114, 914.41624pt x 227.851
+26pt>
+File: images/viterbi/images_sec-viterbi-trellis3.png Graphic file (type png)
+ <use images/viterbi/images_sec-viterbi-trellis3.png>
+Package pdftex.def Info: images/viterbi/images_sec-viterbi-trellis3.png used on
+ input line 235.
+(pdftex.def)             Requested size: 274.32698pt x 68.3559pt.
+
+<images/viterbi/images_sec-viterbi-trellis5.png, id=1115, 903.375pt x 230.8625p
+t>
+File: images/viterbi/images_sec-viterbi-trellis5.png Graphic file (type png)
+ <use images/viterbi/images_sec-viterbi-trellis5.png>
+Package pdftex.def Info: images/viterbi/images_sec-viterbi-trellis5.png used on
+ input line 267.
+(pdftex.def)             Requested size: 271.01459pt x 69.25928pt.
+ [73 <./images/viterbi/images_sec-viterbi-trellis3.png>]
+<images/viterbi/images_sec-viterbi-trellis6.png, id=1121, 917.4275pt x 246.9225
+pt>
+File: images/viterbi/images_sec-viterbi-trellis6.png Graphic file (type png)
+ <use images/viterbi/images_sec-viterbi-trellis6.png>
+Package pdftex.def Info: images/viterbi/images_sec-viterbi-trellis6.png used on
+ input line 280.
+(pdftex.def)             Requested size: 275.23038pt x 74.0773pt.
+) [74 <./images/viterbi/images_sec-viterbi-trellis5.png> <./images/viterbi/imag
+es_sec-viterbi-trellis6.png>]
 Chapter 3.
-[71
+[75
 
 ]
 Appendix A.
-(notation.tex [72
+(notation.tex [76
 
-]) [73]
+]) [77]
 Appendix B.
-(suppl.tex [74
+(suppl.tex [78
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
- [75]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 53.
+ [79]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
  (6008notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
 Package rerunfilecheck Info: File `6008notes.out' has not changed.
-(rerunfilecheck)             Checksum: B290D21F5B4367BB5594DD726B1BD940;8177.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
+(rerunfilecheck)             Checksum: D92CEEDC2C4B6B9B48CBE5B495243059;8246.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
  ) 
 Here is how much of TeX's memory you used:
- 11649 strings out of 493634
- 174361 string characters out of 3135239
+ 11694 strings out of 493634
+ 176095 string characters out of 3135239
  298167 words of memory out of 3000000
- 14327 multiletter control sequences out of 15000+200000
+ 14356 multiletter control sequences out of 15000+200000
  86406 words of font info for 148 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  39i,19n,40p,3317b,1930s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1632,9 +1690,9 @@ nts/type1/urw/symbol/usyr.pfb><C:/Users/colin/AppData/Local/Programs/MiKTeX 2.9
 TeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/colin/AppData/Local/Programs
 /MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/colin/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 6008notes.pdf (77 pages, 2129943 bytes).
+Output written on 6008notes.pdf (81 pages, 2653187 bytes).
 PDF statistics:
- 1498 PDF objects out of 1728 (max. 8388607)
- 408 named destinations out of 1000 (max. 500000)
- 908 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1536 PDF objects out of 1728 (max. 8388607)
+ 413 named destinations out of 1000 (max. 500000)
+ 951 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -148,9 +148,10 @@
 \contentsline {paragraph}{Practical implication:}{69}{section*.62}
 \contentsline {paragraph}{Solution:}{69}{section*.63}
 \contentsline {subsection}{\numberline {2.6.4}Numerical Stability Issues: Max-Product to Min-Sum}{69}{subsection.2.6.4}
-\contentsline {chapter}{\numberline {3}Learning a Probabilistic Model from Data}{71}{chapter.3}
-\contentsline {chapter}{\numberline {A}Notation Summary}{72}{appendix.A}
-\contentsline {chapter}{\numberline {B}Supplementary Information}{74}{appendix.B}
-\contentsline {section}{\numberline {B.1}External Resources}{74}{section.B.1}
-\contentsline {section}{\numberline {B.2}Hints from the Discussion Forum}{74}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Law of Total Expectation as Matrices}{74}{subsection.B.2.1}
+\contentsline {section}{\numberline {2.7}The Viterbi Algorithm}{70}{section.2.7}
+\contentsline {chapter}{\numberline {3}Learning a Probabilistic Model from Data}{75}{chapter.3}
+\contentsline {chapter}{\numberline {A}Notation Summary}{76}{appendix.A}
+\contentsline {chapter}{\numberline {B}Supplementary Information}{78}{appendix.B}
+\contentsline {section}{\numberline {B.1}External Resources}{78}{section.B.1}
+\contentsline {section}{\numberline {B.2}Hints from the Discussion Forum}{78}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Law of Total Expectation as Matrices}{78}{subsection.B.2.1}
