@@ -2,6 +2,44 @@
 \begin{document}
 \graphicspath{ {images/intropl/} }
 
+\section{Introduction to Learning Probabilistic Models}
+
+As we have seen, graphical models are a powerful mechanism for capturing structure in distributions that enables efficient inference. We're now ready to talk about how to choose such models. This is the problem of model selection. Invariably, domain knowledge guides aspects of the model we choose -- for example, the underlying physics, biology, economics, et cetera. However, in practice, some aspects of the model we must often learn directly from data.
+
+So now let's turn our attention to how to learn models. We'll begin with a discussion of a rather general framework of learning based on the time-honored principle of maximum likelihood. We will then put it to work to help us learn a wide range of tree-structured graphical models, including hidden Markov models and what are referred to as naive Bayes models -- which, despite their name, are surprisingly powerful.
+
+In particular, we'll show how to efficiently learn the conditional distribution tables that characterize a tree model. This is called parameter estimation. And we will see that the concept of empirical distributions or histograms plays an important role.
+
+Finally, we will show how to solve the problem of finding a tree that best fits the data, which is referred to as structure learning. Amazingly, even though there are a super exponential number of possible trees, we will see how to solve the problem with only quadratic search complexity using the celebrated Chow-Liu algorithm, which is based on measuring empirical mutual information. Exciting applications for the learning methodology we develop are everywhere, from natural language processing and automatic face recognition to phylogenetics and well beyond. So let's begin.
+
+\subsection{Learning Probabilistic Models: Notation and Outline}
+
+Thus far in the course, we've been given a probabilistic model of the uncertain world, from which we produced predictions given observations. But where do these probabilistic models come from? We now turn to the problem of learning such models (also referred to as model selection since we are selecting which model to use).
+
+As a concrete example that we'll build on later in this section: We don't actually know the underlying probability distribution for what makes an email considered spam vs. ``ham'' (i.e., not spam). However, we do have access to plenty of training examples of what emails are spam or ham, where a user has manually flagged her or his incoming emails as spam or not. From all these training examples, we could learn a model for what spam emails look like and what ham emails look like.
+
+There are two levels of learning we consider:
+
+\begin{itemize}
+\item Parameter learning: Suppose we know what the edges are in an undirected graphical model but we don't know what the table entries should be for the potentials -- how do we estimate these entries?
+
+\item Structure learning: What if we know neither the parameters nor which edges are present in an undirected graphical model? In this case, we could first figure out what edges are present. After we decide on which edges are present, then the problem reduces to the first problem of parameter learning.
+\end{itemize}
+
+In both cases, the high-level setup is the same: there is some underlying probability distribution $p$ that we don't know details for but want to learn. The distribution $p$ has some parameter (or a set of parameters) $\theta$. We will assume that we can collect $n$ independent samples $X^{(1)}, \dots , X^{(n)}$ from the distribution $p$ (these $n$ samples are often referred to as ``training data''). Given these samples, we aim to estimate $\theta$ using what's called ``maximum likelihood'', which tries to learn a model that in some sense best fits the training data we have available. Along the way, we will see how information theory plays a crucial role in helping us not only develop computer programs to learn probability distributions but it also provides an interpretation of what the programs are doing.
+
+We begin with parameter learning, starting with a single node graphical model and working our way to richer graphical models whose potential table entries we aim to learn:
+
+\begin{enumerate}
+\item A single node undirected graphical model corresponding to a single finite random variable
+
+\item A graphical model called the naive Bayes model which can be used for tasks like email spam detection and handwritten digit recognition
+
+\item General tree-structured undirected graphical models
+\end{enumerate}
+
+We then turn toward structure learning, proceeding directly to the most general class of graphical models we consider: tree-structured undirected graphical models, where we learn which edges to include in the tree and what potential tables to assign to the edges.
+
 \section{Introduction to Parameter Learning - Maximum Likelihood and MAP Estimation }
 
 \subsection{Introduction to Maximum Likelihood}
