@@ -150,8 +150,14 @@
 \contentsline {subsection}{\numberline {2.6.4}Numerical Stability Issues: Max-Product to Min-Sum}{69}{subsection.2.6.4}
 \contentsline {section}{\numberline {2.7}The Viterbi Algorithm}{70}{section.2.7}
 \contentsline {chapter}{\numberline {3}Learning a Probabilistic Model from Data}{75}{chapter.3}
-\contentsline {chapter}{\numberline {A}Notation Summary}{76}{appendix.A}
-\contentsline {chapter}{\numberline {B}Supplementary Information}{78}{appendix.B}
-\contentsline {section}{\numberline {B.1}External Resources}{78}{section.B.1}
-\contentsline {section}{\numberline {B.2}Hints from the Discussion Forum}{78}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Law of Total Expectation as Matrices}{78}{subsection.B.2.1}
+\contentsline {section}{\numberline {3.1}Introduction to Parameter Learning - Maximum Likelihood and MAP Estimation }{75}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Introduction to Maximum Likelihood}{75}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Practice Problem: The German Tank Problem}{78}{subsection.3.1.2}
+\contentsline {paragraph}{Solutions}{79}{section*.64}
+\contentsline {subsection}{\numberline {3.1.3}The Bayesian Approach to Learning Parameters}{80}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Parameter Learning: What's Next}{80}{subsection.3.1.4}
+\contentsline {chapter}{\numberline {A}Notation Summary}{81}{appendix.A}
+\contentsline {chapter}{\numberline {B}Supplementary Information}{83}{appendix.B}
+\contentsline {section}{\numberline {B.1}External Resources}{83}{section.B.1}
+\contentsline {section}{\numberline {B.2}Hints from the Discussion Forum}{83}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Law of Total Expectation as Matrices}{83}{subsection.B.2.1}
