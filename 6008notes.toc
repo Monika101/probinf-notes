@@ -158,8 +158,13 @@
 \contentsline {paragraph}{Solutions}{80}{section*.64}
 \contentsline {subsection}{\numberline {3.2.3}The Bayesian Approach to Learning Parameters}{81}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Parameter Learning: What's Next}{81}{subsection.3.2.4}
-\contentsline {chapter}{\numberline {A}Notation Summary}{82}{appendix.A}
-\contentsline {chapter}{\numberline {B}Supplementary Information}{84}{appendix.B}
-\contentsline {section}{\numberline {B.1}External Resources}{84}{section.B.1}
-\contentsline {section}{\numberline {B.2}Hints from the Discussion Forum}{84}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Law of Total Expectation as Matrices}{84}{subsection.B.2.1}
+\contentsline {section}{\numberline {3.3}Parameter Learning - Naive Bayes Classification}{81}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}The Naive Bayes Classifier: Introduction}{81}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}The Naive Bayes Classifier: Training}{82}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}The Naive Bayes Classifier: Prediction}{85}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}The Naive Bayes Classifier: Laplace Smoothing}{86}{subsection.3.3.4}
+\contentsline {chapter}{\numberline {A}Notation Summary}{88}{appendix.A}
+\contentsline {chapter}{\numberline {B}Supplementary Information}{90}{appendix.B}
+\contentsline {section}{\numberline {B.1}External Resources}{90}{section.B.1}
+\contentsline {section}{\numberline {B.2}Hints from the Discussion Forum}{90}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Law of Total Expectation as Matrices}{90}{subsection.B.2.1}
