@@ -163,8 +163,14 @@
 \contentsline {subsection}{\numberline {3.3.2}The Naive Bayes Classifier: Training}{82}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}The Naive Bayes Classifier: Prediction}{85}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}The Naive Bayes Classifier: Laplace Smoothing}{86}{subsection.3.3.4}
-\contentsline {chapter}{\numberline {A}Notation Summary}{88}{appendix.A}
-\contentsline {chapter}{\numberline {B}Supplementary Information}{90}{appendix.B}
-\contentsline {section}{\numberline {B.1}External Resources}{90}{section.B.1}
-\contentsline {section}{\numberline {B.2}Hints from the Discussion Forum}{90}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Law of Total Expectation as Matrices}{90}{subsection.B.2.1}
+\contentsline {section}{\numberline {3.4}Parameter Learning - Finite Random Variables and Trees}{87}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Generalizing Parameter Learning}{87}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Parameter Learning for a Finite Random Variable}{87}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Parameter Learning for an Undirected Tree-Structured Graphical Model}{89}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Structure Learning -- Trees}{91}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Structure Learning for an Undirected Tree-Structured Graphical Model: The Chow-Liu Algorithm}{91}{subsection.3.5.1}
+\contentsline {chapter}{\numberline {A}Notation Summary}{92}{appendix.A}
+\contentsline {chapter}{\numberline {B}Supplementary Information}{94}{appendix.B}
+\contentsline {section}{\numberline {B.1}External Resources}{94}{section.B.1}
+\contentsline {section}{\numberline {B.2}Hints from the Discussion Forum}{94}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Law of Total Expectation as Matrices}{94}{subsection.B.2.1}
